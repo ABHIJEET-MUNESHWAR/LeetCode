@@ -1,0 +1,5 @@
+*_Store
+.project
+.idea/*
+out/*
+*.iml
