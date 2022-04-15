@@ -3,6 +3,7 @@ package com.leetcode.medium.array;
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    12/04/22, Time:    9:35 AM
  * https://leetcode.com/problems/single-number-ii/
+ * https://www.youtube.com/watch?v=jO7uGdvGGC4
  */
 public class SingleNumber2 {
 
