@@ -2,8 +2,8 @@ package com.leetcode.hard.array;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    07/04/22, Time:    9:07 AM
- * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/
- * Best Time to Buy and Sell Stock III
+ * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/ Best Time to Buy and Sell
+ * Stock III
  */
 public class BuySell3 {
 
@@ -17,18 +17,14 @@ public class BuySell3 {
   }
 
   private int getMaxProfit(int[] prices) {
-    int n = prices.length;
-    int maxProfit = 0;
-    if (n == 0) {
-      return 0;
-    } else {
-      for (int i = 1; i < n; i++) {
-        if (prices[i - 1] < prices[i]) {
-          maxProfit += Math.max(0, prices[i] - prices[i - 1]);
-        }
-      }
+    int buy1 = Integer.MAX_VALUE, buy1sell1 = 0, buy2 = Integer.MAX_VALUE, buy2sell2 = 0;
+    for (int price : prices) {
+      buy1 = Math.min(buy1, price);
+      buy1sell1 = Math.max(buy1sell1, price - buy1);
+      buy2 = Math.min(buy2, price - buy1sell1);
+      buy2sell2 = Math.max(buy2sell2, price - buy2);
     }
-    return maxProfit;
+    return buy2sell2;
   }
 
 }
