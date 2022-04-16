@@ -4,6 +4,7 @@ package com.leetcode.hard.array;
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    07/04/22, Time:    9:07 AM
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/ Best Time to Buy and Sell
  * Stock III
+ * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/discuss/39611/Is-it-Best-Solution-with-O(n)-O(1)./242914
  */
 public class BuySell3 {
 
