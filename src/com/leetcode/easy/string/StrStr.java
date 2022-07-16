@@ -2,6 +2,7 @@ package com.leetcode.easy.string;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    05/07/22, Time:    8:29 AM
+ * https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/885/
  */
 public class StrStr {
 
