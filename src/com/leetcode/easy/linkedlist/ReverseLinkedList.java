@@ -14,7 +14,18 @@ public class ReverseLinkedList {
     head.next.next.next = new ListNode(4);
     head.printList(head);
     head = reverseLinkedList.iterativeReverse(head);
+    head = reverseLinkedList.recursiveReverse(head, null);
     head.printList(head);
+  }
+
+  private ListNode recursiveReverse(ListNode head, ListNode newHead) {
+    if (head == null) {
+      return newHead;
+    }
+    ListNode nextNode = head.next;
+    head.next = newHead;
+    newHead = head;
+    return recursiveReverse(nextNode, newHead);
   }
 
   private ListNode iterativeReverse(ListNode head) {
