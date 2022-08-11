@@ -1,9 +1,7 @@
 package com.leetcode.easy.tree;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    07/08/22, Time:    10:35 AM
@@ -28,26 +26,24 @@ public class SpiralLevelOrderTraversal {
 
   private List<List<Integer>> levelOrderTraversal(TreeNode root) {
     List<List<Integer>> lists = new ArrayList<>();
-    if (root == null) {
-      return lists;
-    }
-    Queue<TreeNode> queue = new LinkedList<>();
-    queue.add(root);
-    while (!queue.isEmpty()) {
-      int qSize = queue.size();
-      List<Integer> list = new ArrayList<>();
-      for (int i = 0; i < qSize; i++) {
-        TreeNode node = queue.remove();
-        list.add(node.val);
-        if (node.left != null) {
-          queue.add(node.left);
-        }
-        if (node.right != null) {
-          queue.add(node.right);
-        }
-      }
-      lists.add(list);
-    }
+    zigZagLevelOrderTraversal(lists, root, 0);
     return lists;
+  }
+
+  private void zigZagLevelOrderTraversal(List<List<Integer>> lists, TreeNode root, int level) {
+    if (root == null) {
+      return;
+    }
+    int size = lists.size();
+    if (size <= level) {
+      lists.add(new ArrayList<>());
+    }
+    if (level % 2 == 0) {
+      lists.get(level).add(root.val);
+    } else {
+      lists.get(level).add(0, root.val);
+    }
+    zigZagLevelOrderTraversal(lists, root.left, level + 1);
+    zigZagLevelOrderTraversal(lists, root.right, level + 1);
   }
 }

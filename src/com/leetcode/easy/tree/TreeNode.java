@@ -21,4 +21,13 @@ public class TreeNode {
     this.left = left;
     this.right = right;
   }
+
+  public void inorderTraversal(TreeNode root) {
+    if (root == null) {
+      return;
+    }
+    root.inorderTraversal(root.left);
+    System.out.println(root.val);
+    root.inorderTraversal(root.right);
+  }
 }
