@@ -1,7 +1,8 @@
-package com.leetcode.easy.others;
+package com.leetcode.easy.daily;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    24/08/22, Time:    10:26 AM
+ * https://leetcode.com/problems/power-of-three/
  */
 public class PowerOfThree {
 
