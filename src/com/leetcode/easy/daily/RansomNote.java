@@ -22,10 +22,10 @@ public class RansomNote {
     }
     int lenOfNote = ransomNote.length();
     for (int i = 0; i < lenOfNote; i++) {
-      if (charArray[ransomNote.charAt(i)-'a'] == 0) {
+      if (charArray[ransomNote.charAt(i) - 'a'] == 0) {
         return false;
       } else {
-        charArray[ransomNote.charAt(i)-'a']--;
+        charArray[ransomNote.charAt(i) - 'a']--;
       }
     }
     return true;
