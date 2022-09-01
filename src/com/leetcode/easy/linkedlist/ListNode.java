@@ -13,6 +13,9 @@ public class ListNode {
   }
 
   public void printList(ListNode head) {
+    if (head == null) {
+      return;
+    }
     System.out.println("The list contents are:");
     while (head != null) {
       System.out.print(head.val + " ");
