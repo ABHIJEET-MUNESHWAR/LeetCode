@@ -1,5 +1,7 @@
 package com.leetcode.easy.tree;
 
+import com.leetcode.utils.TreeNode;
+
 import java.util.Stack;
 
 /**

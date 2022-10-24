@@ -1,5 +1,7 @@
 package com.leetcode.easy.tree;
 
+import com.leetcode.utils.TreeNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    10/08/22, Time:    7:36 AM
  * https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/631/

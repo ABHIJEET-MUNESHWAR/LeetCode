@@ -1,5 +1,7 @@
 package com.leetcode.easy.tree;
 
+import com.leetcode.utils.TreeNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    10/09/22, Time:    12:43 PM
  * https://leetcode.com/problems/invert-binary-tree/

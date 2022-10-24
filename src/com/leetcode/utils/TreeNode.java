@@ -1,4 +1,4 @@
-package com.leetcode.easy.tree;
+package com.leetcode.utils;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    02/08/22, Time:    6:49 AM

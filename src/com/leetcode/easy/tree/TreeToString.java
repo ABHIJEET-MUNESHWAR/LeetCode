@@ -1,5 +1,7 @@
 package com.leetcode.easy.tree;
 
+import com.leetcode.utils.TreeNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    10/09/22, Time:    11:55 AM
  * https://leetcode.com/problems/construct-string-from-binary-tree/
