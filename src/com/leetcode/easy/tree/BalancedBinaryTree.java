@@ -1,5 +1,7 @@
 package com.leetcode.easy.tree;
 
+import com.leetcode.utils.TreeNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    28/08/22, Time:    11:11 AM
  * https://leetcode.com/problems/balanced-binary-tree/

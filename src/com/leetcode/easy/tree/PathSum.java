@@ -1,5 +1,7 @@
 package com.leetcode.easy.tree;
 
+import com.leetcode.utils.TreeNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    30/08/22, Time:    9:13 AM
  */

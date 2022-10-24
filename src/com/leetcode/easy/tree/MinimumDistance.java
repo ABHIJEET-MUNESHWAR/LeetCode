@@ -1,5 +1,7 @@
 package com.leetcode.easy.tree;
 
+import com.leetcode.utils.TreeNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    29/08/22, Time:    10:25 PM
  * https://leetcode.com/problems/minimum-distance-between-bst-nodes/

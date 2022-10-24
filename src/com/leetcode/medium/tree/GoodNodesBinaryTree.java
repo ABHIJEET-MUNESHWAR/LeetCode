@@ -1,6 +1,6 @@
 package com.leetcode.medium.tree;
 
-import com.leetcode.easy.tree.TreeNode;
+import com.leetcode.utils.TreeNode;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    01/09/22, Time:    9:32 AM
