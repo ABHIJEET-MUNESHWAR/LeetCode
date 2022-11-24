@@ -1,5 +1,7 @@
 package com.leetcode.easy.linkedlist;
 
+import com.leetcode.utils.ListNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    31/08/22, Time:    8:18 PM
  * https://leetcode.com/problems/remove-linked-list-elements/

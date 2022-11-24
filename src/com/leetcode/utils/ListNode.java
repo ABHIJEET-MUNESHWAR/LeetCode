@@ -1,12 +1,12 @@
-package com.leetcode.easy.linkedlist;
+package com.leetcode.utils;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    16/07/22, Time:    6:31 AM
  */
 public class ListNode {
 
-  int val;
-  ListNode next;
+  public int val;
+  public ListNode next;
 
   public ListNode(int val) {
     this.val = val;

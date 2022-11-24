@@ -1,5 +1,7 @@
 package com.leetcode.easy.linkedlist;
 
+import com.leetcode.utils.ListNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    28/08/22, Time:    9:55 AM
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
