@@ -13,6 +13,22 @@ public class ConvertToBase7 {
   }
 
   private String convertToBase7(int num) {
-    //
+    if (num == 0) {
+      return "0";
+    }
+    boolean isNegative = false;
+    if (num < 0) {
+      isNegative = true;
+    }
+    StringBuilder sb = new StringBuilder();
+
+    while (num != 0) {
+      sb.append(Math.abs(num % 7));
+      num = num / 7;
+    }
+    if (isNegative) {
+      sb.append("-");
+    }
+    return sb.reverse().toString();
   }
 }
