@@ -1,5 +1,7 @@
 package com.leetcode.easy.linkedlist;
 
+import com.leetcode.utils.ListNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    17/07/22, Time:    6:19 AM
  * https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/

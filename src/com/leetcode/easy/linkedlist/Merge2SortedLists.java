@@ -1,5 +1,7 @@
 package com.leetcode.easy.linkedlist;
 
+import com.leetcode.utils.ListNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    26/07/22, Time:    8:43 AM
  */

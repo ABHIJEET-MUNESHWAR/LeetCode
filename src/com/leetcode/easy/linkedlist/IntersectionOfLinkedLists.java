@@ -1,5 +1,7 @@
 package com.leetcode.easy.linkedlist;
 
+import com.leetcode.utils.ListNode;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    30/08/22, Time:    2:56 PM
  * https://leetcode.com/problems/intersection-of-two-linked-lists/
