@@ -16,7 +16,7 @@ public class ClimbingStairs {
     if (n < 3) {
       return n;
     }
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {c
       c = a + b;
       a = b;
       b = c;
