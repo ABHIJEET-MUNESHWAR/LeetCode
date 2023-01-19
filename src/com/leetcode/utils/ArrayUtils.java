@@ -12,7 +12,7 @@ public class ArrayUtils {
     }
   }
 
-  public static void printArray(Integer[] arr) {
+  public static void printArray(int[] arr) {
     int size = arr.length;
     for (int i = 0; i < size; i++) {
       System.out.println(arr[i]);

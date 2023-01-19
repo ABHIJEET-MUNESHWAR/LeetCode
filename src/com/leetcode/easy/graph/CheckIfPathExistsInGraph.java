@@ -9,6 +9,7 @@ import java.util.Queue;
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    19/12/22, Time:    8:02 am
  * https://leetcode.com/problems/find-if-path-exists-in-graph/
+ * https://leetcode.com/problems/find-if-path-exists-in-graph/solutions/1406774/java-4-solutions-union-find-9ms-union-by-rank-14-ms-dfs-88-ms-bfs-90-ms/
  */
 public class CheckIfPathExistsInGraph {
 
