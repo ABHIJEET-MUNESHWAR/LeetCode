@@ -1,5 +1,7 @@
 package com.leetcode.utils;
 
+import java.util.List;
+
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    24/11/22, Time:    9:31 PM
  */
@@ -26,6 +28,12 @@ public class ArrayUtils {
         System.out.println(matrix[i][j] + " ");
       }
       System.out.println();
+    }
+  }
+
+  public static void printArray(List<Boolean> arr) {
+    for(Boolean item: arr){
+      System.out.println(item);
     }
   }
 }
