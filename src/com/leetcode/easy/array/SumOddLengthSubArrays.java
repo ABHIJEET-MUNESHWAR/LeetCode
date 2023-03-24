@@ -10,6 +10,7 @@ public class SumOddLengthSubArrays {
     SumOddLengthSubArrays sumOddLengthSubArrays = new SumOddLengthSubArrays();
     int[] arr = new int[]{1, 4, 2, 5, 3};
     System.out.println(sumOddLengthSubArrays.sumOddLengthSubArrays(arr));
+    System.out.println(sumOddLengthSubArrays.sumOddLengthSubArrays2(arr));
   }
 
   private int sumOddLengthSubArrays(int[] arr) {
@@ -25,6 +26,15 @@ public class SumOddLengthSubArrays {
         startIndex++;
         endIndex++;
       }
+    }
+    return sum;
+  }
+
+  private int sumOddLengthSubArrays2(int[] arr) {
+    int sum = 0;
+    int size = arr.length;
+    for (int i = 0; i < size; i++) {
+      sum += (((i + 1) * (size - i) + 1 ) / 2) * arr[i];
     }
     return sum;
   }
