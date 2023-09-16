@@ -10,6 +10,8 @@ import com.leetcode.utils.TreeNode;
  * https://leetcode.com/problems/increasing-order-search-tree/
  */
 public class IncreasingBST {
+  TreeNode curr = null;
+
   public static void main(String[] args) {
     IncreasingBST increasingBST = new IncreasingBST();
     TreeNode root = new TreeNode(5);
@@ -21,8 +23,29 @@ public class IncreasingBST {
     root.right.right = new TreeNode(8);
     root.right.right.left = new TreeNode(7);
     root.right.right.right = new TreeNode(9);
-    root = increasingBST.increasingBST(root);
+    root = increasingBST.increasingBST2(root);
     root.inorderTraversal(root);
+  }
+
+  private TreeNode increasingBST2(TreeNode root) {
+    if (root == null) {
+      return null;
+    }
+    TreeNode result = new TreeNode(0);
+    curr = result;
+    inorder(root);
+    return result.right;
+  }
+
+  private void inorder(TreeNode node) {
+    if (node == null) {
+      return;
+    }
+    inorder(node.left);
+    node.left = null;
+    curr.right = node;
+    curr = node;
+    inorder(node.right);
   }
 
   private TreeNode increasingBST(TreeNode root) {
