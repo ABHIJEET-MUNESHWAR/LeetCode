@@ -28,13 +28,10 @@ public class FindGCD {
     return gcd(min, max);
   }
 
-  private int gcd(int min, int max) {
-    int maxDivisor = 0;
-    for (int i = 1; i <= min; i++) {
-      if (min % i == 0 && max % i == 0) {
-        maxDivisor = i;
-      }
+  private int gcd(int a, int b) {
+    if (b == 0) {
+      return a;
     }
-    return maxDivisor;
+    return gcd(b, a % b);
   }
 }
