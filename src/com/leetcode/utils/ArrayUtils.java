@@ -36,4 +36,10 @@ public class ArrayUtils {
       System.out.println(item);
     }
   }
+
+  public static void printIntArray(List<Integer> arr) {
+    for(Integer item: arr){
+      System.out.println(item);
+    }
+  }
 }
