@@ -12,8 +12,31 @@ import java.util.Arrays;
 public class MaxProductDifference {
   public static void main(String[] args) {
     MaxProductDifference maxProductDifference = new MaxProductDifference();
-    int[] nums = {4, 2, 5, 9, 7, 4, 8};
+    int[] nums = {10, 10, 10, 10};
+    System.out.println(maxProductDifference.maxProductDifferenceOrderOfN(nums));
     System.out.println(maxProductDifference.maxProductDifference(nums));
+  }
+
+  private int maxProductDifferenceOrderOfN(int[] nums) {
+    int highest = Integer.MIN_VALUE, secondHighest = Integer.MIN_VALUE, smallest =
+        Integer.MAX_VALUE, secondSmallest = Integer.MAX_VALUE;
+    for (int num : nums) {
+      if (highest <= num) {
+        secondHighest = highest;
+        highest = num;
+      }
+      if (secondHighest < highest && secondHighest < num && num < highest) {
+        secondHighest = num;
+      }
+      if (smallest >= num) {
+        secondSmallest = smallest;
+        smallest = num;
+      }
+      if (secondSmallest > smallest && secondSmallest > num && num > smallest) {
+        secondSmallest = num;
+      }
+    }
+    return ((highest * secondHighest) - (smallest * secondSmallest));
   }
 
   private int maxProductDifference(int[] nums) {
