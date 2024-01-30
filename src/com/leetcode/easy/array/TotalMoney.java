@@ -10,20 +10,22 @@ package com.leetcode.easy.array;
 public class TotalMoney {
   public static void main(String[] args) {
     TotalMoney totalMoney = new TotalMoney();
-    System.out.println(totalMoney.totalMoney(20));
+    System.out.println(totalMoney.totalMoney(10));
   }
 
   private int totalMoney(int n) {
     int total = 0;
-    int count = 0;
-    int inc = 1;
-    for (int i = 1; i <= n; i++) {
-      total += inc;
-      if (i % 7 == 0) {
-        count++;
-        inc = count;
-      }
-      inc++;
+    int div = n / 7;
+    int rem = n % 7;
+    int start = 1;
+    for (int i = 0; i < div; i++) {
+      int end = start + 6;
+      int temp = ((start + end) * 7) / 2;
+      total += temp;
+      start++;
+    }
+    for (int i = 0; i < rem; i++) {
+      total += start++;
     }
     return total;
   }
