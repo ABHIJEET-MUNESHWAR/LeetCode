@@ -14,28 +14,30 @@ import java.util.Set;
 public class FindMissingAndRepeatedValues {
   public static void main(String[] args) {
     FindMissingAndRepeatedValues findMissingAndRepeatedValues = new FindMissingAndRepeatedValues();
-    int[][] grid = {{9, 1, 7}, {8, 9, 2}, {3, 4, 6}};
+    int[][] grid = {{1, 2}, {2, 4}};
     ArrayUtils.printArray(findMissingAndRepeatedValues.findMissingAndRepeatedValues(grid));
   }
 
   private int[] findMissingAndRepeatedValues(int[][] grid) {
-    int repeatedNo = 0;
-    int row = grid.length;
-    int arraySum = 0;
-    Set<Integer> set = new HashSet<>();
+    long repeatedNo = 0;
+    long missingNo = 0;
+    long row = grid.length;
+    long arraySum = 0;
+    long arraySquareSum = 0;
+    long arrayLength = row * row;
     for (int i = 0; i < row; i++) {
       for (int j = 0; j < row; j++) {
         arraySum += grid[i][j];
-        if (set.contains(grid[i][j])) {
-          repeatedNo = grid[i][j];
-        } else {
-          set.add(grid[i][j]);
-        }
+        arraySquareSum += (grid[i][j] * grid[i][j]);
       }
     }
-    arraySum -= repeatedNo;
-    int size = row * row;
-    int totalSum = ((size) * (size + 1)) / 2;
-    return new int[] {repeatedNo, totalSum - arraySum};
+    long sum = arrayLength * (arrayLength + 1) / 2;
+    long squareSum = (arrayLength * (arrayLength + 1)) * (2 * arrayLength + 1) / 6;
+    long diffOfSum = sum - arraySum;
+    long diffOfSquareSum = squareSum - arraySquareSum;
+    long sumOfSum = diffOfSquareSum / diffOfSum;
+    repeatedNo = (sumOfSum - diffOfSum) / 2;
+    missingNo = diffOfSum + repeatedNo;
+    return new int[] {(int) repeatedNo, (int) missingNo};
   }
 }
