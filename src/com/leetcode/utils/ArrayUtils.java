@@ -42,4 +42,10 @@ public class ArrayUtils {
       System.out.println(item);
     }
   }
+
+  public static void printStrArray(List<String> arr) {
+    for(String item: arr){
+      System.out.println(item);
+    }
+  }
 }
