@@ -1,14 +1,12 @@
 class Solution {
     public int findFinalValue(int[] nums, int original) {
-
-        Set<Integer> set = new HashSet<>();
-        for (int num : nums) {
-            set.add(num);
+        int size = nums.length;
+        for (int i = 0; i < size; i++) {
+            if (nums[i] == original) {
+                original *= 2;
+                i = -1;
+            }
         }
-        int num = original;
-        while (set.contains(num)) {
-            num = num * 2;
-        }
-        return num;
+        return original;
     }
 }
