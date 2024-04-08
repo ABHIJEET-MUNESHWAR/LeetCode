@@ -1,21 +1,27 @@
 class Solution {
     public int countStudents(int[] students, int[] sandwiches) {
-
-        Queue<Integer> queue = new LinkedList<>();
-        int top = 0, count = 0;
-        for (int i = 0; i < students.length; i++) {
-            queue.add(students[i]);
-        }
-        while (!queue.isEmpty() && count != queue.size()) {
-            if (sandwiches[top] == queue.peek()) {
-                count = 0;
-                queue.poll();
-                top++;
+        int zeros = 0;
+        int once = 0;
+        for (int student : students) {
+            if (student == 0) {
+                zeros++;
             } else {
-                count++;
-                queue.add(queue.poll());
+                once++;
             }
         }
-        return queue.size();
+        for (int sandwich : sandwiches) {
+            if (sandwich == 0) {
+                if (zeros == 0) {
+                    return once;
+                }
+                zeros--;
+            } else {
+                if (once == 0) {
+                    return zeros;
+                }
+                once--;
+            }
+        }
+        return 0;
     }
 }
