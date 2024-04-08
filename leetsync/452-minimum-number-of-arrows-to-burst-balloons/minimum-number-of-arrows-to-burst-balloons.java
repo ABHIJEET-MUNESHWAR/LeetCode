@@ -10,7 +10,7 @@ class Solution {
         for (int i = 1; i < size; i++) {
             int currentStart = points[i][0];
             int currentEnd = points[i][1];
-            if (currentStart > commonEndPoint) {
+            if (commonEndPoint < currentStart) {
                 commonEndPoint = currentEnd;
                 arrowsCount++;
             }
