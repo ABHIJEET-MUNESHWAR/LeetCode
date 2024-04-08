@@ -1,13 +1,20 @@
 class Solution {
-    public int findMinArrowShots(int[][] segments) {
-        Arrays.sort(segments, (a, b) -> Integer.compare(a[1], b[1]));
-        int ans = 0, arrow = 0;
-        for (int i = 0; i < segments.length; i ++) {
-            if (ans == 0 || segments[i][0] > arrow) {
-                ans ++;
-                arrow = segments[i][1];
+    public int findMinArrowShots(int[][] points) {
+        int arrowsCount = 1;
+        int size = points.length;
+        if (size == 1) {
+            return 1;
+        }
+        Arrays.sort(points, Comparator.comparingInt(a -> a[1]));
+        int commonEndPoint = points[0][1];
+        for (int i = 1; i < size; i++) {
+            int currentStart = points[i][0];
+            int currentEnd = points[i][1];
+            if (commonEndPoint < currentStart) {
+                commonEndPoint = currentEnd;
+                arrowsCount++;
             }
         }
-        return ans;
+        return arrowsCount;
     }
 }
