@@ -12,16 +12,30 @@ import java.util.Stack;
 public class MinRemoveToMakeValid {
   public static void main(String[] args) {
     MinRemoveToMakeValid minRemoveToMakeValid = new MinRemoveToMakeValid();
-    String s = "lee(t(c)o)de)";
+    String s = "a)b(c)d";
     System.out.println(minRemoveToMakeValid.minRemoveToMakeValid(s));
   }
 
   private String minRemoveToMakeValid(String s) {
     Stack<Character> stack = new Stack<>();
-    int stackIterator = 0;
-    for (char ch: s.toCharArray()) {
-      stackIterator++;
+    StringBuilder sb = new StringBuilder(s);
+    int size = s.length();
+    for (int i = 0; i < size; i++) {
+      char ch = sb.charAt(i);
+      if (ch == '(') {
+        stack.push(ch);
+      }
+      if (ch == ')') {
+        if (!stack.isEmpty()) {
+          stack.pop();
+        } else {
+          sb.setCharAt(i, '*');
+        }
+      }
     }
-    return s;
+    while (!stack.isEmpty()) {
+      sb.setCharAt(stack.pop(), '*');
+    }
+    return sb.toString().replaceAll("\\*", "");
   }
 }
