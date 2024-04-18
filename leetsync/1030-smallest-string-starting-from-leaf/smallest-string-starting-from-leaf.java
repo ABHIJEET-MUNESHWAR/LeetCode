@@ -14,25 +14,27 @@
  * }
  */
 class Solution {
+    String smallestPath = "", rootToLeafPath = "";
+
     public String smallestFromLeaf(TreeNode root) {
-        return dfs(root, "");
+        smallestFromLeaf(root, rootToLeafPath);
+        return smallestPath;
     }
 
-    public String dfs(TreeNode node, String suffix) {
-        if (null == node) {
-            return suffix;
+    private void smallestFromLeaf(TreeNode node, String rootToLeafPath) {
+        rootToLeafPath = "" + (char) ('a' + node.val) + rootToLeafPath;
+        if (node.left == null && node.right == null) {
+            if (smallestPath == "") {
+                smallestPath = rootToLeafPath;
+            } else {
+                smallestPath = smallestPath.compareTo(rootToLeafPath) < 0 ? smallestPath : rootToLeafPath;
+            }
         }
-        suffix = "" + (char) ('a' + node.val) + suffix;
-        if (null == node.left && null == node.right) {
-            return suffix;
+        if (node.left != null) {
+            smallestFromLeaf(node.left, rootToLeafPath);
         }
-        if (null == node.left || null == node.right) {
-            return (null == node.left) ? dfs(node.right, suffix) : dfs(node.left, suffix);
+        if (node.right != null) {
+            smallestFromLeaf(node.right, rootToLeafPath);
         }
-
-        String left = dfs(node.left, suffix);
-        String right = dfs(node.right, suffix);
-
-        return left.compareTo(right) <= 0 ? left : right;
     }
 }
