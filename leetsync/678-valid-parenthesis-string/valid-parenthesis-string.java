@@ -1,25 +1,36 @@
 class Solution {
     public boolean checkValidString(String s) {
-        int cmin = 0, cmax = 0; // open parentheses count in range [cmin, cmax]
-        for (char c : s.toCharArray()) {
-            if (c == '(') {
-                cmax++;
-                cmin++;
-            } else if (c == ')') {
-                cmax--;
-                cmin--;
-            } else if (c == '*') {
-                cmax++; // if `*` become `(` then openCount++
-                cmin--; // if `*` become `)` then openCount--
-                // if `*` become `` then nothing happens
-                // So openCount will be in new range [cmin-1, cmax+1]
+        Stack<Integer> openingStack = new Stack<>();
+        Stack<Integer> starStack = new Stack<>();
+        int size = s.length();
+        for (int i = 0; i < size; i++) {
+            char ch = s.charAt(i);
+            switch (ch) {
+                case '*':
+                    starStack.push(i);
+                    break;
+                case '(':
+                    openingStack.push(i);
+                    break;
+                case ')':
+                    if (!openingStack.isEmpty()) {
+                        openingStack.pop();
+                    } else if (!starStack.isEmpty()) {
+                        starStack.pop();
+                    } else {
+                        return false;
+                    }
+                    break;
             }
-            if (cmax < 0)
-                return false; // Currently, don't have enough open parentheses to match close parentheses->
-                              // Invalid
-                              // For example: ())(
-            cmin = Math.max(cmin, 0); // It's invalid if open parentheses count < 0 that's why cmin can't be negative
         }
-        return cmin == 0; // Return true if can found `openCount == 0` in range [cmin, cmax]
+        while (!openingStack.isEmpty()) {
+            if (starStack.isEmpty()) {
+                return false;
+            }
+            if (openingStack.pop() > starStack.pop()) {
+                return false;
+            }
+        }
+        return openingStack.isEmpty();
     }
 }
