@@ -1,27 +1,28 @@
 class Solution {
     public long countSubarrays(int[] nums, int minK, int maxK) {
-        long res = 0;
-        boolean minFound = false, maxFound = false;
-        int start = 0, minStart = 0, maxStart = 0;
-        for (int i = 0; i < nums.length; i++) {
-            int num = nums[i];
-            if (num < minK || num > maxK) {
-                minFound = false;
-                maxFound = false;
-                start = i+1;
+        int minI = -1;
+        int maxI = -1;
+        long ans = 0;
+        int leftBoundary = -1;
+        int size = nums.length;
+        for (int current = 0; current < size; current++) {
+            if (nums[current] == minK) {
+                minI = current;
             }
-            if (num == minK) {
-                minFound = true;
-                minStart = i;
+            if (nums[current] == maxK) {
+                maxI = current;
             }
-            if (num == maxK) {
-                maxFound = true;
-                maxStart = i;
+            // check if element is out of bound
+            if (nums[current] < minK || nums[current] > maxK) {
+                leftBoundary = current;
             }
-            if (minFound && maxFound) {
-                res += (Math.min(minStart, maxStart) - start + 1);
+            if (minI != -1 && maxI != -1) {
+                int smaller = Math.min(maxI, minI);
+                if ((smaller - leftBoundary) > 0) {
+                    ans += smaller - leftBoundary;
+                }
             }
         }
-        return res;
+        return ans;
     }
 }
