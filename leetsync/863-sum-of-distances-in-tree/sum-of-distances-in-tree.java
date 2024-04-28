@@ -1,39 +1,43 @@
 class Solution {
-    int[] res, count;
-    ArrayList<HashSet<Integer>> tree;
-
-    public int[] sumOfDistancesInTree(int N, int[][] edges) {
-        tree = new ArrayList<HashSet<Integer>>();
-        res = new int[N];
-        count = new int[N];
-        for (int i = 0; i < N; ++i)
-            tree.add(new HashSet<Integer>());
-        for (int[] e : edges) {
-            tree.get(e[0]).add(e[1]);
-            tree.get(e[1]).add(e[0]);
+    public int[] sumOfDistancesInTree(int n, int[][] edges) {
+        // build graph and declare results
+        final ArrayList<Integer>[] graph = new ArrayList[n];
+        final int[] count = new int[n];
+        Arrays.fill(count, 1);
+        final int[] answer = new int[n];
+        for (int i = 0; i < graph.length; i++) {
+            graph[i] = new ArrayList<>();
         }
-        dfs(0, -1);
-        dfs2(0, -1);
-        return res;
+        for (int[] edge : edges) {
+            graph[edge[0]].add(edge[1]);
+            graph[edge[1]].add(edge[0]);
+        }
+
+        postOrder(0, -1, graph, count, answer);
+        // after postOrder, only answer[root] is correct, so do preOrder to update
+        // answer
+        preOrder(0, -1, graph, count, answer, n);
+
+        return answer;
     }
 
-    public void dfs(int root, int pre) {
-        for (int i : tree.get(root)) {
-            if (i == pre)
-                continue;
-            dfs(i, root);
-            count[root] += count[i];
-            res[root] += res[i] + count[i];
+    // set count et subTreeSum, here use answer[]
+    private void postOrder(int node, int parent, ArrayList<Integer>[] graph, int[] count, int[] answer) {
+        for (int child : graph[node]) {
+            if (child != parent) {
+                postOrder(child, node, graph, count, answer);
+                count[node] += count[child];
+                answer[node] += answer[child] + count[child];
+            }
         }
-        count[root]++;
     }
 
-    public void dfs2(int root, int pre) {
-        for (int i : tree.get(root)) {
-            if (i == pre)
-                continue;
-            res[i] = res[root] - count[i] + count.length - count[i];
-            dfs2(i, root);
+    private void preOrder(int node, int parent, ArrayList<Integer>[] graph, int[] count, int[] answer, int n) {
+        for (int child : graph[node]) {
+            if (child != parent) {
+                answer[child] = answer[node] + (n - count[child]) - count[child];
+                preOrder(child, node, graph, count, answer, n);
+            }
         }
     }
 }
