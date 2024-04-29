@@ -1,22 +1,43 @@
 public class Solution {
     public int findRotateSteps(String ring, String key) {
-        int n = ring.length();
-        int m = key.length();
-        int[][] dp = new int[m + 1][n];
-
-        for (int i = m - 1; i >= 0; i--) {
-            for (int j = 0; j < n; j++) {
-                dp[i][j] = Integer.MAX_VALUE;
-                for (int k = 0; k < n; k++) {
-                    if (ring.charAt(k) == key.charAt(i)) {
-                        int diff = Math.abs(j - k);
-                        int step = Math.min(diff, n - diff);
-                        dp[i][j] = Math.min(dp[i][j], step + dp[i + 1][k]);
-                    }
-                }
-            }
+        int[][] dp = new int[key.length()][ring.length()];
+        for (int i = 0; i < key.length(); i++) {
+            Arrays.fill(dp[i], -1);
         }
+        ArrayList<Integer> positionsMap[] = new ArrayList[26];
+        int ringSize = ring.length();
+        for (int i = 0; i < ringSize; i++) {
+            char c = ring.charAt(i);
+            int index = c - 'a';
+            if (positionsMap[index] == null) {
+                positionsMap[index] = new ArrayList<>();
+            }
+            positionsMap[index].add(i);
+        }
+        return minSteps(ring, key, 0, 0, positionsMap, dp);
+    }
 
-        return dp[0][0] + m;
+    private int minSteps(String ring, String key, int ringIndex, int keyIndex, ArrayList<Integer>[] positionsMap,
+            int[][] dp) {
+        // Base case
+        if (keyIndex == key.length()) {
+            return 0;
+        }
+        if (dp[keyIndex][ringIndex] != -1) {
+            return dp[keyIndex][ringIndex];
+        }
+        // Generate all possibilities
+        // keyIndex
+        int charIndex = key.charAt(keyIndex) - 'a';
+        List<Integer> positions = positionsMap[charIndex];
+        int minAnswer = Integer.MAX_VALUE;
+        for (int position : positions) {
+            int clockwiseStep = Math.abs(ringIndex - position);
+            int antiClockwiseStep = ring.length() - clockwiseStep;
+            int minStep = Math.min(clockwiseStep, antiClockwiseStep);
+            int currentAnswer = minStep + minSteps(ring, key, position, keyIndex + 1, positionsMap, dp);
+            minAnswer = Math.min(minAnswer, currentAnswer);
+        }
+        return dp[keyIndex][ringIndex] = 1 + minAnswer; // 1 is for button press
     }
 }
