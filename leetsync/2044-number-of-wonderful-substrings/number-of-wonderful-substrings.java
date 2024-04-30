@@ -1,20 +1,19 @@
 class Solution {
     public long wonderfulSubstrings(String word) {
-        long[] cnt = new long[1024]; // cnt[state] stores how many times the state occurs
-        cnt[0] = 1; // empty string gives case where all characters occur even number of times
-        int mask = 0; // current state
-        long ans = 0;
-        char[] chars = word.toCharArray();
-        for (char c : chars) {
-            int idx = c - 'a';
-            mask ^= 1 << idx; // update state
-            ans += cnt[mask]; // add count of same previous states
-            for (int i = 0; i < 10; i++) {
-                int lookFor = mask ^ (1 << i); // try flick each switch
-                ans += cnt[lookFor];
+        long answer = 0;
+        int size = word.length();
+        int[] counts = new int[1024];
+        int mask = 0;
+        counts[0] = 1;
+        for (int i = 0; i < size; i++) {
+            mask = mask ^ (1 << ((int) (word.charAt(i) - 'a')));
+            answer += counts[mask];
+            for (int j = 0; j < 10; j++) {
+                int newMask = mask ^ (1 << j);
+                answer += counts[newMask];
             }
-            cnt[mask]++; // add 1 to count of times we've seen current state
+            counts[mask]++;
         }
-        return ans;
+        return answer;
     }
 }
