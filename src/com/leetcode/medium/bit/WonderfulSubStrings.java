@@ -6,6 +6,7 @@ package com.leetcode.medium.bit;
  * Date:    30/04/24,
  * Time:    10:58 am
  * 1915. Number of Wonderful Substrings
+ * https://www.youtube.com/watch?v=1DdmbJj4xLE&ab_channel=codestorywithMIK
  * https://leetcode.com/problems/number-of-wonderful-substrings/description/?envType=daily-question&envId=2024-04-30
  */
 public class WonderfulSubStrings {
