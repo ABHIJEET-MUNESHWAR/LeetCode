@@ -1,12 +1,16 @@
 class Solution {
     public List<List<Integer>> findMatrix(int[] nums) {
-        ArrayList<List<Integer>> res = new ArrayList<>();
-        int n = nums.length, count[] = new int[n + 1];
-        for (int a : nums) {
-            if (res.size() < ++count[a])
-                res.add(new ArrayList<>());
-            res.get(count[a] - 1).add(a);
+        List<List<Integer>> result = new ArrayList<>();
+        int size = nums.length;
+        int[] count = new int[size + 1];
+        for (int num : nums) {
+            int frequency = count[num];
+            if (frequency == result.size()) {
+                result.add(new ArrayList<>());
+            }
+            result.get(frequency).add(num);
+            count[num]++;
         }
-        return res;
+        return result;
     }
 }
