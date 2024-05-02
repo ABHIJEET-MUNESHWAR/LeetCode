@@ -4,7 +4,6 @@ import com.leetcode.utils.ListUtils;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.Map;
 
 /**
