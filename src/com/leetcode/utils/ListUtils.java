@@ -15,6 +15,12 @@ public class ListUtils {
     }
   }
 
+  public static void printBooleanList(List<Boolean> list) {
+    for (Boolean item : list) {
+      System.out.println(item);
+    }
+  }
+
   public static void printLists(List<List<Integer>> listOfList) {
     for (List<Integer> list : listOfList) {
       for (Integer item : list) {
