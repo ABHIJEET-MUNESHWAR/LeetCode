@@ -14,8 +14,8 @@ public class RelativeRanks {
 
   public static void main(String[] args) {
     RelativeRanks relativeRanks = new RelativeRanks();
-    //int[] score = new int[]{5, 4, 3, 2, 1};
-    int[] score = new int[]{1};
+    int[] score = new int[]{5, 4, 3, 2, 1};
+    //int[] score = new int[]{1};
     String[] ans = relativeRanks.findRelativeRanks(score);
     ArrayUtils.printArray(ans);
   }
