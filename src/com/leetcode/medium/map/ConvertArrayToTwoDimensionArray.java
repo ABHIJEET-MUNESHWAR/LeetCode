@@ -1,4 +1,4 @@
-package com.leetcode.medium.hash;
+package com.leetcode.medium.map;
 
 import com.leetcode.utils.ListUtils;
 import java.util.ArrayList;
