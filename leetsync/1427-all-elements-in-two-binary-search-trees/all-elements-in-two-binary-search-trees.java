@@ -14,30 +14,31 @@
  * }
  */
 class Solution {
-    public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
+    PriorityQueue<Integer> pq = new PriorityQueue<>();// We are using the default natural sorting order, to sort the
+                                                      // value
 
-        List<Integer> answer = new ArrayList<>();
-        Stack<TreeNode> stack1 = new Stack<>();
-        Stack<TreeNode> stack2 = new Stack<>();
-        while (root1 != null || root2 != null || !stack1.isEmpty() || !stack2.isEmpty()) {
-            while (root1 != null) {
-                stack1.push(root1);
-                root1 = root1.left;
-            }
-            while (root2 != null) {
-                stack2.push(root2);
-                root2 = root2.left;
-            }
-            if (stack2.isEmpty() || (!stack1.isEmpty() && stack1.peek().val <= stack2.peek().val)) {
-                root1 = stack1.pop();
-                answer.add(root1.val);
-                root1 = root1.right;
-            } else {
-                root2 = stack2.pop();
-                answer.add(root2.val);
-                root2 = root2.right;
-            }
-        }
-        return answer;
+    public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
+        List<Integer> ans = new ArrayList<>();// resultant ArrayList
+
+        if (root1 == null && root2 == null)// if we are provided with both the null graph
+            return ans;// returning the empty ArrayList
+
+        inorder(root1);// recursive inorder tree 1
+        inorder(root2);// recursive inorder tree 2
+
+        while (!pq.isEmpty())// putting the result into the ArrayList
+            ans.add(pq.poll());// Ascendinly sorted
+
+        return ans;// returning the ArrayList contain the node sorted in ascending order
+    }
+
+    public void inorder(TreeNode root) {// simple inorder, inorder of BST is always sorted
+        if (root == null)// when we reach to the null node we just return
+            return;
+        inorder(root.left);// recursing down the left subtree
+        pq.offer(root.val);// Dealing with the root, adding then to the PriorityQueue
+        inorder(root.right);// recursing down the left subtree
+        return;// all function complete deleting this activation record and returning to the
+               // parent
     }
 }
