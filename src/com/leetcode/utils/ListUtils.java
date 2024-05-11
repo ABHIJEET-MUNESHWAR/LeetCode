@@ -21,6 +21,12 @@ public class ListUtils {
     }
   }
 
+  public static void printStringList(List<String> list) {
+    for (String item : list) {
+      System.out.println(item);
+    }
+  }
+
   public static void printLists(List<List<Integer>> listOfList) {
     for (List<Integer> list : listOfList) {
       for (Integer item : list) {

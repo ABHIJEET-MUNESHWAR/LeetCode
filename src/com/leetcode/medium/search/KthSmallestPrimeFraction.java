@@ -1,6 +1,8 @@
 package com.leetcode.medium.search;
 
 import com.leetcode.utils.ArrayUtils;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * Created using IntelliJ IDEA.
@@ -16,6 +18,43 @@ public class KthSmallestPrimeFraction {
     int[] arr = {1, 2, 3, 5};
     int k = 3;
     ArrayUtils.printArray(kthSmallestPrimeFraction.kthSmallestPrimeFraction(arr, k));
+    ArrayUtils.printArray(kthSmallestPrimeFraction.kthSmallestPrimeFractionUsingPriorityQueue(arr, k));
+  }
+
+  private int[] kthSmallestPrimeFractionUsingPriorityQueue(int[] arr, int k) {
+    PriorityQueue<double[]> queue = new PriorityQueue<>(new Comparator<double[]>() {
+      @Override
+      public int compare(double[] arr1, double[] arr2) {
+        if (arr1[0] <= arr2[0]) {
+          return -1;
+        } else {
+          return 1; // swap
+        }
+      }
+    });
+    int size = arr.length;
+    // insert elements in priority queue
+    for (int i = 0; i < size; i++) {
+      double primeFraction = 1.0 * arr[i] / arr[size - 1];
+      queue.add(new double[] {primeFraction, i, size - 1});
+    }
+    int[] result = new int[2];
+    while (k > 0) {
+      double[] currentValue = queue.poll();
+      int numeratorIndex = (int) currentValue[1];
+      int denominatorIndex = (int) currentValue[2];
+      int nextDenominatorIndex = denominatorIndex-1;
+      if (numeratorIndex < denominatorIndex) {
+        double primeFraction = 1.0 * arr[numeratorIndex] / arr[nextDenominatorIndex];
+        queue.add(new double[] {primeFraction, numeratorIndex, nextDenominatorIndex});
+      }
+      k--;
+      if (k == 0) {
+        result[0] = arr[numeratorIndex];
+        result[1] = arr[denominatorIndex];
+      }
+    }
+    return result;
   }
 
   private int[] kthSmallestPrimeFraction(int[] arr, int k) {
