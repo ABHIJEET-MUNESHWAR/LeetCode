@@ -27,11 +27,23 @@ public class ListUtils {
     }
   }
 
+  public static void printStringLists(List<List<String>> listOfList) {
+    for (List<String> list : listOfList) {
+      for (String item : list) {
+        System.out.print(item);
+        System.out.print(" ");
+      }
+      System.out.println();
+    }
+  }
+
   public static void printLists(List<List<Integer>> listOfList) {
     for (List<Integer> list : listOfList) {
       for (Integer item : list) {
-        System.out.println(item);
+        System.out.print(item);
+        System.out.print(" ");
       }
+      System.out.println();
     }
   }
 }
