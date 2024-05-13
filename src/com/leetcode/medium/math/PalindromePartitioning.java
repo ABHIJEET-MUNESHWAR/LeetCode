@@ -30,7 +30,7 @@ public class PalindromePartitioning {
       result.add(new ArrayList<>(tempList));
     } else {
       for (int i = start; i < s.length(); i++) {
-        if (isPallindrome(s, start, i)) {
+        if (isPalindrome(s, start, i)) {
           tempList.add(s.substring(start, i + 1));
           backtrack(result, tempList, s, i + 1);
           tempList.remove(tempList.size() - 1);
@@ -39,7 +39,7 @@ public class PalindromePartitioning {
     }
   }
 
-  private boolean isPallindrome(String s, int low, int high) {
+  private boolean isPalindrome(String s, int low, int high) {
     while (low < high) {
       if (s.charAt(low++) != s.charAt(high--)) {
         return false;
