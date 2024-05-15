@@ -5,6 +5,7 @@ import java.util.Set;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    24/06/22, Time:    7:52 AM
+ * 36. Valid Sudoku
  * https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/769/
  */
 public class ValidSudoku {
@@ -22,7 +23,7 @@ public class ValidSudoku {
         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
     };*/
-    char[][] board = new char[][]{
+    char[][] board = new char[][] {
         {'5', '3', '.', '.', '7', '.', '.', '.', '.'},
         {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
         {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
@@ -33,7 +34,25 @@ public class ValidSudoku {
         {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
         {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
     System.out.println(validSudoku.isValidSudoku(board) ? "Yes" : "No");
+    System.out.println(validSudoku.isValidSudokuOptimised(board) ? "Yes" : "No");
     //System.out.println(validSudoku.isValidSudoku2(board) ? "Yes" : "No");
+  }
+
+  private boolean isValidSudokuOptimised(char[][] board) {
+    Set<String> seen = new HashSet<>();
+    for (int i = 0; i < 9; i++) {
+      for (int j = 0; j < 9; j++) {
+        char number = board[i][j];
+        if (number != '.') {
+          if (!seen.add(number + " in row " + i)
+              || !seen.add(number + " in column " + j)
+              || !seen.add(number + " in block " + i / 3 + "-" + j / 3)) {
+            return false;
+          }
+        }
+      }
+    }
+    return true;
   }
 
   private boolean isValidSudoku(char[][] board) {
