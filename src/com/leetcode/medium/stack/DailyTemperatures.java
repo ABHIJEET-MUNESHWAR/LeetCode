@@ -19,13 +19,17 @@ public class DailyTemperatures {
   }
 
   private int[] dailyTemperatures(int[] temperatures) {
+    Stack<Integer> stack = new Stack<>();
     int size = temperatures.length;
     int[] result = new int[size];
-    Stack<Integer> stack = new Stack<>();
-    for (int i = 0; i < size; i++) {
-      while (!stack.isEmpty() && temperatures[stack.peek()] < temperatures[i]) {
-        int index = stack.pop();
-        result[index] = i - index;
+    for (int i = size - 1; i >= 0; i--) {
+      while (!stack.isEmpty() && temperatures[i] >= temperatures[stack.peek()]) {
+        stack.pop();
+      }
+      if (stack.isEmpty()) {
+        result[i] = 0;
+      } else {
+        result[i] = stack.peek() - i;
       }
       stack.push(i);
     }
