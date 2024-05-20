@@ -13,6 +13,24 @@ public class FindMinInRotatedSortedArray {
     FindMinInRotatedSortedArray findMinInRotatedSortedArray = new FindMinInRotatedSortedArray();
     int[] nums = {3, 4, 5, 1, 2};
     System.out.println(findMinInRotatedSortedArray.findMinInRotatedSortedArray(nums));
+    System.out.println(findMinInRotatedSortedArray.findMinInRotatedSortedArrayUsingEliminationTechnique(nums));
+  }
+
+  private int findMinInRotatedSortedArrayUsingEliminationTechnique(int[] nums) {
+    int size = nums.length;
+    int left = 0, right = size - 1;
+    int min = Integer.MAX_VALUE;
+    while (left <= right) {
+      int mid = (left + right) / 2;
+      if (nums[left] <= nums[mid]) {
+        min = Math.min(min, nums[left]);
+        left = mid + 1;
+      } else {
+        min = Math.min(min, nums[mid]);
+        right = mid - 1;
+      }
+    }
+    return min;
   }
 
   private int findMinInRotatedSortedArray(int[] nums) {
