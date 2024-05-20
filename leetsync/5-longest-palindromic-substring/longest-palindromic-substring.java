@@ -1,10 +1,16 @@
 class Solution {
-    int low, maxLength;
+
+    int[][] dp = new int[1001][1001];
 
     public String longestPalindrome(String s) {
         int size = s.length();
         int maxLength = 0;
         int startingIndex = 0;
+        for (int i = 0; i < 1001; i++) {
+            for (int j = 0; j < 1001; j++) {
+                dp[i][j] = -1;
+            }
+        }
         for (int i = 0; i < size; i++) {
             for (int j = i; j < size; j++) {
                 if (isPalindrome(s, i, j)) {
@@ -18,14 +24,18 @@ class Solution {
         return s.substring(startingIndex, startingIndex + maxLength);
     }
 
-    private boolean isPalindrome(String s, int i, int j) {
-        if (i >= j) {
+    private boolean isPalindrome(String s, int l, int r) {
+        if (l >= r) {
             return true;
         }
-        if (s.charAt(i) == s.charAt(j)) {
-            return isPalindrome(s, i + 1, j - 1);
-        } else {
-            return false;
+        if (dp[l][r] != -1) {
+            return dp[l][r] == 1;
         }
+        if (s.charAt(l) == s.charAt(r)) {
+            dp[l][r] = isPalindrome(s, l + 1, r - 1) ? 1 : 0;
+        } else {
+            dp[l][r] = 0;
+        }
+        return dp[l][r] == 1;
     }
 }
