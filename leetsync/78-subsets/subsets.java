@@ -1,17 +1,20 @@
 class Solution {
+    List<List<Integer>> result = new ArrayList<>();
+
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        Arrays.sort(nums);
-        backtrack(result, new ArrayList<Integer>(), nums, 0);
+        List<Integer> temp = new ArrayList<>();
+        subsetsTakeOrNoTake(nums, 0, temp);
         return result;
     }
 
-    private void backtrack(List<List<Integer>> result, ArrayList<Integer> tempList, int[] nums, int start) {
-        result.add(new ArrayList<>(tempList));
-        for (int i = start; i < nums.length; i++) {
-            tempList.add(nums[i]);
-            backtrack(result, tempList, nums, i + 1);
-            tempList.remove(tempList.size() - 1);
+    private void subsetsTakeOrNoTake(int[] nums, int index, List<Integer> temp) {
+        if (index >= nums.length) {
+            result.add(new ArrayList<>(temp));
+            return;
         }
+        temp.add(nums[index]);
+        subsetsTakeOrNoTake(nums, index + 1, temp);
+        temp.remove(temp.size() - 1);
+        subsetsTakeOrNoTake(nums, index + 1, temp);
     }
 }
