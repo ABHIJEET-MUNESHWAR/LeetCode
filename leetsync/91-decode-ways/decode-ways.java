@@ -10,14 +10,16 @@ class Solution {
     int[] dp = new int[101];
 
     private int solve(String s, int index, int size) {
+        if (dp[index] != -1) {
+            return dp[index];
+        }
         if (index == size) {
+            dp[index] = 1;
             return 1; // Found 1 valid split
         }
         if (s.charAt(index) == '0') {
+            dp[index] = 0;
             return 0; // Not possible to split
-        }
-        if (dp[index] != -1) {
-            return dp[index];
         }
         int onlyIthChar = solve(s, index + 1, size);
         int ithAndIthPlusOneChar = 0;
