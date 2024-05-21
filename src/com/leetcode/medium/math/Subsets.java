@@ -18,6 +18,27 @@ public class Subsets {
     Subsets subsets = new Subsets();
     int[] nums = {1, 2, 3};
     ListUtils.printLists(subsets.subsets(nums));
+    System.out.println();
+    ListUtils.printLists(subsets.subsetsTakeOrNoTake(nums));
+  }
+
+  List<List<Integer>> result = new ArrayList<>();
+
+  private List<List<Integer>> subsetsTakeOrNoTake(int[] nums) {
+    List<Integer> temp = new ArrayList<>();
+    subsetsTakeOrNoTake(nums, 0, temp);
+    return result;
+  }
+
+  private void subsetsTakeOrNoTake(int[] nums, int index, List<Integer> temp) {
+    if (index >= nums.length) {
+      result.add(new ArrayList<>(temp));
+      return;
+    }
+    temp.add(nums[index]);
+    subsetsTakeOrNoTake(nums, index + 1, temp);
+    temp.remove(temp.size() - 1);
+    subsetsTakeOrNoTake(nums, index + 1, temp);
   }
 
   private List<List<Integer>> subsets(int[] nums) {
