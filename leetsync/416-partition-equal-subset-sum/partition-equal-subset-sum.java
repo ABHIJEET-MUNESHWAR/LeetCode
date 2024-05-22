@@ -18,6 +18,9 @@ class Solution {
         for (int i = 0; i < size; i++) {
             Set<Integer> tempSet = new HashSet<>();
             for (int setItem : set) {
+                if ((setItem + nums[i]) == target) {
+                    return true;
+                }
                 tempSet.add(setItem + nums[i]);
                 tempSet.add(setItem);
             }
