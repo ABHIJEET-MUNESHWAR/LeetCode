@@ -1,5 +1,6 @@
 package com.leetcode.medium.backtracking;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,6 +25,7 @@ public class TheNumberOfBeautifulSubsets {
   private int beautifulSubsets(int[] nums, int k) {
     K = k;
     Map<Integer, Integer> frequency = new HashMap<>();
+    Arrays.sort(nums);
     solve(nums, 0, frequency);
     return result - 1;
   }
@@ -36,7 +38,7 @@ public class TheNumberOfBeautifulSubsets {
     // Skip
     solve(nums, index + 1, frequency);
     // Take
-    if (!frequency.containsKey(nums[index] - K) && !frequency.containsKey(K + nums[index])) {
+    if (!frequency.containsKey(nums[index] - K)) {
       frequency.put(nums[index], frequency.getOrDefault(nums[index], 0) + 1); // Do
       solve(nums, index + 1, frequency); // Backtracking
       frequency.put(nums[index], frequency.getOrDefault(nums[index], 0) - 1); // Undo
