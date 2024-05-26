@@ -1,7 +1,4 @@
-package com.leetcode.slidingwindow;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.leetcode.medium.slidingwindow;
 
 /**
  * Created using IntelliJ IDEA.
