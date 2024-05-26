@@ -1,30 +1,30 @@
 class Solution {
+    int mod = 1000000007;
+
     public int checkRecord(int n) {
-        for (int i = 0; i < 100001; i++) {
-            for (int j = 0; j < 2; j++) {
-                Arrays.fill(dp[i][j], -1);
+        int M = 1000000007;
+        int[][][] t = new int[100001][2][3];
+
+        // Base Case - 0 number of days. So, t[0][A][L], we return 1
+        for (int A = 0; A <= 1; ++A) {
+            for (int L = 0; L <= 2; ++L) {
+                t[0][A][L] = 1;
             }
         }
-        return solve(n, 0, 0);
-    }
 
-    int mod = 1000000007;
-    int[][][] dp = new int[100001][2][3];
+        for (int i = 1; i <= n; i++) {
+            for (int A = 0; A <= 1; A++) {
+                for (int L = 0; L <= 2; L++) {
 
-    private int solve(int n, int absent, int consecutiveLate) {
-        // Pruning i.e. ignoring meaningless cases
-        if (absent > 1 || consecutiveLate > 2) {
-            return 0;
+                    long result = t[i - 1][A][0]; // P ---> solve(n-1, absent, 0) % M;
+                    result += (L < 2 ? t[i - 1][A][L + 1] : 0); // L ---> solve(n-1, absent, consecutive_late+1) % M;
+                    result += (A == 0 ? t[i - 1][A + 1][0] : 0); // A ---> solve(n-1, absent+1, 0) % M;
+
+                    t[i][A][L] = (int) (result % M);
+                }
+            }
         }
-        if (n == 0) {
-            return 1;
-        }
-        if (dp[n][absent][consecutiveLate] != -1) {
-            return dp[n][absent][consecutiveLate];
-        }
-        int absentCount = solve(n - 1, absent + 1, 0) % mod;
-        int lateCount = solve(n - 1, absent, consecutiveLate + 1) % mod;
-        int presentCount = solve(n - 1, absent, 0) % mod;
-        return dp[n][absent][consecutiveLate] = ((absentCount + lateCount) % mod + presentCount) % mod;
+
+        return t[n][0][0];
     }
 }
