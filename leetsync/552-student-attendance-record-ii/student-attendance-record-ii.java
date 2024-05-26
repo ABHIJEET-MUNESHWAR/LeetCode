@@ -1,19 +1,30 @@
 class Solution {
-    public int checkRecord(int n) {
-        final int MOD = 1000000007;
-        int[][][] f = new int[n + 1][2][3];
+    int mod = 1000000007;
 
-        f[0] = new int[][] { { 1, 1, 1 }, { 1, 1, 1 } };
-        for (int i = 1; i <= n; i++)
-            for (int j = 0; j < 2; j++)
-                for (int k = 0; k < 3; k++) {
-                    int val = f[i - 1][j][2]; // ...P
-                    if (j > 0)
-                        val = (val + f[i - 1][j - 1][2]) % MOD; // ...A
-                    if (k > 0)
-                        val = (val + f[i - 1][j][k - 1]) % MOD; // ...L
-                    f[i][j][k] = val;
+    public int checkRecord(int n) {
+        int M = 1000000007;
+        int[][][] t = new int[100001][2][3];
+
+        // Base Case - 0 number of days. So, t[0][A][L], we return 1
+        for (int A = 0; A <= 1; ++A) {
+            for (int L = 0; L <= 2; ++L) {
+                t[0][A][L] = 1;
+            }
+        }
+
+        for (int i = 1; i <= n; i++) {
+            for (int A = 0; A <= 1; A++) {
+                for (int L = 0; L <= 2; L++) {
+
+                    long result = t[i - 1][A][0]; // P ---> solve(n-1, absent, 0) % M;
+                    result += (L < 2 ? t[i - 1][A][L + 1] : 0); // L ---> solve(n-1, absent, consecutive_late+1) % M;
+                    result += (A == 0 ? t[i - 1][A + 1][0] : 0); // A ---> solve(n-1, absent+1, 0) % M;
+
+                    t[i][A][L] = (int) (result % M);
                 }
-        return f[n][1][2];
+            }
+        }
+
+        return t[n][0][0];
     }
 }
