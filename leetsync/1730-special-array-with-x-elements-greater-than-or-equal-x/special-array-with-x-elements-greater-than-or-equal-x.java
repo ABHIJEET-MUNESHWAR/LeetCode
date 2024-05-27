@@ -2,13 +2,21 @@ class Solution {
     public int specialArray(int[] nums) {
         int size = nums.length;
         Arrays.sort(nums);
-        for (int x = 0; x <= size; x++) {
-            int index = lowerBoundBinarySearch(nums, x);
-            if ((size - index) == x) {
-                return x;
+        int xLeft = 0;
+        int xRight = size;
+        while (xLeft <= xRight) {
+            int xMid = (xLeft + xRight) / 2;
+            int index = lowerBoundBinarySearch(nums, xMid);
+            if (size - index == xMid) {
+                return xMid;
+            } else if (size - index > xMid) {
+                xLeft = xMid + 1;
+            } else {
+                xRight = xMid - 1;
             }
         }
         return -1;
+
     }
 
     private int lowerBoundBinarySearch(int[] nums, int x) {
