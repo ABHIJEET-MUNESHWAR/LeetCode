@@ -1,4 +1,4 @@
-package com.leetcode.easy.searching;
+package com.leetcode.easy.search;
 
 /**
  * Created using IntelliJ IDEA.
