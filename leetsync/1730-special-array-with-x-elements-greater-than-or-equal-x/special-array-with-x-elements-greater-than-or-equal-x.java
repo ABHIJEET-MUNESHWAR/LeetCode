@@ -1,35 +1,27 @@
 class Solution {
     public int specialArray(int[] nums) {
         int size = nums.length;
-        Arrays.sort(nums);
-        int xLeft = 0;
-        int xRight = size;
-        while (xLeft <= xRight) {
-            int xMid = (xLeft + xRight) / 2;
-            int index = lowerBoundBinarySearch(nums, xMid);
-            if (size - index == xMid) {
-                return xMid;
-            } else if (size - index > xMid) {
-                xLeft = xMid + 1;
+        // Frequency array
+        int[] frequencyMap = new int[size + 1];
+
+        // Populate the frequency array
+        for (int i = 0; i < size; i++) {
+            if (nums[i] > size) {
+                frequencyMap[size]++;
             } else {
-                xRight = xMid - 1;
+                frequencyMap[nums[i]]++;
+            }
+        }
+
+        // Calculate prefix sum from the end
+        int cumulativeSum = 0;
+        for (int i = size; i >= 0; i--) {
+            cumulativeSum += frequencyMap[i];
+            if (i == cumulativeSum) {
+                return i;
             }
         }
         return -1;
 
-    }
-
-    private int lowerBoundBinarySearch(int[] nums, int x) {
-        int low = 0;
-        int high = nums.length - 1;
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            if (nums[mid] < x) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
-            }
-        }
-        return low;
     }
 }
