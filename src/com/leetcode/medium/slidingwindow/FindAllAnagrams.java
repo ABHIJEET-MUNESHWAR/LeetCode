@@ -2,6 +2,7 @@ package com.leetcode.medium.slidingwindow;
 
 import com.leetcode.utils.ListUtils;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -23,10 +24,32 @@ public class FindAllAnagrams {
     List<Integer> answer = new ArrayList<>();
     int sourceSize = s.length();
     int patternSize = p.length();
-    int[] patternFrequency = new int[26];
-    for (char c : p.toCharArray()) {
-      patternFrequency[c - 'a']++;
+    int[] frequencyMap = new int[26];
+    for (int i = 0; i < patternSize; i++) {
+      frequencyMap[p.charAt(i) - 'a']++;
+    }
+    int left = 0, right = 0;
+    while (right < sourceSize) {
+      frequencyMap[s.charAt(right) - 'a']--;
+      if ((right - left + 1) == patternSize) {
+        if (isAllZero(frequencyMap)) {
+          answer.add(left);
+        }
+        frequencyMap[s.charAt(left) - 'a']++;
+        left++;
+      }
+      right++;
     }
     return answer;
+  }
+
+  private boolean isAllZero(int[] frequencyMap) {
+    int size = frequencyMap.length;
+    for (int i = 0; i < size; i++) {
+      if (frequencyMap[i] != 0) {
+        return false;
+      }
+    }
+    return true;
   }
 }
