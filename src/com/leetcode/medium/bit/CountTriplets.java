@@ -5,6 +5,8 @@ package com.leetcode.medium.bit;
  * Author:  abhijeet,
  * Date:    30/05/24,
  * Time:    2:52 pm
+ * 1442. Count Triplets That Can Form Two Arrays of Equal XOR
+ * https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/description/?envType=daily-question&envId=2024-05-30
  */
 public class CountTriplets {
   public static void main(String[] args) {
