@@ -15,6 +15,27 @@ public class BuySellCoolDownProfit {
     BuySellCoolDownProfit buySellCoolDownProfit = new BuySellCoolDownProfit();
     int[] prices = {1, 2, 3, 0, 2};
     System.out.println(buySellCoolDownProfit.maxProfit(prices));
+    System.out.println(buySellCoolDownProfit.maxProfitBottomUp(prices));
+  }
+
+  private int maxProfitBottomUp(int[] prices) {
+    int size = prices.length;
+    if (size == 0 || size == 1) {
+      return 0;
+    }
+    int[] dp = new int[size + 1];
+    dp[0] = 0;
+    dp[1] = Math.max(prices[1] - prices[0], 0);
+    for (int i = 2; i < size; i++) {
+      dp[i] = dp[i - 1];
+      // Fill up dp[i]
+      for (int j = 0; j < i; j++) {
+        int todayProfit = prices[i] - prices[j];
+        int prevProfit = (j >= 2) ? dp[j - 2] : 0;
+        dp[i] = Math.max(prevProfit + todayProfit, dp[i]);
+      }
+    }
+    return dp[size - 1];
   }
 
   private int maxProfit(int[] prices) {
