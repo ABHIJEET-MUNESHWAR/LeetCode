@@ -20,7 +20,7 @@ class Solution {
             return dp[i][j];
         }
         if (word1.charAt(i) == word2.charAt(j)) {
-            return solve(word1, word2, i + 1, j + 1, m, n, dp);
+            return dp[i][j] = solve(word1, word2, i + 1, j + 1, m, n, dp);
         }
         int insert = 1 + solve(word1, word2, i, j + 1, m, n, dp);
         int delete = 1 + solve(word1, word2, i + 1, j, m, n, dp);
