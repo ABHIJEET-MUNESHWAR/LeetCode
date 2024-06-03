@@ -7,8 +7,10 @@ class Solution {
         while (i < sourceSize && j < targetSize) {
             if (s.charAt(i) == t.charAt(j)) {
                 j++;
+                i++;
+            } else {
+                i++;
             }
-            i++;
         }
         answer = targetSize - j;
         return answer;
