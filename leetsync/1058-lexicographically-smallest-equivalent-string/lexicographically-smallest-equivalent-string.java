@@ -4,7 +4,7 @@ class Solution {
         if (parent[i] == i) {
             return i;
         }
-        return find(parent[i], parent);
+        return parent[i]=find(parent[i], parent);
     }
 
     public void union(int i, int j, int[] parent) {
