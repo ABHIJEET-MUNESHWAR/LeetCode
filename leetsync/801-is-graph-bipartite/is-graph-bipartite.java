@@ -1,14 +1,14 @@
 class Solution {
 
     public boolean isBipartite(int[][] graph) {
-        int vertexCount = graph.length;
-        int[] colors = new int[vertexCount];
-        Arrays.fill(colors, -1); // No nodes coloured at the start
+        int vortexCount = graph.length;
+        int[] colors = new int[vortexCount];
+        Arrays.fill(colors, -1);
         // Red: 1
         // Green: 0
-        for (int i = 0; i < vertexCount; i++) {
+        for (int i = 0; i < vortexCount; i++) {
             if (colors[i] == -1) {
-                if (!checkBipartiteDFS(graph, i, colors, 1)) {
+                if (!checkBipartiteBFS(graph, i, colors, 1)) {
                     return false;
                 }
             }
@@ -16,16 +16,18 @@ class Solution {
         return true;
     }
 
-    private boolean checkBipartiteDFS(int[][] graph, int currentNode, int[] colors, int currentColor) {
+    private boolean checkBipartiteBFS(int[][] graph, int currentNode, int[] colors, int currentColor) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(currentNode);
         colors[currentNode] = currentColor;
-        for (int neighbor : graph[currentNode]) {
-            if (colors[neighbor] == colors[currentNode]) {
-                return false;
-            }
-            if (colors[neighbor] == -1) {
-                int colourOfNeighbor = 1 - currentColor;
-                if (!checkBipartiteDFS(graph, neighbor, colors, colourOfNeighbor)) {
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            for (int neighbor : graph[node]) {
+                if (colors[neighbor] == colors[node]) {
                     return false;
+                } else if (colors[neighbor] == -1) {
+                    colors[neighbor] = 1 - colors[node];
+                    queue.add(neighbor);
                 }
             }
         }
