@@ -42,7 +42,7 @@ public class IsBipartite {
     colors[currentNode] = currentColor;
     while (!queue.isEmpty()) {
       int node = queue.poll();
-      for (int neighbor : graph[node]) { 
+      for (int neighbor : graph[node]) {
         if (colors[neighbor] == colors[node]) {
           return false;
         } else if (colors[neighbor] == -1) {
