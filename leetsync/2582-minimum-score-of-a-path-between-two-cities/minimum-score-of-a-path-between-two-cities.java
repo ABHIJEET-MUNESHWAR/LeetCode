@@ -20,17 +20,23 @@ class Solution {
             graph.get(road[0]).add(new Pair(road[1], road[2]));
             graph.get(road[1]).add(new Pair(road[0], road[2]));
         }
-        boolean[] visited = new boolean[n + 1];
-        dfs(graph, visited, 1);
+        bfs(graph, 1);
         return minScore;
     }
 
-    private void dfs(Map<Integer, List<Pair>> graph, boolean[] visited, int currentNode) {
+    private void bfs(Map<Integer, List<Pair>> graph, int currentNode) {
+        boolean[] visited = new boolean[graph.size()];
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(currentNode);
         visited[currentNode] = true;
-        for (Pair pair : graph.get(currentNode)) {
-            minScore = Math.min(minScore, pair.score);
-            if (!visited[pair.node]) {
-                dfs(graph, visited, pair.node);
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            for (Pair pair : graph.get(node)) {
+                minScore = Math.min(minScore, pair.score);
+                if (!visited[pair.node]) {
+                    visited[pair.node] = true;
+                    queue.add(pair.node);
+                }
             }
         }
     }
