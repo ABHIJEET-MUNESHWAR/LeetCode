@@ -1,45 +1,37 @@
 class Solution {
+    class Pair {
+        int node;
+        int score;
 
-    public int find(int i, int[] parent) {
-        if (parent[i] == i) {
-            return i;
+        public Pair(int node, int score) {
+            this.node = node;
+            this.score = score;
         }
-        return parent[i] = find(parent[i], parent);
     }
 
-    public void union(int i, int j, int[] parent, int[] rank) {
-        int parentOfI = find(i, parent);
-        int parentOfJ = find(j, parent);
-        if (parentOfI == parentOfJ) {
-            return;
-        }
-        if (rank[parentOfI] > rank[parentOfJ]) {
-            parent[parentOfJ] = parentOfI;
-        } else if (rank[parentOfI] < rank[parentOfJ]) {
-            parent[parentOfI] = parentOfJ;
-        } else {
-            parent[parentOfI] = parentOfJ;
-            rank[parentOfJ]++;
-        }
-    }
+    int minScore = Integer.MAX_VALUE;
 
     public int minScore(int n, int[][] roads) {
-        int[] parent = new int[n + 1];
-        int[] rank = new int[n + 1];
+        Map<Integer, List<Pair>> graph = new HashMap<>();
         for (int i = 0; i <= n; i++) {
-            parent[i] = i;
+            graph.putIfAbsent(i, new ArrayList<>());
         }
-        int minPath = Integer.MAX_VALUE;
         for (int[] road : roads) {
-            union(road[0], road[1], parent, rank);
+            graph.get(road[0]).add(new Pair(road[1], road[2]));
+            graph.get(road[1]).add(new Pair(road[0], road[2]));
         }
-        int parentOfZero = find(1, parent);
-        for (int[] road : roads) {
-            int parentOfRoad = find(road[0], parent);
-            if (parentOfRoad == parentOfZero) {
-                minPath = Math.min(minPath, road[2]);
+        boolean[] visited = new boolean[n + 1];
+        dfs(graph, visited, 1);
+        return minScore;
+    }
+
+    private void dfs(Map<Integer, List<Pair>> graph, boolean[] visited, int currentNode) {
+        visited[currentNode] = true;
+        for (Pair pair : graph.get(currentNode)) {
+            minScore = Math.min(minScore, pair.score);
+            if (!visited[pair.node]) {
+                dfs(graph, visited, pair.node);
             }
         }
-        return minPath;
     }
 }
