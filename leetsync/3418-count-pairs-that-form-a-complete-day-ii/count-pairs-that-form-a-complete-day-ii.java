@@ -1,30 +1,17 @@
 class Solution {
     public long countCompleteDayPairs(int[] hours) {
-
-        // Initialize a frequency array to count occurrences of each remainder
-
-        int[] remainderCounts = new int[24];
-
-        long count = 0;
-
-        for (int hour : hours) {
-
-            int remainder = hour % 24;
-
-            // The complement remainder needed to form a complete day
-
-            int complement = (24 - remainder) % 24;
-
-            // Add the count of numbers that can pair with this one
-
-            count += remainderCounts[complement];
-
-            // Increment the count for this remainder
-
-            remainderCounts[remainder]++;
-
+        int size = hours.length;
+        long[] frequencyMap = new long[24];
+        long totalPairs = 0;
+        for (int i = 0; i < size; i++) {
+            int remainder = hours[i] % 24;
+            if (remainder == 0) {
+                totalPairs += frequencyMap[remainder];
+            } else {
+                totalPairs += frequencyMap[24 - remainder];
+            }
+            frequencyMap[remainder]++;
         }
-
-        return count;
+        return totalPairs;
     }
 }
