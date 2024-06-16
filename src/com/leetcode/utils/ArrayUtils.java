@@ -21,6 +21,13 @@ public class ArrayUtils {
     }
   }
 
+  public static void printDoubleArray(double[] arr) {
+    double size = arr.length;
+    for (int i = 0; i < size; i++) {
+      System.out.println(arr[i]);
+    }
+  }
+
   public static void printMatrix(int[][] matrix) {
     int row = matrix.length;
     int col = matrix[0].length;
