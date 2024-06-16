@@ -1,11 +1,14 @@
 class Solution {
     public int fib(int n) {
-        int[] dp = new int[31];
-        dp[0] = 0;
-        dp[1] = 1;
-        for (int i = 2; i <= 30; i++) {
-            dp[i] = dp[i - 1] + dp[i - 2];
+        if (n <= 1) {
+            return n;
         }
-        return dp[n];
+        int a = 0, b = 1, c = 0;
+        for (int i = 1; i < n; i++) {
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return c;
     }
 }
