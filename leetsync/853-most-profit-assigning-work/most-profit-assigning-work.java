@@ -1,29 +1,34 @@
 class Solution {
     public int maxProfitAssignment(int[] difficulty, int[] profit, int[] worker) {
-
-        int profitSize = profit.length;
         int workerSize = worker.length;
-        // Create a max-heap using a priority queue
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> b[0] - a[0]); // Max-heap by profit
-
-        for (int i = 0; i < profitSize; i++) {
-            pq.offer(new int[] { profit[i], difficulty[i] });
-        }
+        int difficultySize = difficulty.length;
         int totalProfit = 0;
-        Arrays.sort(worker);
-        for (int i = 0; i < workerSize / 2; i++) {
-            int temp = worker[i];
-            worker[i] = worker[workerSize - i - 1];
-            worker[workerSize - i - 1] = temp;
+        List<int[]> jobsList = new ArrayList<>();
+        for (int i = 0; i < difficultySize; i++) {
+            jobsList.add(new int[] { difficulty[i], profit[i] });
         }
-        int i = 0;
-        while (i < workerSize && !pq.isEmpty()) {
-            if (pq.peek()[1] > worker[i]) {
-                pq.poll();
-            } else {
-                totalProfit += pq.peek()[0];
-                i++;
+        // Sort the vector based on difficulty
+        Collections.sort(jobsList, (a, b) -> Integer.compare(a[0], b[0]));
+        // Pre-processing to find the maximum profit till index i at constant time
+        for (int i = 1; i < difficultySize; i++) {
+            jobsList.get(i)[1] = Math.max(jobsList.get(i)[1], jobsList.get(i - 1)[1]);
+        }
+        for (int i = 0; i < workerSize; i++) {
+            int workerDifficulty = worker[i];
+            // Apply binary search on vec
+            int low = 0;
+            int high = difficultySize - 1;
+            int maxProfit = 0;
+            while (low <= high) {
+                int mid = low + (high - low) / 2;
+                if (jobsList.get(mid)[0] <= workerDifficulty) {
+                    maxProfit = Math.max(maxProfit, jobsList.get(mid)[1]);
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
             }
+            totalProfit += maxProfit;
         }
         return totalProfit;
     }
