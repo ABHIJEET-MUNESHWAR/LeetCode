@@ -1,32 +1,22 @@
 class Solution {
 
-    int[][] dp;
-
     public int longestStrChain(String[] words) {
         Arrays.sort(words, (a, b) -> Integer.compare(a.length(), b.length()));
-        dp = new int[1001][1001];
-        for (int i = 0; i < 1001; i++) {
-            Arrays.fill(dp[i], -1);
+        int size = words.length;
+        int[] dp = new int[size];
+        for (int i = 0; i < size; i++) {
+            dp[i] = 1;
         }
-        return solveRecursionMemoization(words, -1, 0);
-    }
-
-    private int solveRecursionMemoization(String[] words, int previousIndex, int currentIndex) {
-        if (currentIndex >= words.length) {
-            return 0;
+        int maxLength = 1;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < i; j++) {
+                if (isPredecessor(words[j], words[i])) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                    maxLength = Math.max(maxLength, dp[i]);
+                }
+            }
         }
-        if (previousIndex != -1 && dp[previousIndex][currentIndex] != -1) {
-            return dp[previousIndex][currentIndex];
-        }
-        int take = 0;
-        if (previousIndex == -1 || isPredecessor(words[previousIndex], words[currentIndex])) {
-            take = 1 + solveRecursionMemoization(words, currentIndex, currentIndex + 1);
-        }
-        int skip = solveRecursionMemoization(words, previousIndex, currentIndex + 1);
-        if (previousIndex != -1) {
-            dp[previousIndex][currentIndex] = Math.max(take, skip);
-        }
-        return Math.max(take, skip);
+        return maxLength;
     }
 
     private boolean isPredecessor(String word1, String word2) {
