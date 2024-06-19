@@ -1,4 +1,4 @@
-package com.leetcode.medium.dynamicprogramming;
+package com.leetcode.medium.dynamicprogramming.lis;
 
 import java.util.ArrayList;
 
@@ -47,17 +47,17 @@ public class LongestIncreasingSubsequence {
 
 
   private int lengthOfLISBottomUp(int[] nums) {
-    int[] t = new int[2501];
+    int[] dp = new int[2501];
     for (int i = 0; i < 2501; i++) {
-      t[i] = 1;
+      dp[i] = 1;
     }
     int size = nums.length;
     int maxLIS = 1;
     for (int i = 0; i < size; i++) {
       for (int j = 0; j < i; j++) {
         if (nums[j] < nums[i]) {
-          t[i] = Math.max(t[i], t[j] + 1);
-          maxLIS = Math.max(maxLIS, t[i]);
+          dp[i] = Math.max(dp[i], dp[j] + 1);
+          maxLIS = Math.max(maxLIS, dp[i]);
         }
       }
     }
