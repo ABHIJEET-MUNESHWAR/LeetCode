@@ -1,11 +1,14 @@
 class Solution {
     public int maxLength(List<String> arr) {
-        return solveRecursion(arr, "", 0);
+        return solveRecursionMemoization(arr, "", 0, new HashMap<String, Integer>());
     }
 
-    private int solveRecursion(List<String> arr, String temp, int index) {
+    private int solveRecursionMemoization(List<String> arr, String temp, int index, HashMap<String, Integer> map) {
         if (index >= arr.size()) {
             return temp.length();
+        }
+        if (map.containsKey(temp)) {
+            return map.get(temp);
         }
         int includeLength = 0;
         int excludeLength = 0;
@@ -14,12 +17,13 @@ class Solution {
             // Include
             String originalTemp = temp;
             temp += arr.get(index);
-            includeLength += solveRecursion(arr, temp, index + 1);
+            includeLength += solveRecursionMemoization(arr, temp, index + 1, map);
             temp = originalTemp;
         }
         // Exclude
-        excludeLength += solveRecursion(arr, temp, index + 1);
+        excludeLength += solveRecursionMemoization(arr, temp, index + 1, map);
         int result = Math.max(includeLength, excludeLength);
+        map.put(temp, result);
         return result;
     }
 
