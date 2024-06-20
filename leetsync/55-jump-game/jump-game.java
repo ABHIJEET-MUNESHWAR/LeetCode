@@ -1,22 +1,16 @@
 class Solution {
     public boolean canJump(int[] nums) {
-        Boolean[] memo = new Boolean[nums.length];
-        return canJumpRecursionMemoization(nums, nums.length, 0, memo);
-    }
-
-    private boolean canJumpRecursionMemoization(int[] nums, int length, int index, Boolean[] memo) {
-        if (index >= length - 1) {
-            return true;
-        }
-        if (memo[index] != null) {
-            return memo[index];
-        }
-        memo[index] = false;
-        for (int step = nums[index]; step > 0; step--) {
-            if (canJumpRecursionMemoization(nums, length, index + step, memo)) {
-                return memo[index] = true;
+        int size = nums.length;
+        boolean[] dp = new boolean[size];
+        Arrays.fill(dp, false);
+        dp[0] = true;
+        for (int i = 1; i < size; i++) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (dp[j] && nums[j] + j >= i) {
+                    dp[i] = true;
+                }
             }
         }
-        return memo[index];
+        return dp[size - 1];
     }
 }
