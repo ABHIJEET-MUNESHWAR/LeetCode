@@ -1,21 +1,25 @@
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
-
-        int n = nums.length;
-        int count = 0;
-        int oddsCount = 0;
-        Map<Integer, Integer> oddsFrequencyMap = new HashMap<>();
-        oddsFrequencyMap.put(0, 1);
-        for (int i = 0; i < n; i++) {
-            if (nums[i] % 2 == 1) {
-                oddsCount++;
+        int size = nums.length;
+        int result = 0;
+        int oddCount = 0;
+        int previousCount = 0;
+        int left = 0, right = 0;
+        while (right < size) {
+            if (nums[right] % 2 == 1) {
+                oddCount++;
+                previousCount = 0;
             }
-            int key = oddsCount - k;
-            if (oddsFrequencyMap.containsKey(key)) {
-                count += oddsFrequencyMap.get(key);
+            while (oddCount == k) {
+                previousCount++;
+                if (left < size && nums[left] % 2 == 1) {
+                    oddCount--;
+                }
+                left++;
             }
-            oddsFrequencyMap.put(oddsCount, oddsFrequencyMap.getOrDefault(oddsCount, 0) + 1);
+            result += previousCount;
+            right++;
         }
-        return count;
+        return result;
     }
 }
