@@ -56,9 +56,9 @@ public class BuySellCoolDownProfit {
     }
     int profit = 0;
     if (isBuy == 1) {
-      int take = solve(prices, dayIndex + 1, length, 0, dp) - prices[dayIndex];
-      int notTake = solve(prices, dayIndex + 1, length, 1, dp);
-      profit = Math.max(profit, Math.max(take, notTake));
+      int buy = solve(prices, dayIndex + 1, length, 0, dp) - prices[dayIndex];
+      int notBuy = solve(prices, dayIndex + 1, length, 1, dp);
+      profit = Math.max(profit, Math.max(buy, notBuy));
     } else {
       int sell = prices[dayIndex] + solve(prices, dayIndex + 2, length, 1, dp);
       int notSell = solve(prices, dayIndex + 1, length, 0, dp);
