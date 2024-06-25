@@ -1,4 +1,4 @@
-package com.leetcode.medium.dynamicprogramming.twodimension;
+package com.leetcode.medium.dynamicprogramming.string;
 
 /**
  * Created using IntelliJ IDEA.
