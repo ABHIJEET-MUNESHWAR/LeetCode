@@ -21,7 +21,34 @@ public class BalanceBST {
     root.right = new TreeNode(2);
     root.right.right = new TreeNode(3);
     root.right.right.right = new TreeNode(4);
+    root = balanceBST.balanceBSTApproachTwo(root);
     root = balanceBST.balanceBST(root);
+  }
+
+  private TreeNode balanceBSTApproachTwo(TreeNode root) {
+    List<Integer> sortedArray = new ArrayList<>();
+    inorder(root, sortedArray);
+    return constructBalancedBst(sortedArray, 0, sortedArray.size() - 1);
+  }
+
+  private TreeNode constructBalancedBst(List<Integer> sortedArray, int left, int right) {
+    if (left > right) {
+      return null;
+    }
+    int mid = (left + right) / 2;
+    TreeNode root = new TreeNode(sortedArray.get(mid));
+    root.left = constructBalancedBst(sortedArray, left, mid - 1);
+    root.right = constructBalancedBst(sortedArray, mid + 1, right);
+    return root;
+  }
+
+  private void inorder(TreeNode root, List<Integer> sortedArray) {
+    if (root == null) {
+      return;
+    }
+    inorder(root.left, sortedArray);
+    sortedArray.add(root.val);
+    inorder(root.right, sortedArray);
   }
 
   private TreeNode balanceBST(TreeNode root) {
