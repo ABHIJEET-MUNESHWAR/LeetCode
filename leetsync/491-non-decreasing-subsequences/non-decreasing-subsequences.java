@@ -16,10 +16,11 @@ class Solution {
                 continue;
             }
             if (current.isEmpty() || nums[i] >= current.get(current.size() - 1)) {
+
                 current.add(nums[i]);
-                used.add(nums[i]);
                 backTrack(nums, current, result, i + 1);
                 current.remove(current.size() - 1);
+                used.add(nums[i]);
             }
         }
     }
