@@ -15,27 +15,25 @@
  */
 class Solution {
     public boolean isCompleteTree(TreeNode root) {
+        int totalNodes = inorderCount(root);
+        int index = 1;
+        return dfs(root, totalNodes, index);
+    }
+
+    private boolean dfs(TreeNode root, int totalNodes, int index) {
         if (root == null) {
             return true;
         }
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        boolean isPreviousNull = false;
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            for (int i = 0; i < size; i++) {
-                TreeNode node = queue.poll();
-                if (node != null && isPreviousNull) {
-                    return false;
-                }
-                if (node == null) {
-                    isPreviousNull = true;
-                    continue;
-                }
-                queue.add(node.left);
-                queue.add(node.right);
-            }
+        if (index > totalNodes) {
+            return false;
         }
-        return true;
+        return dfs(root.left, totalNodes, 2 * index) && dfs(root.right, totalNodes, 2 * index + 1);
+    }
+
+    private int inorderCount(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return 1 + inorderCount(root.left) + inorderCount(root.right);
     }
 }
