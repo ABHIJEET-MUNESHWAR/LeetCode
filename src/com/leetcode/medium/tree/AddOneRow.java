@@ -53,6 +53,34 @@ public class AddOneRow {
     return root;
   }
 
+  private TreeNode addOneRowDfsTwo(TreeNode root, int val, int depth) {
+    if (depth == 1) {
+      TreeNode newRoot = new TreeNode(val);
+      newRoot.left = root;
+      return newRoot;
+    }
+    return addDfsTwo(root, val, depth, 1);
+  }
+
+  private TreeNode addDfsTwo(TreeNode root, int val, int depth, int currentDepth) {
+    if (root == null) {
+      return null;
+    }
+    if (currentDepth == depth - 1) {
+      TreeNode leftNode = root.left;
+      TreeNode rightNode = root.right;
+
+      root.left = new TreeNode(val);
+      root.right = new TreeNode(val);
+      root.left.left = leftNode;
+      root.right.right = rightNode;
+      return root;
+    }
+    root.left = addDfsTwo(root.left, val, depth, currentDepth + 1);
+    root.right = addDfsTwo(root.right, val, depth, currentDepth + 1);
+    return root;
+  }
+
   private TreeNode addOneRowBFS(TreeNode root, int val, int depth) {
     Queue<TreeNode> queue = new LinkedList<>();
     if (depth == 1) {
