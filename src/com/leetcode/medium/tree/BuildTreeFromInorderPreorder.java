@@ -10,12 +10,12 @@ import com.leetcode.utils.TreeNode;
  * 105. Construct Binary Tree from Preorder and Inorder Traversal
  * https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/
  */
-public class BuildTree {
+public class BuildTreeFromInorderPreorder {
   public static void main(String[] args) {
-    BuildTree buildTree = new BuildTree();
+    BuildTreeFromInorderPreorder buildTreeFromInorderPreorder = new BuildTreeFromInorderPreorder();
     int[] preorder = {3, 9, 20, 15, 7};
     int[] inorder = {9, 3, 15, 20, 7};
-    TreeNode root = buildTree.buildTree(preorder, inorder);
+    TreeNode root = buildTreeFromInorderPreorder.buildTree(preorder, inorder);
     root.inorderTraversal(root);
   }
 
