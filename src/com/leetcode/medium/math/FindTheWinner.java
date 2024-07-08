@@ -24,9 +24,9 @@ public class FindTheWinner {
     if (n == 1) {
       return 0;
     }
-    int x = findTheWinnerUsingRecursion(n - 1, k);
-    int y = (x + k) % n;
-    return y;
+    int index = findTheWinnerUsingRecursion(n - 1, k);
+    index = (index + k) % n;
+    return index;
   }
 
   private int findTheWinnerUsingRecursion(int n, int k) {
