@@ -1,20 +1,14 @@
 class Solution {
     public int minOperations(String[] logs) {
 
-        Stack<String> stack = new Stack<>();
+        int depth = 0;
         for (String log : logs) {
-            switch (log) {
-                case "../":
-                    if (!stack.isEmpty()) {
-                        stack.pop();
-                    }
-                    break;
-                case "./":
-                    break;
-                default:
-                    stack.push(log);
+            if (log.equals("../")) {
+                depth = Math.max(0, depth - 1);
+            } else if (!log.equals("./")) {
+                depth++;
             }
         }
-        return stack.size();
+        return depth;
     }
 }
