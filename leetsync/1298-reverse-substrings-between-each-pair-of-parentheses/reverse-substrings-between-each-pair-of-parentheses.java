@@ -1,40 +1,28 @@
 class Solution {
     public String reverseParentheses(String s) {
-        Stack<Integer> startParenthesesStack = new Stack<>();
-        char[] chars = s.toCharArray();
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < chars.length; i++) {
-            char ch = chars[i];
-            switch (ch) {
-                case '(':
-                    startParenthesesStack.push(i);
-                    break;
-                case ')':
-                    int startIndex = startParenthesesStack.pop();
-                    s = reverseString(s, startIndex + 1, i - 1);
-                    break;
+        Stack<Integer> openBracketIndex = new Stack<>();
+        int n = s.length();
+        int[] door = new int[n];
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt(i);
+            if (c == '(') {
+                openBracketIndex.push(i);
+            } else if (c == ')') {
+                int openBracket = openBracketIndex.pop();
+                door[i] = openBracket;
+                door[openBracket] = i;
             }
         }
-        chars = s.toCharArray();
-        for (char c : chars) {
-            if (c != ')' && c != '(') {
-                sb.append(c);
+        StringBuilder sb = new StringBuilder();
+        int flag = 1;
+        for (int i = 0; i < n; i += flag) {
+            if (s.charAt(i) == '(' || s.charAt(i) == ')') {
+                i = door[i];
+                flag = -flag;
+            } else {
+                sb.append(s.charAt(i));
             }
         }
         return sb.toString();
-    }
-
-    private String reverseString(String s, int start, Integer end) {
-        int i = start;
-        int j = end;
-        char[] chars = s.toCharArray();
-        while (i < j) {
-            char temp = chars[i];
-            chars[i] = chars[j];
-            chars[j] = temp;
-            i++;
-            j--;
-        }
-        return new String(chars);
     }
 }
