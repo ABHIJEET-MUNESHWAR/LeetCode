@@ -1,6 +1,8 @@
 package com.leetcode.easy.array;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    02/09/22, Time:    9:52 AM
@@ -17,6 +19,26 @@ public class ContainsDuplicate2 {
     int[] nums = {1, 2, 3, 1, 2, 3};
     int k = 2;
     System.out.println(containsDuplicate2.containsNearbyDuplicate(nums, k));
+    System.out.println(containsDuplicate2.containsNearbyDuplicateOptimised(nums, k));
+  }
+
+  private boolean containsNearbyDuplicateOptimised(int[] nums, int k) {
+    int n = nums.length;
+    int left = 0;
+    int right = 0;
+    Set<Integer> set = new HashSet<>();
+    while (right < n) {
+      if ((right - left) > k) {
+        set.remove(nums[left]);
+        left++;
+      }
+      if (set.contains(nums[right])) {
+        return true;
+      }
+      set.add(nums[right]);
+      right++;
+    }
+    return false;
   }
 
   private boolean containsNearbyDuplicate(int[] nums, int k) {
