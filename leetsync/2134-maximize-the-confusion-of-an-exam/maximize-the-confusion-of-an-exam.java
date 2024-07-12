@@ -1,40 +1,21 @@
 class Solution {
     public int maxConsecutiveAnswers(String answerKey, int k) {
-        
-    int n = answerKey.length();
-    int result = 0;
-    int left = 0;
-    int right = 0;
-    int countF = 0;
-    while (right < n) {
-      if (answerKey.charAt(right) == 'F') {
-        countF++;
-      }
-      while (countF > k) {
-        if (answerKey.charAt(left) == 'F') {
-          countF--;
+        int result = 0;
+        Map<Character, Integer> charToFrequencyMap = new HashMap<>();
+        int n = answerKey.length();
+        int left = 0;
+        int right = 0;
+        while (right < n) {
+            Character rightChar = answerKey.charAt(right);
+            charToFrequencyMap.put(rightChar, charToFrequencyMap.getOrDefault(rightChar, 0) + 1);
+            while (Math.min(charToFrequencyMap.getOrDefault('T', 0), charToFrequencyMap.getOrDefault('F', 0)) > k) {
+                Character leftChar = answerKey.charAt(left);
+                charToFrequencyMap.put(leftChar, charToFrequencyMap.getOrDefault(leftChar, 0) - 1);
+                left++;
+            }
+            result = Math.max(result, right - left + 1);
+            right++;
         }
-        left++;
-      }
-      result = Math.max(result, right - left + 1);
-      right++;
-    }
-    left = 0;
-    right = 0;
-    int countT = 0;
-    while (right < n) {
-      if (answerKey.charAt(right) == 'T') {
-        countT++;
-      }
-      while (countT > k) {
-        if (answerKey.charAt(left) == 'T') {
-          countT--;
-        }
-        left++;
-      }
-      result = Math.max(result, right - left + 1);
-      right++;
-    }
-    return result;
+        return result;
     }
 }
