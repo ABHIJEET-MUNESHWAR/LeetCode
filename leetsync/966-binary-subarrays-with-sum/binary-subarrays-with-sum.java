@@ -1,19 +1,31 @@
 class Solution {
     public int numSubarraysWithSum(int[] nums, int goal) {
-
+        int prefixZeros = 0;
+        int windowSum = 0;
         int count = 0;
-        int size = nums.length;
-        Map<Integer, Integer> prefixSumToFrequencyMap = new HashMap<>();
-        int prefixSum = 0;
-        prefixSumToFrequencyMap.put(0, 1);
-        for (int i = 0; i < size; i++) {
-            prefixSum += nums[i];
-            if (prefixSumToFrequencyMap.containsKey(prefixSum - goal)) {
-                count += prefixSumToFrequencyMap.get(prefixSum - goal);
+
+        int left = 0, right = 0;
+
+        while (right < nums.length) {
+            windowSum += nums[right];
+
+            while (left < right && (nums[left] == 0 || windowSum > goal)) {
+                if (nums[left] == 1) {
+                    prefixZeros = 0;
+                } else {
+                    prefixZeros += 1;
+                }
+
+                windowSum -= nums[left];
+                left++;
             }
-            prefixSumToFrequencyMap.put(
-                    prefixSum, prefixSumToFrequencyMap.getOrDefault(prefixSum, 0) + 1);
+
+            if (windowSum == goal) {
+                count += 1 + prefixZeros;
+            }
+            right++;
         }
+
         return count;
     }
 }
