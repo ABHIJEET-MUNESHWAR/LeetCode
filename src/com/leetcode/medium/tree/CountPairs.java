@@ -27,6 +27,47 @@ public class CountPairs {
         root.left.right = new TreeNode(4);
         int distance = 3;
         System.out.println(countPairs.countPairs(root, distance));
+        System.out.println(countPairs.countPairsDfs(root, distance));
+    }
+
+    private int countPairsDfs(TreeNode root, int distance) {
+        int[] goodLeafNodes = new int[1];
+        solve(root, distance, goodLeafNodes);
+        return goodLeafNodes[0];
+    }
+
+    private List<Integer> solve(TreeNode root, int distance, int[] goodLeafNodes) {
+        if (root == null) {
+            List<Integer> emptyList = new ArrayList<>();
+            emptyList.add(0);
+            return emptyList;
+        }
+        if (root.left == null && root.right == null) {
+            List<Integer> list = new ArrayList<>();
+            list.add(1);
+            return list;
+        }
+        List<Integer> leftDistance = solve(root.left, distance, goodLeafNodes);
+        List<Integer> rightDistance = solve(root.right, distance, goodLeafNodes);
+        for (int l : leftDistance) {
+            for (int r : rightDistance) {
+                if (r != 0 && l != 0 && (r + l) <= distance) {
+                    goodLeafNodes[0]++;
+                }
+            }
+        }
+        List<Integer> currentDistances = new ArrayList<>();
+        for (int l : leftDistance) {
+            if (l != 0 && (l + 1) <= distance) {
+                currentDistances.add(l + 1);
+            }
+        }
+        for (int r : rightDistance) {
+            if (r != 0 && (r + 1) <= distance) {
+                currentDistances.add(r + 1);
+            }
+        }
+        return currentDistances;
     }
 
     private int countPairs(TreeNode root, int distance) {
