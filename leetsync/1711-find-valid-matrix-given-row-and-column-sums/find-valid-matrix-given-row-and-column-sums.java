@@ -17,16 +17,4 @@ class Solution {
         }
         return matrix;
     }
-
-    private int minIndex(int[] rowSum, Set<Integer> rowSumSet) {
-        int minIndex = Integer.MAX_VALUE;
-        int minValue = Integer.MAX_VALUE;
-        for (int i = 0; i < rowSum.length; i++) {
-            if (minValue > rowSum[i] && !rowSumSet.contains(i)) {
-                minValue = rowSum[i];
-                minIndex = i;
-            }
-        }
-        return minIndex;
-    }
 }
