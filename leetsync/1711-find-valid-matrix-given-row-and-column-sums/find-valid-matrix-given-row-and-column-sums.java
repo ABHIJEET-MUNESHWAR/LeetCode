@@ -3,19 +3,16 @@ class Solution {
         int rows = rowSum.length;
         int cols = colSum.length;
         int[][] matrix = new int[rows][cols];
-        Set<Integer> rowSumSet = new HashSet<>();
-        Set<Integer> colSumSet = new HashSet<>();
-        while (rowSumSet.size() != rows && colSumSet.size() != cols) {
-            int rowIndex = minIndex(rowSum, rowSumSet);
-            int colIndex = minIndex(colSum, colSumSet);
-            if (rowSum[rowIndex] < colSum[colIndex]) {
-                matrix[rowIndex][colIndex] = rowSum[rowIndex];
-                colSum[colIndex] -= rowSum[rowIndex];
-                rowSumSet.add(rowIndex);
-            } else {
-                matrix[rowIndex][colIndex] = colSum[colIndex];
-                rowSum[rowIndex] -= colSum[colIndex];
-                colSumSet.add(colIndex);
+        int i = 0, j = 0;
+        while (i < rows && j < cols) {
+            matrix[i][j] = Math.min(rowSum[i], colSum[j]);
+            rowSum[i] -= matrix[i][j];
+            colSum[j] -= matrix[i][j];
+            if (rowSum[i] == 0) {
+                i++;
+            }
+            if (colSum[j] == 0) {
+                j++;
             }
         }
         return matrix;
