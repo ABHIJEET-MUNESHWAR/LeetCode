@@ -1,7 +1,4 @@
-package com.leetcode.contest.companies.bitgo;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.leetcode.companies.bitgo;
 
 /**
  * Created using IntelliJ IDEA.
