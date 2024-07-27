@@ -1,4 +1,4 @@
-package com.leetcode.contest.companies.bitgo;
+package com.leetcode.companies.bitgo;
 
 import java.util.HashMap;
 import java.util.Map;

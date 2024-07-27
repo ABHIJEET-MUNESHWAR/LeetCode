@@ -1,4 +1,4 @@
-package com.leetcode.contest.companies.wayfair;
+package com.leetcode.companies.wayfair;
 
 /**
  * Created using IntelliJ IDEA.

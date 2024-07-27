@@ -1,4 +1,4 @@
-package com.leetcode.contest.companies.groupon;
+package com.leetcode.companies.groupon;
 
 import java.util.ArrayList;
 import java.util.HashMap;

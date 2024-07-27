@@ -1,4 +1,4 @@
-package com.leetcode.contest.companies.microsoft;
+package com.leetcode.companies.microsoft;
 
 import java.util.Arrays;
 

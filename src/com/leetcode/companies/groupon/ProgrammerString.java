@@ -1,4 +1,4 @@
-package com.leetcode.contest.companies.groupon;
+package com.leetcode.companies.groupon;
 
 /**
  * Created using IntelliJ IDEA.
