@@ -9,70 +9,93 @@ package com.leetcode.medium.dynamicprogramming.twodimension;
  * https://leetcode.com/problems/palindromic-substrings/description/
  */
 public class CountPalindromicSubstrings {
-  public static void main(String[] args) {
-    CountPalindromicSubstrings countPalindromicSubstrings = new CountPalindromicSubstrings();
-    String s = "aaa";
-    System.out.println(countPalindromicSubstrings.countSubstringsDp(s));
-    System.out.println(countPalindromicSubstrings.countSubstringsEvenOdd(s));
-  }
-
-  int count = 0;
-
-  private int countSubstringsEvenOdd(String s) {
-    int size = s.length();
-    for (int i = 0; i < size; i++) {
-      isPalindromeFound(s, i, i);
-      isPalindromeFound(s, i, i + 1);
+    public static void main(String[] args) {
+        CountPalindromicSubstrings countPalindromicSubstrings = new CountPalindromicSubstrings();
+        String s = "aaa";
+        System.out.println(countPalindromicSubstrings.countSubstringsDp(s));
+        System.out.println(countPalindromicSubstrings.countSubstringsBottomUp(s));
+        System.out.println(countPalindromicSubstrings.countSubstringsEvenOdd(s));
     }
-    return count;
-  }
 
-  private void isPalindromeFound(String s, int i, int j) {
-    int size = s.length();
-    while ((i >= 0) && (j < size) && (s.charAt(i) == s.charAt(j))) {
-      count++;
-      i--;
-      j++;
-    }
-  }
-
-  int[][] dp = new int[1001][1001];
-
-  private int countSubstringsDp(String s) {
-    for (int i = 0; i < 1001; i++) {
-      for (int j = 0; j < 1001; j++) {
-        dp[i][j] = -1;
-      }
-    }
-    int count = 0;
-    int size = s.length();
-    for (int i = 0; i < size; i++) {
-      for (int j = i; j < size; j++) {
-        if (isPalindrome(s, i, j)) {
-          count++;
+    private int countSubstringsBottomUp(String s) {
+        int n = s.length();
+        boolean[][] dp = new boolean[n][n];
+        int count = 0;
+        for (int l = 1; l <= n; l++) {
+            for (int i = 0; i + l <= n; i++) {
+                int j = i + l - 1;
+                if (i == j) {
+                    dp[i][j] = true;
+                } else if ((i + 1) == j) {
+                    dp[i][j] = s.charAt(i) == s.charAt(j);
+                } else {
+                    dp[i][j] = (s.charAt(i) == s.charAt(j) && dp[i + 1][j - 1]);
+                }
+                if (dp[i][j]) {
+                    count++;
+                }
+            }
         }
-      }
+        return count;
     }
-    return count;
-  }
 
-  private boolean isPalindrome(String s, int left, int right) {
-    if (left >= right) {
-      return true;
+    int count = 0;
+
+    private int countSubstringsEvenOdd(String s) {
+        int size = s.length();
+        for (int i = 0; i < size; i++) {
+            isPalindromeFound(s, i, i);
+            isPalindromeFound(s, i, i + 1);
+        }
+        return count;
     }
-    if (dp[left][right] != -1) {
-      return dp[left][right] == 1;
+
+    private void isPalindromeFound(String s, int i, int j) {
+        int size = s.length();
+        while ((i >= 0) && (j < size) && (s.charAt(i) == s.charAt(j))) {
+            count++;
+            i--;
+            j++;
+        }
     }
-    if (s.charAt(left) == s.charAt(right)) {
-      boolean val = isPalindrome(s, left + 1, right - 1);
-      if (val) {
-        dp[left][right] = 1;
-      } else {
+
+    int[][] dp = new int[1001][1001];
+
+    private int countSubstringsDp(String s) {
+        for (int i = 0; i < 1001; i++) {
+            for (int j = 0; j < 1001; j++) {
+                dp[i][j] = -1;
+            }
+        }
+        int count = 0;
+        int size = s.length();
+        for (int i = 0; i < size; i++) {
+            for (int j = i; j < size; j++) {
+                if (isPalindrome(s, i, j)) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    private boolean isPalindrome(String s, int left, int right) {
+        if (left >= right) {
+            return true;
+        }
+        if (dp[left][right] != -1) {
+            return dp[left][right] == 1;
+        }
+        if (s.charAt(left) == s.charAt(right)) {
+            boolean val = isPalindrome(s, left + 1, right - 1);
+            if (val) {
+                dp[left][right] = 1;
+            } else {
+                dp[left][right] = 0;
+            }
+            return val;
+        }
         dp[left][right] = 0;
-      }
-      return val;
+        return false;
     }
-    dp[left][right] = 0;
-    return false;
-  }
 }
