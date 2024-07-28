@@ -1,4 +1,4 @@
-package com.leetcode.contest.weekly.fourzerotwo;
+package com.leetcode.contest.weekly.four.zero.two;
 
 /**
  * Created using IntelliJ IDEA.

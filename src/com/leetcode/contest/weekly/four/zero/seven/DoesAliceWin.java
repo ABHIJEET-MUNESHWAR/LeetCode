@@ -1,7 +1,4 @@
-package com.leetcode.contest.weekly.fourzeroseven;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.leetcode.contest.weekly.four.zero.seven;
 
 /**
  * Created using IntelliJ IDEA.
