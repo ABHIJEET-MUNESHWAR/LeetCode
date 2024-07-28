@@ -1,4 +1,4 @@
-package com.leetcode.contest.weekly.fourzerosix;
+package com.leetcode.contest.weekly.four.zero.six;
 
 import com.leetcode.utils.ListNode;
 import java.util.HashSet;
