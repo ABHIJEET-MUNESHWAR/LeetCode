@@ -1,43 +1,41 @@
 class Solution {
-    private int n;
-    private int WIDTH;
-    private int[][] t;
 
-    private int solve(int[][] books, int i, int remainW, int maxHt) {
-        if (i >= n) {
-            return maxHt;
+    int totalShelfWidth;
+    int[][] dp;
+
+    public int minHeightShelves(int[][] books, int shelfWidth) {
+        int index = 0;
+        int maxHeight = 0;
+        totalShelfWidth = shelfWidth;
+        dp = new int[1001][1001];
+        for (int i = 0; i < 1001; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+        return solveMemoization(books, shelfWidth, index, maxHeight);
+    }
+
+    private int solveMemoization(int[][] books, int remainingWidth, int index, int maxHeight) {
+        if (index >= books.length) {
+            return maxHeight;
         }
 
-        if (t[i][remainW] != -1) {
-            return t[i][remainW];
+        if (dp[index][remainingWidth] != -1) {
+            return dp[index][remainingWidth];
         }
 
-        int bookW = books[i][0];
-        int bookH = books[i][1];
+        int width = books[index][0];
+        int height = books[index][1];
 
         int keep = Integer.MAX_VALUE;
         int skip = Integer.MAX_VALUE;
 
         // keep
-        if (bookW <= remainW) { // let's keep it here
-            keep = solve(books, i + 1, remainW - bookW, Math.max(maxHt, bookH));
+        if (width <= remainingWidth) {
+            keep = solveMemoization(books, remainingWidth - width, index + 1, Math.max(maxHeight, height));
         }
 
         // skip and put in next shelf
-        skip = maxHt + solve(books, i + 1, WIDTH - bookW, bookH);
-
-        return t[i][remainW] = Math.min(keep, skip);
-    }
-
-    public int minHeightShelves(int[][] books, int shelfWidth) {
-        n = books.length;
-        WIDTH = shelfWidth;
-        t = new int[1001][1001];
-        for (int[] row : t) {
-            Arrays.fill(row, -1);
-        }
-
-        int remainW = shelfWidth;
-        return solve(books, 0, remainW, 0);
+        skip = maxHeight + solveMemoization(books, totalShelfWidth - width, index + 1, height);
+        return dp[index][remainingWidth] = Math.min(keep, skip);
     }
 }
