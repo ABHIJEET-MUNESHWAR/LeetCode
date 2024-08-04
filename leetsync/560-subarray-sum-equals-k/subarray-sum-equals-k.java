@@ -1,19 +1,18 @@
 class Solution {
-    public int subarraySum(int[] nums, int goal) {
-
-        int count = 0;
-        int size = nums.length;
-        Map<Integer, Integer> prefixSumToFrequencyMap = new HashMap<>();
+    public int subarraySum(int[] nums, int k) {
+        int n = nums.length;
+        Map<Integer, Integer> diffToFreqMap = new HashMap<>();
+        int result = 0;
+        diffToFreqMap.put(0, 1);
         int prefixSum = 0;
-        prefixSumToFrequencyMap.put(0, 1);
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < n; i++) {
             prefixSum += nums[i];
-            if (prefixSumToFrequencyMap.containsKey(prefixSum - goal)) {
-                count += prefixSumToFrequencyMap.get(prefixSum - goal);
+            int diff = prefixSum - k;
+            if (diffToFreqMap.containsKey(diff)) {
+                result += diffToFreqMap.get(diff);
             }
-            prefixSumToFrequencyMap.put(
-                    prefixSum, prefixSumToFrequencyMap.getOrDefault(prefixSum, 0) + 1);
+            diffToFreqMap.put(prefixSum, diffToFreqMap.getOrDefault(prefixSum, 0) + 1);
         }
-        return count;
+        return result;
     }
 }
