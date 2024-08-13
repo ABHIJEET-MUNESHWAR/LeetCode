@@ -49,8 +49,7 @@ class LRUCache {
         Node p = m.get(key);
         deleteNode(p);
         addNode(p);
-        m.put(key, head.next);
-        return head.next.val;
+        return p.val;
     }
 
     public void put(int key, int value) {
