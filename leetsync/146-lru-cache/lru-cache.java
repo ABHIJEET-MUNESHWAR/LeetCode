@@ -58,7 +58,6 @@ class LRUCache {
             deleteNode(c);
             c.val = value;
             addNode(c);
-            m.put(key, head.next);
         } else {
             if (m.size() == size) {
                 Node prev = tail.prev;
