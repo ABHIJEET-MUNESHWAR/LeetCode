@@ -18,6 +18,25 @@ public class SpiralMatrixThree {
     }
 
     private int[][] spiralMatrixThree(int rows, int cols, int rStart, int cStart) {
-        return null;
+        int[][] matrix = new int[rows * cols][2];
+        int steps = 0;
+        int direction = 0;
+        int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        matrix[0] = new int[] {rStart, cStart};
+        int count = 1;
+        while (count < rows * cols) {
+            if (direction == 0 || direction == 2) {
+                steps++;
+            }
+            for (int i = 0; i < steps; i++) {
+                rStart += directions[direction][0];
+                cStart += directions[direction][1];
+                if (rStart >= 0 && rStart < rows && cStart >= 0 && cStart < cols) {
+                    matrix[count++] = new int[] {rStart, cStart};
+                }
+            }
+            direction = (direction + 1) % 4;
+        }
+        return matrix;
     }
 }
