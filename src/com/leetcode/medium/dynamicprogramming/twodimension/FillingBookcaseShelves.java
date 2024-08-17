@@ -1,4 +1,4 @@
-package com.leetcode.medium.dynamicprogramming;
+package com.leetcode.medium.dynamicprogramming.twodimension;
 
 import java.util.Arrays;
 
