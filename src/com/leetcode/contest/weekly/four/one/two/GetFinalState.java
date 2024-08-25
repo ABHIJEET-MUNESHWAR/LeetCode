@@ -7,8 +7,8 @@ import com.leetcode.utils.ArrayUtils;
  * Author:  abhijeet,
  * Date:    25/08/24,
  * Time:    8:14 am
- * Q1. Final Array State After K Multiplication Operations I
- * https://leetcode.com/contest/weekly-contest-412/problems/final-array-state-after-k-multiplication-operations-i/description/
+ * 3264. Final Array State After K Multiplication Operations I
+ * https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i/description/
  */
 public class GetFinalState {
     public static void main(String[] args) {
