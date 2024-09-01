@@ -5,9 +5,11 @@ class Solution {
             return new int[0][0];
         }
         int[][] result = new int[m][n];
-        for (int r = 0; r < m; r++) {
-            for (int c = 0; c < n; c++) {
-                result[r][c] = original[r * n + c];
+        int index = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                result[i][j] = original[index];
+                index++;
             }
         }
         return result;
