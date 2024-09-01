@@ -5,10 +5,12 @@ class Solution {
             return new int[0][0];
         }
         int[][] result = new int[m][n];
-        for (int i = 0; i < size; i++) {
-            int row = i / n;
-            int col = i % n;
-            result[row][col] = original[i];
+        int index = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                result[i][j] = original[index];
+                index++;
+            }
         }
         return result;
     }
