@@ -1,32 +1,29 @@
 class Solution {
-    int[] dp;
-
+    int[] t = new int[51];
     public int minExtraChar(String s, String[] dictionary) {
+        int n = s.length();
         Set<String> set = new HashSet<>();
-        for (String d : dictionary) {
-            set.add(d);
+        for (String word : dictionary) {
+            set.add(word);
         }
-        dp = new int[s.length() + 1];
-        Arrays.fill(dp, -1);
-        return solveRecursionMemoization(s, set, 0);
+        Arrays.fill(t, -1);
+        return solve(0, s, set, n);
     }
 
-    private int solveRecursionMemoization(String s, Set<String> set, int index) {
-        if (index >= s.length()) {
+    public int solve(int index, String s, Set<String> set, int n) {
+        if (index >= n) {
             return 0;
         }
-        if (dp[index] != -1) {
-            return dp[index];
+        if(t[index]!=-1){
+            return t[index];
         }
-        int minChars = s.length();
-        for (int i = index; i < s.length(); i++) {
-            String currentSubString = s.substring(index, i + 1);
-            if (set.contains(currentSubString)) {
-                minChars = Math.min(minChars, solveRecursionMemoization(s, set, i + 1));
-            } else {
-                minChars = Math.min(minChars, currentSubString.length() + solveRecursionMemoization(s, set, i + 1));
+        int result = 1 + solve(index + 1, s, set, n); // skipping the ith character
+        for (int j = index; j < n; j++) {
+            String current = s.substring(index, j + 1);
+            if (set.contains(current)) {
+                result = Math.min(result, solve(j + 1, s, set, n));
             }
         }
-        return dp[index] = minChars;
+        return t[index]=result;
     }
 }
