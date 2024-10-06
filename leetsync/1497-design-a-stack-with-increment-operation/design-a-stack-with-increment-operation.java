@@ -1,33 +1,36 @@
 class CustomStack {
+    int currentPointer;
+    int[] stack;
     int n;
-    int[] inc;
-    Stack<Integer> stack;
+
     public CustomStack(int maxSize) {
         n = maxSize;
-        inc = new int[n];
-        stack = new Stack<>();
+        stack = new int[n];
+        currentPointer = -1;
     }
 
     public void push(int x) {
-        if (stack.size() < n)
-            stack.push(x);
+        if (currentPointer >= n-1) {
+            return;
+        }
+        currentPointer++;
+        stack[currentPointer] = x;        
     }
 
     public int pop() {
-        int i = stack.size() - 1;
-        if (i < 0)
+        if (currentPointer < 0) {
             return -1;
-        if (i > 0)
-            inc[i - 1] += inc[i];
-        int res = stack.pop() + inc[i];
-        inc[i] = 0;
-        return res;
+        }
+        int element = stack[currentPointer];        
+        currentPointer--;
+        return element;
     }
 
     public void increment(int k, int val) {
-        int i = Math.min(k, stack.size()) - 1;
-        if (i >= 0)
-            inc[i] += val;
+        int upperLimit = Math.min(k, n);
+        for (int i = 0; i < upperLimit; i++) {
+            stack[i] += val;
+        }
     }
 }
 
