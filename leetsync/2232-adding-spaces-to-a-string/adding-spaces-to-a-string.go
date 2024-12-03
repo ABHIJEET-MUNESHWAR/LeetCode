@@ -1,13 +1,12 @@
 func addSpaces(s string, spaces []int) string {
-    resultString:=strings.Builder{}
-    resultString.Grow(len(s)+len(spaces))
+	result := make([]uint8, 0, len(s)+len(spaces))
 
-    lastPos:=0
-    for _, space:= range spaces {
-        resultString.WriteString(s[lastPos:space])
-        resultString.WriteByte(' ')
-        lastPos = space
-    }
-    resultString.WriteString(s[lastPos:])
-    return resultString.String()
+	for sIterator, spaceIterator := 0, 0; sIterator < len(s); sIterator++ {
+		if spaceIterator < len(spaces) && sIterator == spaces[spaceIterator] {
+			result = append(result, ' ')
+			spaceIterator++
+		}
+		result = append(result, s[sIterator])
+	}
+	return string(result)
 }
