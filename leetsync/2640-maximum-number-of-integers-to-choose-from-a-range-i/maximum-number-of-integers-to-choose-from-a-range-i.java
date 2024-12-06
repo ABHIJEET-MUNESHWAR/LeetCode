@@ -13,6 +13,8 @@ class Solution {
             if ((sum + i) <= maxSum) {
                 sum += i;
                 count++;
+            } else {
+                break;
             }
         }
         return count;
