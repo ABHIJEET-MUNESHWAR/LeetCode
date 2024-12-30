@@ -1,16 +1,47 @@
 class Solution {
+    private int m;
+    private int k;
+    private final int MOD = (int) 1e9 + 7;
+    private int[][] memo;
+
+    private int solve(int i, int j, long[][] freq, String target) {
+        if (i == m) {
+            return 1;
+        }
+
+        if (j == k) {
+            return 0;
+        }
+
+        if (memo[i][j] != -1) {
+            return memo[i][j];
+        }
+
+        int notTaken = solve(i, j + 1, freq, target) % MOD;
+
+        int taken = (int) ((freq[target.charAt(i) - 'a'][j] * solve(i + 1, j + 1, freq, target)) % MOD);
+
+        return memo[i][j] = (notTaken + taken) % MOD;
+    }
+
     public int numWays(String[] words, String target) {
-        int n = target.length();
-        long mod = (long)1e9 + 7, res[] = new long[n + 1];
-        res[0] = 1;
-        for (int i = 0; i < words[0].length(); ++i) {
-            int[] count = new int[26];
-            for (String w : words)
-                count[w.charAt(i) - 'a']++;
-            for (int j = n - 1; j >= 0; --j) {
-                res[j + 1] += res[j] * count[target.charAt(j) - 'a'] % mod;
+        k = words[0].length();
+        m = target.length();
+
+        long[][] freq = new long[26][k];
+
+        // Populate frequency array
+        for (String word : words) {
+            for (int col = 0; col < k; col++) {
+                freq[word.charAt(col) - 'a'][col]++;
             }
         }
-        return (int)(res[n] % mod);
+
+        memo = new int[m][k];
+        for (int[] row : memo) {
+            Arrays.fill(row, -1);
+        }
+
+        return solve(0, 0, freq, target);
     }
 }
