@@ -1,24 +1,31 @@
 class Solution {
+    int[] dp;
 
     public int mincostTickets(int[] days, int[] costs) {
-        int totalDays = days.length;
-        int lastDay = days[totalDays - 1];
-        int[] dp = new int[lastDay + 1];
-        boolean[] isTravelDayMap = new boolean[lastDay + 1];
-        for (int day : days) {
-            isTravelDayMap[day] = true;
+        dp = new int[days.length + 1];
+        Arrays.fill(dp, -1);
+        return solveRecursionMemoization(days, costs, 0);
+    }
+
+    private int solveRecursionMemoization(int[] days, int[] costs, int index) {
+        if (index >= days.length) {
+            return 0;
         }
-        dp[0] = 0;
-        for (int i = 1; i <= lastDay; i++) {
-            if (!isTravelDayMap[i]) { // no need to buy ticket if it is not a travel day
-                dp[i] = dp[i - 1];
-                continue;
-            }
-            int costOfOneDayPass = costs[0] + dp[Math.max(i - 1, 0)];
-            int costOfSevenDayPass = costs[1] + dp[Math.max(i - 7, 0)];
-            int costOfThirtyDayPass = costs[2] + dp[Math.max(i - 30, 0)];
-            dp[i] = Math.min(costOfOneDayPass, Math.min(costOfSevenDayPass, costOfThirtyDayPass));
+        if (dp[index] != -1) {
+            return dp[index];
         }
-        return dp[lastDay];
+        int costOfOneDayPass = costs[0] + solveRecursionMemoization(days, costs, index + 1);
+        int costOfSevenDayPass = costs[1]
+                + solveRecursionMemoization(days, costs, getIndexOfNextDay(days, index, days[index] + 7));
+        int costOfThirtyDayPass = costs[2]
+                + solveRecursionMemoization(days, costs, getIndexOfNextDay(days, index, days[index] + 30));
+        return dp[index] = Math.min(costOfOneDayPass, Math.min(costOfSevenDayPass, costOfThirtyDayPass));
+    }
+
+    private int getIndexOfNextDay(int[] days, int index, int totalDaysCanBeCovered) {
+        while (index < days.length && days[index] < totalDaysCanBeCovered) {
+            index++;
+        }
+        return index;
     }
 }
