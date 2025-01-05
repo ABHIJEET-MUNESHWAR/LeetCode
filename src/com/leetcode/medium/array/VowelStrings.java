@@ -47,7 +47,7 @@ public class VowelStrings {
         return isVowel(first) && isVowel(last);
     }
 
-    private static boolean isVowel(char character) {
+    private boolean isVowel(char character) {
         return character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u';
     }
 }
