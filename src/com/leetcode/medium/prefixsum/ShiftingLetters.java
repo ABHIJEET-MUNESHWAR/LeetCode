@@ -15,7 +15,7 @@ public class ShiftingLetters {
         ShiftingLetters shiftingLetters = new ShiftingLetters();
         String s = "xasy";
         int[] shifts = new int[]{622939912, 116899933, 983296461, 536563513};
-        System.out.printf(shiftingLetters.shiftingLetters(s, shifts));  // kdod
+        System.out.println(shiftingLetters.shiftingLetters(s, shifts));  // kdod
     }
 
     private String shiftingLetters(String s, int[] shifts) {
