@@ -15,7 +15,7 @@ class Solution {
         for (int i = 0; i < queriesLen; i++) {
             int l = queries[i][0];
             int r = queries[i][1];
-            result[i] = prefixArray[r] - (l > 0 ? prefixArray[l-1] : 0);
+            result[i] = prefixArray[r] - (l > 0 ? prefixArray[l - 1] : 0);
         }
         return result;
     }
@@ -23,7 +23,10 @@ class Solution {
     public boolean isWordStartEndWithVowel(String word) {
         char first = word.charAt(0);
         char last = word.charAt(word.length() - 1);
-        return (first == 'a' || first == 'e' || first == 'i' || first == 'o' || first == 'u')
-                && (last == 'a' || last == 'e' || last == 'i' || last == 'o' || last == 'u');
+        return isVowel(first) && isVowel(last);
+    }
+
+    private boolean isVowel(char character) {
+        return character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u';
     }
 }
