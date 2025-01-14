@@ -7,11 +7,18 @@ class Solution {
             char ch = s.charAt(i);
             int chInt = ch - 'a';
             freq[chInt]++;
-            if (freq[chInt] == 3) {
-                freq[chInt] = 1;
-                deletedChars += 2;
+        }
+        int length = 0;
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] == 0) {
+                continue;
+            }
+            if (freq[i] % 2 == 1) {
+                length += 1;
+            } else {
+                length += 2;
             }
         }
-        return n - deletedChars;
+        return length;
     }
 }
