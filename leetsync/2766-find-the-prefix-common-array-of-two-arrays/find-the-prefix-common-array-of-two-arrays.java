@@ -1,19 +1,17 @@
 class Solution {
     public int[] findThePrefixCommonArray(int[] a, int[] b) {
-
         int size = a.length;
         int[] result = new int[size];
-        int matchingCount = 0;
-        Set<Integer> set = new HashSet<>();
+        int[] visited = new int[size + 1];
+        int currentCount = 0;
         for (int i = 0; i < size; i++) {
-            set.add(a[i]);
-            matchingCount = 0;
-            for (int j = 0; j <= i; j++) {
-                if (set.contains(b[j])) {
-                    matchingCount++;
-                }
+            if (++visited[a[i]] == 2) {
+                currentCount++;
             }
-            result[i] = matchingCount;
+            if (++visited[b[i]] == 2) {
+                currentCount++;
+            }
+            result[i] = currentCount;
         }
         return result;
     }
