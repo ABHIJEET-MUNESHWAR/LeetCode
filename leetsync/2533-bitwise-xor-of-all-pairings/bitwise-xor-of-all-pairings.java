@@ -3,18 +3,14 @@ class Solution {
         int m = nums1.length;
         int n = nums2.length;
         int result = 0;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int num : nums1) {
-            map.put(num, map.getOrDefault(num, 0) + n);
+        if (m % 2 == 1) {
+            for (int j = 0; j < n; j++) {
+                result = result ^ (nums2[j]);
+            }
         }
-        for (int num : nums2) {
-            map.put(num, map.getOrDefault(num, 0) + m);
-        }
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            int key = entry.getKey();
-            int value = entry.getValue();
-            if (value % 2 == 1) {
-                result ^= key;
+        if (n % 2 == 1) {
+            for (int j = 0; j < m; j++) {
+                result = result ^ (nums1[j]);
             }
         }
         return result;
