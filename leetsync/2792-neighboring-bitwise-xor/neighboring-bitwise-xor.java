@@ -9,7 +9,7 @@ class Solution {
     public boolean checkOriginal(int[] derived, int firstValue) {
         int n = derived.length;
         int[] original = new int[n];
-        original[0] = 0;
+        original[0] = firstValue;
         for (int i = 0; i < n - 1; i++) {
             original[i + 1] = original[i] ^ derived[i];
         }
