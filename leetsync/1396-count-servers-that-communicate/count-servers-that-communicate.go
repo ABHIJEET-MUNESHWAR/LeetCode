@@ -1,6 +1,5 @@
 func countServers(grid [][]int) int {
-	m := len(grid)
-	n := len(grid[0])
+	m, n := len(grid), len(grid[0])
 	answer := 0
 	indexRowCount := make([]int, m)
 	indexColCount := make([]int, n)
