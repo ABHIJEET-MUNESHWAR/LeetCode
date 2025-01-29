@@ -1,51 +1,37 @@
-class DSU {
-    private int[] rank;
-    private int[] parent;
-
-    public DSU(int n) {
-        rank = new int[n + 1];
-        parent = new int[n + 1];
-        for (int i = 1; i <= n; i++) {
-            parent[i] = i;
-        }
-    }
-
-    public int find(int i) {
-        if (parent[i] == i) {
-            return i;
-        }
-        return parent[i] = find(parent[i]);
-    }
-
-    public void union(int i, int j) {
-        int parentOfI = find(i);
-        int parentOfJ = find(j);
-        if (parentOfI == parentOfJ) {
-            return;
-        }
-        if (rank[parentOfI] > rank[parentOfJ]) {
-            parent[parentOfJ] = parent[parentOfI];
-        } else if (rank[parentOfI] < parent[parentOfJ]) {
-            parent[parentOfI] = parent[parentOfJ];
-        } else {
-            parent[parentOfI] = parent[parentOfJ];
-            rank[parentOfJ]++;
-        }
-    }
-}
-
 class Solution {
+    public boolean dfs(Map<Integer, List<Integer>> adj, int u, int v, boolean[] visited) {
+        visited[u] = true;
+        if (u == v) {
+            return true;
+        }
+        for (int neighbour : adj.get(u)) {
+            if (visited[neighbour]) {
+                continue;
+            }
+            if (dfs(adj, neighbour, v, visited)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public int[] findRedundantConnection(int[][] edges) {
-        int m = edges.length;
-        DSU dsu = new DSU(m);
+        int n = edges.length;
+        Map<Integer, List<Integer>> adj = new HashMap<>();
         for (int[] edge : edges) {
-            int i = edge[0];
-            int j = edge[1];
-            if (dsu.find(i) == dsu.find(j)) {
-                return edge;
+            int u = edge[0];
+            int v = edge[1];
+
+            if (adj.containsKey(u) && adj.containsKey(v)) {
+                boolean[] visited = new boolean[n + 1];
+                if (dfs(adj, u, v, visited)) {
+                    return edge;
+                }
             }
-            dsu.union(i, j);
+            adj.putIfAbsent(u, new ArrayList<>());
+            adj.putIfAbsent(v, new ArrayList<>());
+            adj.get(u).add(v);
+            adj.get(v).add(u);
         }
         return new int[0];
     }
