@@ -1,10 +1,7 @@
 func isArraySpecial(nums []int) bool {
 	n := len(nums)
-	isEven := nums[0]%2 == 0
-	for i := 1; i < n; i++ {
-		isEven = !isEven
-		currentParity := nums[i]%2 == 0
-		if currentParity != isEven {
+	for i := 0; i < n-1; i++ {
+		if nums[i]%2 == nums[i+1]%2 {
 			return false
 		}
 	}
