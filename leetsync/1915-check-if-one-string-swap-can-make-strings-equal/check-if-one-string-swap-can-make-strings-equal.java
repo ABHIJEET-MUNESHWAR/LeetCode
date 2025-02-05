@@ -1,26 +1,27 @@
 class Solution {
     public boolean areAlmostEqual(String s1, String s2) {
+        if (s1.equals(s2)) {
+            return true;
+        }
         int n = s1.length();
         int diffCount = 0;
+        int firstMismatch = 0, secondMismatch = 0;
         for (int i = 0; i < n; i++) {
             if (s1.charAt(i) != s2.charAt(i)) {
                 diffCount++;
-            }
-            if (diffCount > 2) {
-                return false;
-            }
-        }
-        int[] first = new int[26];
-        int[] second = new int[26];
-        for (int i = 0; i < n; i++) {
-            first[s1.charAt(i) - 'a']++;
-            second[s2.charAt(i) - 'a']++;
-        }
-        for (int i = 0; i < 26; i++) {
-            if (first[i] != second[i]) {
-                return false;
+                if (diffCount > 2) {
+                    return false;
+                } else if (diffCount == 1) {
+                    firstMismatch = i;
+                } else if (diffCount == 2) {
+                    secondMismatch = i;
+                }
             }
         }
-        return true;
+        if (s1.charAt(firstMismatch) == s2.charAt(secondMismatch)
+                && s1.charAt(secondMismatch) == s2.charAt(firstMismatch)) {
+            return true;
+        }
+        return false;
     }
 }
