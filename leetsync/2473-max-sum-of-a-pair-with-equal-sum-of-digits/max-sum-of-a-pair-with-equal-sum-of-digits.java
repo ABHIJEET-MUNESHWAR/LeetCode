@@ -1,14 +1,14 @@
 class Solution {
     public int maximumSum(int[] nums) {
         int n = nums.length;
-        Map<Integer, Integer> digitSumToNumMap = new HashMap<>();
+        int[] digitSumToNumMap = new int[82];
         int maxSum = -1;
         for (int num : nums) {
             int digitSum = getDigitSum(num);
-            if (digitSumToNumMap.containsKey(digitSum)) {
-                maxSum = Math.max(maxSum, num + digitSumToNumMap.get(digitSum));
+            if (digitSumToNumMap[digitSum] > 0) {
+                maxSum = Math.max(maxSum, num + digitSumToNumMap[digitSum]);
             }
-            digitSumToNumMap.put(digitSum, Math.max(num, digitSumToNumMap.getOrDefault(digitSum, 0)));
+            digitSumToNumMap[digitSum] = Math.max(num, digitSumToNumMap[digitSum]);
         }
         return maxSum;
     }
