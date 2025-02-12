@@ -1,10 +1,10 @@
 func maximumSum(nums []int) int {
-	digitSumToNumMap := make(map[int]int)
+	digitSumToNumMap := [82]int{}
 	maxSum := -1
 	for _, num := range nums {
 		digitSum := getDigitSum(num)
-		value, ok := digitSumToNumMap[digitSum]
-		if ok {
+		value := digitSumToNumMap[digitSum]
+		if value > 0 {
 			maxSum = max(maxSum, num+value)
 		} else {
 			value = 0
