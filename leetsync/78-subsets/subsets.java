@@ -1,20 +1,19 @@
 class Solution {
-    List<List<Integer>> result = new ArrayList<>();
-
     public List<List<Integer>> subsets(int[] nums) {
-        List<Integer> temp = new ArrayList<>();
-        subsetsTakeOrNoTake(nums, 0, temp);
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> current = new ArrayList<>();
+        subSets(nums, result, current, 0);
         return result;
     }
 
-    private void subsetsTakeOrNoTake(int[] nums, int index, List<Integer> temp) {
+    public void subSets(int[] nums, List<List<Integer>> result, List<Integer> current, int index) {
         if (index >= nums.length) {
-            result.add(new ArrayList<>(temp));
+            result.add(new ArrayList<>(current));
             return;
         }
-        temp.add(nums[index]);
-        subsetsTakeOrNoTake(nums, index + 1, temp);
-        temp.remove(temp.size() - 1);
-        subsetsTakeOrNoTake(nums, index + 1, temp);
+        current.add(nums[index]);
+        subSets(nums, result, current, index + 1);
+        current.remove(current.size() - 1);
+        subSets(nums, result, current, index + 1);
     }
 }
