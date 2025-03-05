@@ -1,11 +1,6 @@
 class Solution {
     public long coloredCells(int n) {
-        int time = 1;
-        long cells = 1;
-        while (time <= n) {
-            cells += (4 * (time - 1));
-            time++;
-        }
+        long cells = 1 + 2 * ((long)n * ((long)n - 1));
         return cells;
     }
 }
