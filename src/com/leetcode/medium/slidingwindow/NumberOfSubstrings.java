@@ -13,7 +13,7 @@ package com.leetcode.medium.slidingwindow;
 public class NumberOfSubstrings {
     public static void main(String[] args) {
         NumberOfSubstrings numberOfSubstrings = new NumberOfSubstrings();
-        String s = "abcabc";
+        String s = "aaaabc";
         System.out.println(numberOfSubstrings.numberOfSubstrings(s));
     }
 
