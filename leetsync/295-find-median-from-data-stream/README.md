@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/find-median-from-data-stream">Find Median from Data Stream</a></h2> <img src='https://img.shields.io/badge/Difficulty-Hard-red' alt='Difficulty: Hard' /><hr><p>The <strong>median</strong> is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.</p>
+<h2><a href="https://leetcode.com/problems/find-median-from-data-stream"></a></h2> <img src='https://img.shields.io/badge/Difficulty-Hard-red' alt='Difficulty: Hard' /><hr><p>The <strong>median</strong> is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.</p>
 
 <ul>
 	<li>For example, for <code>arr = [2,3,4]</code>, the median is <code>3</code>.</li>
