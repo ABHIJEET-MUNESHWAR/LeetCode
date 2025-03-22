@@ -43,19 +43,19 @@ public class AddStrings {
         StringBuilder sb = new StringBuilder();
         int carry = 0;
         for (int i = m - 1, j = n - 1; i >= 0 || j >= 0 || carry == 1; i--, j--) {
-            // Validation
-            if (!Character.isDigit(num1.charAt(i))) {
-                throw new IllegalArgumentException("Invalid character in input: " + num1.charAt(i));
-            }
-            if (!Character.isDigit(num2.charAt(j))) {
-                throw new IllegalArgumentException("Invalid character in input: " + num2.charAt(j));
-            }
             // ✅ Ignore commas while processing digits
-            while (i >= 0 && num1.charAt(i) == ',') {
+            if (i >= 0 && num1.charAt(i) == ',') {
                 i--;
             }
-            while (j >= 0 && num2.charAt(j) == ',') {
+            if (j >= 0 && num2.charAt(j) == ',') {
                 j--;
+            }
+            // Validation
+            if (i >= 0 && !Character.isDigit(num1.charAt(i))) {
+                throw new IllegalArgumentException("Invalid character in input: " + num1.charAt(i));
+            }
+            if (j >= 0 && !Character.isDigit(num2.charAt(j))) {
+                throw new IllegalArgumentException("Invalid character in input: " + num2.charAt(j));
             }
             int a = i < 0 ? 0 : num1.charAt(i) - '0';
             int b = j < 0 ? 0 : num2.charAt(j) - '0';
@@ -63,7 +63,7 @@ public class AddStrings {
             sb.append(sum % 10);
             carry = sum / 10;
 
-            if (sb.length() % 3 == 0 && (i >= 0 || j >= 0 || carry == 0)) {
+            if (sb.length() % 3 == 0 && (i >= 0 || j >= 0 || carry > 0)) {
                 sb.append(",");
             }
         }
