@@ -1,39 +1,59 @@
-class Solution {
-    public void bfs(int i, Map<Integer, List<Integer>> adj, boolean[] visited, int[] info) {
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(i);
-        visited[i] = true;
-        while (!queue.isEmpty()) {
-            int curr = queue.poll();
-            info[0]++;
-            info[1] += adj.getOrDefault(curr, new ArrayList<>()).size();
-            for (int ngbr : adj.getOrDefault(curr, new ArrayList<>())) {
-                if (!visited[ngbr]) {
-                    visited[ngbr] = true;
-                    queue.add(ngbr);
-                }
-            }
+class DSU {
+    int[] parent, size;
+
+    public DSU(int n) {
+        parent = new int[n];
+        size = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+            size[i] = 1;
         }
     }
 
+    public int find(int i) {
+        if (parent[i] == i) {
+            return i;
+        }
+        return parent[i] = find(parent[i]);
+    }
+
+    public void union(int a, int b) {
+        int parentOfA = find(a);
+        int parentOfB = find(b);
+        if (parentOfA == parentOfB) {
+            return;
+        }
+        if (size[parentOfA] > size[parentOfB]) {
+            parent[parentOfB] = parentOfA;
+            size[parentOfA] += size[parentOfB];
+        } else {
+            parent[parentOfA] = parentOfB;
+            size[parentOfB] += size[parentOfA];
+        }
+    }
+}
+
+class Solution {
     public int countCompleteComponents(int n, int[][] edges) {
-        Map<Integer, List<Integer>> adj = new HashMap<>();
+        Map<Integer, Integer> edgeCount = new HashMap<>();
         int result = 0;
+        DSU dsu = new DSU(n);
         for (int[] edge : edges) {
             int u = edge[0];
             int v = edge[1];
-            adj.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
-            adj.computeIfAbsent(v, k -> new ArrayList<>()).add(u);
+            dsu.union(u, v);
         }
-        boolean[] visited = new boolean[n];
+        for (int[] edge : edges) {
+            int parent = dsu.find(edge[0]);
+            edgeCount.put(parent, edgeCount.getOrDefault(parent, 0) + 1);
+        }
         for (int i = 0; i < n; i++) {
-            if (visited[i]) {
-                continue;
-            }
-            int[] info = new int[2];
-            bfs(i, adj, visited, info);
-            if (info[0] * (info[0] - 1) == info[1]) {
-                result++;
+            if (dsu.find(i) == i) {
+                int v = dsu.size[i];
+                int e = edgeCount.getOrDefault(i, 0);
+                if ((v * (v - 1) / 2) == e) {
+                    result++;
+                }
             }
         }
         return result;
