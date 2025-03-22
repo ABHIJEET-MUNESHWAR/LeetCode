@@ -1,11 +1,17 @@
 class Solution {
-    public void dfs(int i, Map<Integer, List<Integer>> adj, boolean[] visited, int[] info) {
+    public void bfs(int i, Map<Integer, List<Integer>> adj, boolean[] visited, int[] info) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(i);
         visited[i] = true;
-        info[0]++;
-        info[1] += adj.getOrDefault(i, new ArrayList<>()).size();
-        for (int ngbr : adj.getOrDefault(i, new ArrayList<>())) {
-            if (!visited[ngbr]) {
-                dfs(ngbr, adj, visited, info);
+        while (!queue.isEmpty()) {
+            int curr = queue.poll();
+            info[0]++;
+            info[1] += adj.getOrDefault(curr, new ArrayList<>()).size();
+            for (int ngbr : adj.getOrDefault(curr, new ArrayList<>())) {
+                if (!visited[ngbr]) {
+                    visited[ngbr] = true;
+                    queue.add(ngbr);
+                }
             }
         }
     }
@@ -25,7 +31,7 @@ class Solution {
                 continue;
             }
             int[] info = new int[2];
-            dfs(i, adj, visited, info);
+            bfs(i, adj, visited, info);
             if (info[0] * (info[0] - 1) == info[1]) {
                 result++;
             }
