@@ -1,10 +1,9 @@
-package com.leetcode.companies.wayfair.productdiscount;
+package com.leetcode.companies.wayfair.app.productdiscount;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;

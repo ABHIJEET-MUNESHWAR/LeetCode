@@ -1,4 +1,4 @@
-package com.leetcode.companies.wayfair.productdiscount;
+package com.leetcode.companies.wayfair.app.productdiscount;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
