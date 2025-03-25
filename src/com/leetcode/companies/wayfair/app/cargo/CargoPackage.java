@@ -1,4 +1,4 @@
-package com.leetcode.companies.wayfair.app.Cargo;
+package com.leetcode.companies.wayfair.app.cargo;
 
 /**
  * Created using IntelliJ IDEA.
