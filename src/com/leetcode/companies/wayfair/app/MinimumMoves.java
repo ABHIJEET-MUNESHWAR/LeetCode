@@ -1,4 +1,4 @@
-package com.leetcode.companies.wayfair;
+package com.leetcode.companies.wayfair.app;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package com.leetcode.companies.wayfair;
+package com.leetcode.companies.wayfair.app;
 
 import com.leetcode.utils.ListUtils;
 import java.util.ArrayList;
