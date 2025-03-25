@@ -147,20 +147,13 @@ public class CargoPackage {
             // Test 2: validate logic to calculate volume
             CargoCalculator calculator = new CargoCalculator();
             CargoCalculator.Volume volume = calculator.new Volume(1, 2, 3);
-            Integer calculatedColume = volume.getVolume();
-            System.out.println("Volume is: " + calculatedColume);
-
-            //
+            Integer calculatedVolume = volume.getVolume();
+            System.out.println("Volume is: " + calculatedVolume);
 
             writer.printf("%s%.1f%n", "Total Space: ", results.get("Total Space"));
             writer.printf("%s%.2f%n", "Transportation Cost: ", results.get("Transportation Cost"));
             writer.printf("%s%.2f%n", "Service Charges: ", results.get("Service Charges"));
             writer.printf("%s%.2f%n", "Total Cost: ", results.get("Total Cost"));
-
-/*
-            for (Map.Entry<String, Double> result : results.entrySet()) {
-                writer.printf("%s: %.2f%n", result.getKey(), result.getValue());
-            }*/
 
         } catch (IOException e) {
             e.printStackTrace();
