@@ -13,7 +13,8 @@ package com.leetcode.companies.wayfair.app.addstrings;
 public class AddStrings {
     public static void main(String[] args) {
         AddStrings addStrings = new AddStrings();
-        String num1 = "456", num2 = "77";
+        String num1 = "456";
+        String num2 = "77";
         System.out.println(addStrings.addStrings(num1, num2));
         num1 = "1,234";
         num2 = "2,345";
