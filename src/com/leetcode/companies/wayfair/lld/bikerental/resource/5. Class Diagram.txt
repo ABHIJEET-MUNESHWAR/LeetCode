@@ -1,0 +1,49 @@
+    Customer
+- id: Long
+- name: String
+- email: String
+- balance: BigDecimal
++ getRentals()
++ getTransactions()
+
+    Aggregation
+
+    Rental
+- id: Long
+- customerId: Long
+- vehicleId: Long
+- rentalDate: LocalDate
+- returnDate: LocalDate
+- amount: BigDecimal
++ getVehicle()
+
+    Association
+
+    Vehicle
+- id: Long
+- name: String
+- type: Enum(bike, scooter)
+- isAvailable: boolean
++ getBike()
++ getScooter()
+
+    Composition
+
+    Bike
+- id: Long
+- vehicleId: Long
+- size: Enum(small, medium, large)
+
+    Scooter
+- id: Long
+- vehicleId: Long
+- motorType: Enum(electric, gas)
+
+    Aggregation
+
+    Transaction
+- id: Long
+- customerId: Long
+- vehicleId: Long
+- transactionDate
+- type: ENUM ( fine, payment)

@@ -1,0 +1,6 @@
+Vehicle: id, name, type, isAvailable
+Bike: size(small, medium, large)
+Scooter: motorType(electric, gas)
+Customer: id, name, email, balance
+Rental: id, customerId, vehicleId, rentalDate, dueDate, isOverdue
+Transaction: id, customerId, amount, timestamp

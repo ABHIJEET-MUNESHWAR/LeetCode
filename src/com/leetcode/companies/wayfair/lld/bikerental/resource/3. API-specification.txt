@@ -1,0 +1,26 @@
+
+Required Queries
+* How many small bikes do you have?
+    GET: /inventory/count/small
+* What products are there for rent?
+    GET: /rental/available
+* Does this customer have a balance? (aka owe us money)
+    GET: /customer/{id}/balance
+* What products are rented?
+    GET: /rental/rented
+* Are there products that are overdue for return? Who has them?
+    GET: /rental/overdue
+* What products has a customer rented?
+    GET: /customer/{id}/rented
+
+Required commands
+* Add a product to inventory
+    POST: /inventory
+* Add a customer
+    POST: /customer
+* Remove a product from inventory (permanently not for rental, i.e. it's been damaged)
+    DELETE: /inventory/{id}
+* Record that a product is rented to a customer
+    POST: /rental/rent
+* Create a charge for the customer
+    POST: /customer/charge
