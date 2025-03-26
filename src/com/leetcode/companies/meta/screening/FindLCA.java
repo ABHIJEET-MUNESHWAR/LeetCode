@@ -6,6 +6,7 @@ package com.leetcode.companies.meta.screening;
     Author: Abhijeet Ashok Muneshwar
     Date:   25-03-2025
     Time:   05:54 pm
+    Find the least common ancestor given 2 nodes
 */
 
 public class FindLCA {
