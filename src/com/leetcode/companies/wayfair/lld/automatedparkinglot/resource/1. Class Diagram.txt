@@ -1,0 +1,34 @@
+Parking Lot
+- id: Long
+- location: String
++ getAvailableSpots()
+
+    Aggregation (1 - M)
+
+ParkingSpot
+- id: Long
+- size: ENUM(small, medium, large)
+- isAvailable: boolean
++ assignVehicle()
+
+    Association (1 - 1)
+
+Vehicle
+- id: Long
+- licensePlate: String
+- size: ENUM(small, medium, large)
++ parkVehicle()
+
+    Association (1 - 1)
+
+Ticket
+-id: Long
+-vehicleId: Long
+-spotId: Long
+-entryTime: Date
+-exitTime: Date
++calculateFee()
+
+List System
++identifySize()
++moveToParkingSpot()
