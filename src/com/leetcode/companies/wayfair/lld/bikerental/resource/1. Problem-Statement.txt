@@ -1,6 +1,5 @@
 You've been hired by a bike shop to create software to help them with their rental operation. This includes automating activities such as keeping track of inventory, customers, stock items that are rented, customer fee accrual etc... The store rents two types of products: Bikes and Scooters. Each bike is made in one of three different sizes, Small, Medium, Large and will fit small, medium and large humans respectively. We'd like to be sure our customers get a bike that fits them and will need to track size of our bikes. The scooters are available in electric motor or gas motor styles. The styles of scooters are very different so we want to track them separately so we can match our customers needs to the appropriate scooter.
 
-
 Required Queries
  * How many small bikes do you have?
  * What products are there for rent?
