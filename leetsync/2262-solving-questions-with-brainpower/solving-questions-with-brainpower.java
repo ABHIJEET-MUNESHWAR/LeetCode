@@ -1,22 +1,13 @@
 class Solution {
-
-    long[] dp;
-
-    public long mostPoints(int[][] questions) {
-        dp = new long[questions.length + 1];
-        Arrays.fill(dp, -1L);
-        return solveRecursionMemoization(questions, 0);
-    }
-
-    private long solveRecursionMemoization(int[][] questions, int index) {
-        if (index >= questions.length) {
-            return 0;
+    public long mostPoints(int[][] q) {
+        int n = q.length;
+        long[] dp = new long[200001];
+        if (n == 1) {
+            return q[0][0];
         }
-        if (dp[index] != -1) {
-            return dp[index];
+        for (int i = n - 1; i >= 0; i--) {
+            dp[i] = Math.max(dp[i + 1], q[i][0] + dp[q[i][1] + i + 1]);
         }
-        long take = questions[index][0] + solveRecursionMemoization(questions, index + questions[index][1] + 1);
-        long skip = solveRecursionMemoization(questions, index + 1);
-        return dp[index] = Math.max(take, skip);
+        return dp[0];
     }
 }
