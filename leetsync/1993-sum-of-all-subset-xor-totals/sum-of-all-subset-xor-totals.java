@@ -1,14 +1,10 @@
 class Solution {
     public int subsetXORSum(int[] nums) {
-        return solve(nums, 0, 0);
-    }
-
-    public int solve(int[] nums, int index, int currentXOR) {
-        if (index == nums.length) {
-            return currentXOR;
+        int n = nums.length;
+        int result = 0;
+        for (int i = 0; i < n; i++) {
+            result |= nums[i];
         }
-        int includeSum = solve(nums, index + 1, currentXOR ^ nums[index]);
-        int excludeSum = solve(nums, index + 1, currentXOR);
-        return includeSum + excludeSum;
+        return result << (n - 1);
     }
 }
