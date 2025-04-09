@@ -1,4 +1,6 @@
 class Solution {
+    int[][] dp = new int[201][20001];
+
     public boolean canPartition(int[] nums) {
         int sum = 0;
         for (int num : nums) {
@@ -7,25 +9,28 @@ class Solution {
         if (sum % 2 != 0) {
             return false;
         }
-        int target = sum / 2;
-        return canPartition(nums, target);
+        for (int i = 0; i < 201; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+        return canPartition(nums, 0, sum / 2);
     }
 
-    private boolean canPartition(int[] nums, int target) {
-        Set<Integer> set = new HashSet<>();
-        set.add(0);
-        int size = nums.length;
-        for (int i = 0; i < size; i++) {
-            Set<Integer> tempSet = new HashSet<>();
-            for (int setItem : set) {
-                if ((setItem + nums[i]) == target) {
-                    return true;
-                }
-                tempSet.add(setItem + nums[i]);
-                tempSet.add(setItem);
-            }
-            set = tempSet;
+    public boolean canPartition(int[] nums, int index, int target) {
+        if (target == 0) {
+            return true;
         }
-        return set.contains(target);
+        if (index >= nums.length) {
+            return false;
+        }
+        if (dp[index][target] != -1) {
+            return dp[index][target] == 1;
+        }
+        boolean take = false;
+        if (nums[index] <= target) {
+            take = canPartition(nums, index + 1, target - nums[index]);
+        }
+        boolean skip = canPartition(nums, index + 1, target);
+        dp[index][target] = (take || skip) ? 1 : 0;
+        return take || skip;
     }
 }
