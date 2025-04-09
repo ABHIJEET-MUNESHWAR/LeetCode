@@ -1,13 +1,13 @@
 class Solution {
     public int minOperations(int[] nums, int k) {
-        Set<Integer> set = new HashSet<>();
+        BitSet bs = new BitSet(100001);
         for (int num : nums) {
             if (num < k) {
                 return -1;
             } else if (num > k) {
-                set.add(num);
+                bs.set(num);
             }
         }
-        return set.size();
+        return bs.cardinality();
     }
 }
