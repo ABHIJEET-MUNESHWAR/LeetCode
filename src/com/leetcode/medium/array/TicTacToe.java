@@ -7,7 +7,7 @@ package com.leetcode.medium.array;
     Date:   12-04-2025
     Time:   09:25 pm
     https://leetcode.com/problems/design-tic-tac-toe/description/
-    348. Design Tic-Tac-Toe
+    🟠 348. Design Tic-Tac-Toe
     https://leetcode.ca/all/348.html
 */
 
