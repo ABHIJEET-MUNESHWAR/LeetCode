@@ -4,7 +4,8 @@ class Solution {
         List<int[]> result = new ArrayList<>();
         result.add(intervals[0]);
         int n = intervals.length;
-        for (int[] interval : intervals) {
+        for (int i = 1; i < n; i++) {
+            int[] interval = intervals[i];
             int currentStart = interval[0];
             int currentEnd = interval[1];
             if (currentStart > result.get(result.size() - 1)[1]) {
