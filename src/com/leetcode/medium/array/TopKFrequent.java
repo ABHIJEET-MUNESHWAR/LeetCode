@@ -24,16 +24,17 @@ public class TopKFrequent {
   }
 
   private int[] topKFrequent(int[] nums, int k) {
-    Map<Integer, Integer> map = new HashMap<>();
+    Map<Integer, Integer> numToFreqMap = new HashMap<>();
     for (int num : nums) {
-      map.put(num, map.getOrDefault(num, 0) + 1);
+      numToFreqMap.put(num, numToFreqMap.getOrDefault(num, 0) + 1);
     }
-    PriorityQueue<Map.Entry<Integer, Integer>> mapHeap = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
-    mapHeap.addAll(map.entrySet());
-    List<Integer> list = new ArrayList<>();
-    while (list.size() < k) {
-      list.add(mapHeap.poll().getKey());
+    PriorityQueue<Map.Entry<Integer, Integer>> maxHeap = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue());
+    maxHeap.addAll(numToFreqMap.entrySet());
+    int[] result = new int[k];
+    for (int i = 0; i < k; i++) {
+      Map.Entry<Integer, Integer> entry = maxHeap.poll();
+      result[i] = entry.getKey();
     }
-    return list.stream().mapToInt(i -> i).toArray();
+    return result;
   }
 }
