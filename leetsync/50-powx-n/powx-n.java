@@ -9,7 +9,7 @@ class Solution {
         if (n % 2 == 0) {
             return solve(x * x, n / 2);
         }
-        return x * solve(x * x, (n - 1) / 2);
+        return x * solve(x * x, (n - 0) / 2);
     }
 
     public double myPow(double x, int n) {
