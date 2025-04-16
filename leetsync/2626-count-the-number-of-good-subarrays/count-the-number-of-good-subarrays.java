@@ -1,22 +1,21 @@
 class Solution {
-    public long countGood(int[] A, int k) {
-        long res = 0L;
-        Map<Integer, Integer> count = new HashMap<>();
-        for (int i = 0, j = 0; j < A.length; ++j) {
-            k -= count.getOrDefault(A[j], 0);
-            count.put(A[j], count.getOrDefault(A[j], 0) + 1);
-            // Or
-            /*
-            count.putIfAbsent(A[j],0);
-            k -= count.get(A[j]);
-            count.put(A[j],count.get(A[j])+1);
-            */
-            while (k <= 0) {
-                count.put(A[i], count.get(A[i]) - 1);
-                k += count.get(A[i++]);
+    public long countGood(int[] nums, int k) {
+        long pairs = 0;
+        long result = 0;
+        int n = nums.length;
+        int left = 0, right = 0;
+        Map<Integer, Integer> numToFreqMap = new HashMap<>();
+        while (right < n) {
+            pairs += numToFreqMap.getOrDefault(nums[right], 0);
+            numToFreqMap.put(nums[right], numToFreqMap.getOrDefault(nums[right], 0) + 1);
+            while (pairs >= k) {
+                result += (n - right);
+                numToFreqMap.put(nums[left], numToFreqMap.get(nums[left]) - 1);
+                pairs -= numToFreqMap.get(nums[left]);
+                left++;
             }
-            res += i;
+            right++;
         }
-        return res;
+        return result;
     }
 }
