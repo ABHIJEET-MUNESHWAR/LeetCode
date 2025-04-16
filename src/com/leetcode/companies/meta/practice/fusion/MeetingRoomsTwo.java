@@ -7,7 +7,8 @@ package com.leetcode.companies.meta.practice.fusion;
     Date:   13-04-2025
     Time:   09:14 pm
     https://leetcode.com/problems/meeting-rooms-ii/description/
-    Meeting Rooms II
+    253. Meeting Rooms II
+    https://leetcode.ca/all/253.html
 */
 
 import java.util.Arrays;
