@@ -1,4 +1,4 @@
-package com.leetcode.medium.slidingwindow;
+package com.leetcode.companies.meta.practice.slidingwindow;
 
 /**
  * Created using IntelliJ IDEA.
@@ -13,17 +13,13 @@ public class LongestOnes {
         LongestOnes longestOnes = new LongestOnes();
         int[] nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
         int k = 2;
-        System.out.println(longestOnes.longestOnes(nums, k));
         System.out.println(longestOnes.longestOnesSlidingWindow(nums, k));
     }
 
     private int longestOnesSlidingWindow(int[] nums, int k) {
-        int size = nums.length;
-        int left = 0;
-        int right = 0;
-        int maxLength = 0;
-        int zeroCount = 0;
-        while (right < size) {
+        int n = nums.length;
+        int left = 0, right = 0, maxLength = 0, zeroCount = 0;
+        while (right < n) {
             if (nums[right] == 0) {
                 zeroCount++;
             }
@@ -37,24 +33,5 @@ public class LongestOnes {
             right++;
         }
         return maxLength;
-    }
-
-    private int longestOnes(int[] nums, int k) {
-        int size = nums.length;
-        int left = 0;
-        int right = 0;
-        while (right < size) {
-            if (nums[right] == 0) {
-                k--;
-            }
-            if (k < 0) {
-                if (nums[left] == 0) {
-                    k++;
-                }
-                left++;
-            }
-            right++;
-        }
-        return right - left;
     }
 }
