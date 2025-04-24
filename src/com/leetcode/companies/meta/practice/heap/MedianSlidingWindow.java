@@ -39,8 +39,9 @@ public class MedianSlidingWindow {
 
         double[] result = new double[nums.length - k + 1];
 
-        for (int i = 0; i < k; i++)
+        for (int i = 0; i < k; i++) {
             left.add(i);
+        }
         balance.run();
         result[0] = median.get();
 

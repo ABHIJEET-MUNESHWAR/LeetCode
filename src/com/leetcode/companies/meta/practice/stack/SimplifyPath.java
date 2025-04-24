@@ -1,4 +1,4 @@
-package com.leetcode.medium.stack;
+package com.leetcode.companies.meta.practice.stack;
 
 import java.util.Stack;
 

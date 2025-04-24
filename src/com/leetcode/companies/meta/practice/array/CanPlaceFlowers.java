@@ -1,4 +1,4 @@
-package com.leetcode.easy.array;
+package com.leetcode.companies.meta.practice.array;
 
 /**
  * Created using IntelliJ IDEA. Author:  abhijeet, Date:    20/03/23, Time:    7:03 pm
