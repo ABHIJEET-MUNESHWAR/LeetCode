@@ -6,7 +6,7 @@ package com.leetcode.hard.slidingwindow;
     Author: Abhijeet Ashok Muneshwar
     Date:   28-04-2025
     Time:   09:17 pm
-    2302. Count SubArrays With Score Less Than K
+    🔴 2302. Count SubArrays With Score Less Than K
     https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/?envType=daily-question&envId=2025-04-28
 */
 
