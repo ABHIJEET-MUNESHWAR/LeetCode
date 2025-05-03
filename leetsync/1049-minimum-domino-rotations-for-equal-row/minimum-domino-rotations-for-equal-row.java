@@ -1,23 +1,28 @@
 class Solution {
     public int minDominoRotations(int[] tops, int[] bottoms) {
-        int res = getRotation(tops, bottoms, tops[0]);
-        if (bottoms[0] != tops[0]) {
-            res = Math.min(res, getRotation(tops, bottoms, bottoms[0]));
+        int result = Integer.MAX_VALUE;
+        for (int val = 1; val <= 6; val++) {
+            int swaps = find(tops, bottoms, val);
+            if (swaps != -1) {
+                result = Math.min(result, swaps);
+            }
         }
-        return res == Integer.MAX_VALUE ? -1 : res;
+        return result == Integer.MAX_VALUE ? -1 : result;
     }
 
-    private int getRotation(int[] tops, int[] bottoms, int target) {
-        int rotateTop = 0, rotateBottom = 0;
-        for (int i = 0; i < tops.length; i++) {
-            if (tops[i] != target && bottoms[i] != target) {
-                return Integer.MAX_VALUE;
+    public int find(int[] tops, int[] bottoms, int val) {
+        int n = tops.length;
+        int swapTop = 0;
+        int swapBottom = 0;
+        for (int i = 0; i < n; i++) {
+            if (tops[i] != val && bottoms[i] != val) {
+                return -1;
+            } else if (tops[i] != val) {
+                swapTop++;
+            } else if (bottoms[i] != val) {
+                swapBottom++;
             }
-            if (tops[i] != target)
-                rotateTop++;
-            if (bottoms[i] != target)
-                rotateBottom++;
         }
-        return Math.min(rotateTop, rotateBottom);
+        return Math.min(swapTop, swapBottom);
     }
 }
