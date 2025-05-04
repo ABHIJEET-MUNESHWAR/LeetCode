@@ -1,14 +1,14 @@
 class Solution {
     public int numEquivDominoPairs(int[][] dominoes) {
-        Map<Integer, Integer> count = new HashMap<>();
-        int res = 0;
-        for (int[] d : dominoes) {
-            int k = Math.min(d[0], d[1]) * 10 + Math.max(d[0], d[1]);
-            count.put(k, count.getOrDefault(k, 0) + 1);
+        Map<Integer, Integer> numToFreqMap = new HashMap<>();
+        int result = 0;
+        for (int[] domino : dominoes) {
+            int num = Math.min(domino[0], domino[1]) * 10 + Math.max(domino[0], domino[1]);
+            numToFreqMap.put(num, numToFreqMap.getOrDefault(num, 0) + 1);
         }
-        for (int v : count.values()) {
-            res += v * (v - 1) / 2;
+        for (int value : numToFreqMap.values()) {
+            result += (value) * (value - 1) / 2;
         }
-        return res;
+        return result;
     }
 }
