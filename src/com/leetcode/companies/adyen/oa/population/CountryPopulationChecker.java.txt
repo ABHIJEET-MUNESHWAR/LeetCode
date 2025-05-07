@@ -1,0 +1,105 @@
+package com.leetcode.companies.adyen.oa.population;
+
+
+/*
+    Created using IntelliJ IDEA
+    Author: Abhijeet Ashok Muneshwar
+    Date:   05-05-2025
+    Time:   10:43 am
+*/
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+public class CountryPopulationChecker {
+
+    public static void main(String[] args) {
+        /*String input1 = "in"; // country name prefix
+        String input2 = "10,00,000"; // population threshold, string with commas*/
+        String input1 = "co"; // country name prefix
+        String input2 = "500"; // population threshold, string with commas
+        int populationThreshold = parsePopulation(input2);
+
+        int result = getCountries(input1.toLowerCase(), populationThreshold);
+        System.out.println(result);
+    }
+
+    public static int getCountries(String prefix, int p) {
+        int accum = 0;
+        int page = 1;
+        int totalPages = 1;
+
+        try {
+            do {
+                String urlStr = "https://jsonmock.hackerrank.com/api/countries/search?name=" + prefix + "&page=" + page;
+                URL url = new URL(urlStr);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("GET");
+
+                BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                StringBuilder response = new StringBuilder();
+                String line;
+
+                while ((line = in.readLine()) != null) {
+                    response.append(line);
+                }
+                in.close();
+
+                JsonObject json = JsonParser.parseString(response.toString()).getAsJsonObject();
+                if (page == 1) {
+                    totalPages = json.get("total_pages").getAsInt();
+                }
+
+                JsonArray countries = json.getAsJsonArray("data");
+
+                for (JsonElement countryElem : countries) {
+                    JsonObject country = countryElem.getAsJsonObject();
+                    String name = country.get("name").getAsString().toLowerCase();
+
+                    if (!name.contains(prefix)) {
+                        continue;
+                    }
+
+                    int population = country.get("population").getAsInt();
+                    if (population > p) {
+                        accum++;
+                    }
+                }
+
+                page++;
+            } while (page <= totalPages);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return accum;
+    }
+
+    // Helper to parse population like "10,00,000" -> 1000000
+    public static int parsePopulation(String input) {
+        return Integer.parseInt(input.replaceAll(",", ""));
+    }
+}
+/*
+first input :
+input 1 - in
+input 2 - 10,00,000
+
+expected output - 21
+your output - 24
+
+Second input :
+input 1 - co
+input 2 - 500
+
+expected output - 13
+your output - 20.
+ */

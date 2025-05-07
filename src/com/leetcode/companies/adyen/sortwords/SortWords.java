@@ -1,4 +1,4 @@
-package com.leetcode.companies.adyen;
+package com.leetcode.companies.adyen.sortwords;
 
 /**
  * Created using IntelliJ IDEA.

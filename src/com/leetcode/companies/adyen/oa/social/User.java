@@ -1,4 +1,4 @@
-package com.leetcode.companies.adyen;
+package com.leetcode.companies.adyen.oa.social;
 
 
 /*
