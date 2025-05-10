@@ -45,13 +45,13 @@ Wells-Chase-20
 
 public class Solution {
     public static void main(String args[]) throws Exception {
-        Scanner scanner = new Scanner(System.in);
-        String destination = scanner.nextLine();
-        int k = Integer.parseInt(scanner.nextLine());
-        int routesCount = Integer.parseInt(scanner.nextLine());
-        List<BankRoute> bankRoutes = new ArrayList<>(routesCount);
+        Scanner         scanner     = new Scanner(System.in);
+        String          destination = scanner.nextLine();
+        int             k           = Integer.parseInt(scanner.nextLine());
+        int             routesCount = Integer.parseInt(scanner.nextLine());
+        List<BankRoute> bankRoutes  = new ArrayList<>(routesCount);
         for (int i = 0; i < routesCount; i++) {
-            String[] line = scanner.nextLine().split("-");
+            String[]  line  = scanner.nextLine().split("-");
             BankRoute route = new SampleBankRouteImpl(line[0], line[1], Integer.parseInt(line[2]));
             bankRoutes.add(route);
         }

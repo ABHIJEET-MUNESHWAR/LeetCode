@@ -10,8 +10,8 @@ package com.leetcode.companies.adyen.one.cheapestbankroute;
 
 public class RoutesState {
     String currentBank;
-    int cost;
-    int intermediaries;
+    int    cost;
+    int    intermediaries;
 
     public RoutesState(String currentBank, int cost, int intermediaries) {
         this.currentBank = currentBank;
