@@ -11,7 +11,7 @@ package com.leetcode.companies.adyen.one.cheapestbankroute;
 public class SampleBankRouteImpl implements BankRoute {
     private final String source;
     private final String destination;
-    private final int cost;
+    private final int    cost;
 
     public SampleBankRouteImpl(String source, String destination, int cost) {
         this.source = source;

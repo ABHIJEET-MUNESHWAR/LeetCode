@@ -38,9 +38,9 @@ public class CheapestBankRoute {
             }
 
             for (BankRoute bankRoute : graph.get(currentBank)) {
-                String nextBank = bankRoute.getDestination();
-                int newCost = current.cost + bankRoute.getCost();
-                int nextIntermediaries = current.intermediaries + 1;
+                String nextBank           = bankRoute.getDestination();
+                int    newCost            = current.cost + bankRoute.getCost();
+                int    nextIntermediaries = current.intermediaries + 1;
                 if (nextIntermediaries <= max + 1) {
                     // Only consider if this (bank, intermediaries) pair is either unseen or better
                     Map<Integer, Integer> bankMap = visitedMap.getOrDefault(nextBank, new HashMap<>());
