@@ -1,39 +1,33 @@
 class Solution {
-
-    public int find(int i, int[] parent) {
-        if (parent[i] == i) {
-            return i;
+    public char dfsToFindMin(Map<Character, List<Character>> adjListMap, char ch, boolean[] visited) {
+        visited[ch - 'a'] = true;
+        char minChar = ch;
+        List<Character> neighbours = adjListMap.getOrDefault(ch, new ArrayList<>());
+        for (char neighbour : neighbours) {
+            if (!visited[neighbour - 'a']) {
+                char nextChar = dfsToFindMin(adjListMap, neighbour, visited);
+                if (minChar > nextChar) {
+                    minChar = nextChar;
+                }
+            }
         }
-        return parent[i]=find(parent[i], parent);
-    }
-
-    public void union(int i, int j, int[] parent) {
-        int parentOfI = find(i, parent);
-        int parentOfJ = find(j, parent);
-        if (parentOfI < parentOfJ) {
-            parent[parentOfJ] = parentOfI;
-        } else {
-            parent[parentOfI] = parentOfJ;
-        }
+        return minChar;
     }
 
     public String smallestEquivalentString(String s1, String s2, String baseStr) {
-        int size = s1.length();
-        int[] parent = new int[26];
-        for (int i = 0; i < 26; i++) {
-            parent[i] = i;
+        int n = s1.length();
+        Map<Character, List<Character>> adjListMap = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            char u = s1.charAt(i);
+            char v = s2.charAt(i);
+            adjListMap.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
+            adjListMap.computeIfAbsent(v, k -> new ArrayList<>()).add(u);
         }
-        for (int i = 0; i < size; i++) {
-            union(s1.charAt(i) - 'a', s2.charAt(i) - 'a', parent);
+        StringBuilder result = new StringBuilder();
+        for (char ch : baseStr.toCharArray()) {
+            boolean[] visited = new boolean[26];
+            result.append(dfsToFindMin(adjListMap, ch, visited));
         }
-        String result = "";
-        int baseStringSize = baseStr.length();
-        for (int i = 0; i < baseStringSize; i++) {
-            int parentIntegerValue = find(baseStr.charAt(i) - 'a', parent);
-            char a = 'a';
-            a += parentIntegerValue;
-            result += String.valueOf(a);
-        }
-        return result;
+        return result.toString();
     }
 }
