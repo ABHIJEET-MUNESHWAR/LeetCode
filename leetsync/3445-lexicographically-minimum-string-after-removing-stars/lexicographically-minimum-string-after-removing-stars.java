@@ -1,34 +1,41 @@
-import java.util.*;
+class P {
+    public char c;
+    public int i;
+    public P(char c, int i) {
+        this.c = c;
+        this.i = i;
+    }
+}
 
 class Solution {
     public String clearStars(String s) {
-        int n = s.length();
-        PriorityQueue<Character> pq = new PriorityQueue<>();
-        Map<Character, Deque<Integer>> map = new HashMap<>();
-        boolean[] keep = new boolean[n];
-        Arrays.fill(keep, true);
-
-        for (int i = 0; i < n; i++) {
-            char c = s.charAt(i);
-            if (c == '*') {
-                char smallest = pq.poll();
-                int indexToRemove = map.get(smallest).removeLast();
-                keep[i] = false; // Remove '*'
-                keep[indexToRemove] = false; // Remove smallest char
-            } else {
-                pq.offer(c);
-                map.putIfAbsent(c, new ArrayDeque<>());
-                map.get(c).add(i);
+        char[] str = s.toCharArray();
+        Queue<P> pq = new PriorityQueue<>((a, b) -> {
+           if (a.c == b.c) {
+               return b.i - a.i;
+           }
+            return Character.compare(a.c, b.c);
+        });
+        
+        for (int i = 0; i < str.length; i++) {
+            char c = str[i];
+            if (c != '*') {
+                pq.add(new P(c, i));
+                continue;
+            }
+            
+            if (!pq.isEmpty()) {
+                P p = pq.poll();
+                str[p.i] = '*';
             }
         }
-
-        StringBuilder result = new StringBuilder();
-        for (int i = 0; i < n; i++) {
-            if (keep[i]) {
-                result.append(s.charAt(i));
+        char[] result = new char[str.length]; 
+        int index = 0;
+        for (char c : str) {
+            if (c != '*') {
+                result[index++] = c;
             }
         }
-
-        return result.toString();
+        return new String(result, 0, index); 
     }
 }
