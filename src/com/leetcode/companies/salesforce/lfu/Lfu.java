@@ -119,5 +119,9 @@ public class Lfu {
         System.out.println(lfu.get(2));
         System.out.println(lfu.get(3));
         System.out.println(lfu.get(4));
+        System.out.println(lfu.get(6));
+        System.out.println(lfu.get(6));
+        System.out.println(lfu.get(6));
+        System.out.println(lfu.get(6));
     }
 }
