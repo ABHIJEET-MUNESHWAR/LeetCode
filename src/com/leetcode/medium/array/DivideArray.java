@@ -18,7 +18,8 @@ public class DivideArray {
     public static void main(String[] args) {
         DivideArray divideArray = new DivideArray();
         int[]       nums        = new int[]{1, 3, 4, 8, 7, 9, 3, 5, 1};
-        ArrayUtils.printMatrix(divideArray.divideArray(nums));
+        int         k           = 2;
+        ArrayUtils.printMatrix(divideArray.divideArray(nums, k));
     }
 
     public int[][] divideArray(int[] nums, int k) {
