@@ -23,19 +23,20 @@ class Solution {
         return score;
     }
 
-    public String removeSubString(String s, String matchStr) {
-        Stack<Character> stack = new Stack<>();
-        for (char ch : s.toCharArray()) {
-            if (!stack.isEmpty() && stack.peek() == matchStr.charAt(0) && ch == matchStr.charAt(1)) {
-                stack.pop();
-            } else {
-                stack.push(ch);
+    public String removeSubString(String inputString, String matchStr) {
+        StringBuilder sb = new StringBuilder();
+        int j = 0;
+
+        for (int i = 0; i < inputString.length(); i++) {
+            sb.append(inputString.charAt(i));
+            j++;
+
+            if (j > 1 && sb.charAt(j - 2) == matchStr.charAt(0) && sb.charAt(j - 1) == matchStr.charAt(1)) {
+                sb.delete(j - 2, j);
+                j -= 2;
             }
         }
-        StringBuilder remainingStr = new StringBuilder();
-        while (!stack.isEmpty()) {
-            remainingStr.append(stack.pop());
-        }
-        return remainingStr.reverse().toString();
+
+        return sb.toString();
     }
 }
