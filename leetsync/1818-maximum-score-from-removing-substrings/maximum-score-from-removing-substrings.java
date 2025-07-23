@@ -1,26 +1,41 @@
 class Solution {
     public int maximumGain(String s, int x, int y) {
-        int result = 0;
-        String maxSubString = x > y ? "ab" : "ba";
-        String minSubString = x < y ? "ab" : "ba";
-        String firstFilteredString = removeSubStringWithoutStack(s, maxSubString);
-        result += ((s.length() - firstFilteredString.length()) / 2) * (Math.max(x, y));
-        String secondFilteredString = removeSubStringWithoutStack(firstFilteredString, minSubString);
-        result += ((firstFilteredString.length() - secondFilteredString.length()) / 2) * (Math.min(x, y));
-        return result;
+        int n = s.length();
+        int score = 0;
+        String maxStr = (x > y) ? "ab" : "ba";
+        String minStr;
+
+        if (maxStr.equals("ab")) {
+            minStr = "ba";
+        } else {
+            minStr = "ab";
+        }
+
+        // First Pass
+        String tempFirst = removeSubString(s, maxStr);
+        int removedPairsCount = (n - tempFirst.length()) / 2;
+        score += removedPairsCount * Math.max(x, y);
+
+        // Second Pass
+        String tempSecond = removeSubString(tempFirst, minStr);
+        removedPairsCount = (tempFirst.length() - tempSecond.length()) / 2;
+        score += removedPairsCount * Math.min(x, y);
+        return score;
     }
 
-    private String removeSubStringWithoutStack(String s, String subString) {
-        StringBuilder sb = new StringBuilder();
-        int j = 0;
+    public String removeSubString(String s, String matchStr) {
+        Stack<Character> stack = new Stack<>();
         for (char ch : s.toCharArray()) {
-            sb.append(ch);
-            j++;
-            if (j > 1 && sb.charAt(j - 2) == subString.charAt(0) && sb.charAt(j - 1) == subString.charAt(1)) {
-                sb.delete(j - 2, j);
-                j -= 2;
+            if (!stack.isEmpty() && stack.peek() == matchStr.charAt(0) && ch == matchStr.charAt(1)) {
+                stack.pop();
+            } else {
+                stack.push(ch);
             }
         }
-        return sb.toString();
+        StringBuilder remainingStr = new StringBuilder();
+        while (!stack.isEmpty()) {
+            remainingStr.append(stack.pop());
+        }
+        return remainingStr.reverse().toString();
     }
 }
