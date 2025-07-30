@@ -1,26 +1,42 @@
 class Solution {
     public int maximumGain(String s, int x, int y) {
-        int result = 0;
-        String maxSubString = x > y ? "ab" : "ba";
-        String minSubString = x < y ? "ab" : "ba";
-        String firstFilteredString = removeSubStringWithoutStack(s, maxSubString);
-        result += ((s.length() - firstFilteredString.length()) / 2) * (Math.max(x, y));
-        String secondFilteredString = removeSubStringWithoutStack(firstFilteredString, minSubString);
-        result += ((firstFilteredString.length() - secondFilteredString.length()) / 2) * (Math.min(x, y));
-        return result;
+        int n = s.length();
+        int score = 0;
+        String maxStr = (x > y) ? "ab" : "ba";
+        String minStr;
+
+        if (maxStr.equals("ab")) {
+            minStr = "ba";
+        } else {
+            minStr = "ab";
+        }
+
+        // First Pass
+        String tempFirst = removeSubString(s, maxStr);
+        int removedPairsCount = (n - tempFirst.length()) / 2;
+        score += removedPairsCount * Math.max(x, y);
+
+        // Second Pass
+        String tempSecond = removeSubString(tempFirst, minStr);
+        removedPairsCount = (tempFirst.length() - tempSecond.length()) / 2;
+        score += removedPairsCount * Math.min(x, y);
+        return score;
     }
 
-    private String removeSubStringWithoutStack(String s, String subString) {
+    public String removeSubString(String inputString, String matchStr) {
         StringBuilder sb = new StringBuilder();
         int j = 0;
-        for (char ch : s.toCharArray()) {
-            sb.append(ch);
+
+        for (int i = 0; i < inputString.length(); i++) {
+            sb.append(inputString.charAt(i));
             j++;
-            if (j > 1 && sb.charAt(j - 2) == subString.charAt(0) && sb.charAt(j - 1) == subString.charAt(1)) {
+
+            if (j > 1 && sb.charAt(j - 2) == matchStr.charAt(0) && sb.charAt(j - 1) == matchStr.charAt(1)) {
                 sb.delete(j - 2, j);
                 j -= 2;
             }
         }
+
         return sb.toString();
     }
 }
