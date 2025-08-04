@@ -7,7 +7,7 @@ class Solution {
             // Add the fruit at the right pointer to the map
             fruitTypeToNoMap.put(fruits[right], fruitTypeToNoMap.getOrDefault(fruits[right], 0) + 1);
             // While more than 2 types of fruits are in the map, move the left pointer
-            if (fruitTypeToNoMap.size() > 2) {
+            while (fruitTypeToNoMap.size() > 2) {
                 fruitTypeToNoMap.put(fruits[left], fruitTypeToNoMap.get(fruits[left]) - 1);
                 if (fruitTypeToNoMap.get(fruits[left]) == 0) {
                     fruitTypeToNoMap.remove(fruits[left]);
