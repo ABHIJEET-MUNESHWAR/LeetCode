@@ -1,40 +1,33 @@
 class Solution {
-    private void sortDiagonal(int row, int col, int[][] grid, boolean asc) {
-        int n = grid.length;
-        List<Integer> array = new ArrayList<>();
-        int i = row, j = col;
-        while (i < n && j < n) {
-            array.add(grid[i][j]);
-            i++;
-            j++;
-        }
-        if (asc) {
-            Collections.sort(array); // Ascending
-        } else {
-            array.sort(Collections.reverseOrder()); // Descending
-        }
-        i = row;
-        j = col;
-        for (int val : array) {
-            grid[i][j] = val;
-            i++;
-            j++;
-        }
-    }
-
     public int[][] sortMatrix(int[][] grid) {
         int n = grid.length;
+        Map<Integer, List<Integer>> map = new HashMap<>();
 
-        // Bottom-left diagonals → sort in non-increasing order
-        for (int row = 0; row < n; row++) {
-            sortDiagonal(row, 0, grid, false);
+        // Collect diagonal elements (i - j as the key)
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                int diagonal = i - j;
+                map.computeIfAbsent(diagonal, k -> new ArrayList<>()).add(grid[i][j]);
+            }
+        }
+        // Sort diagonals: non-decreasing for diag >= 0, non-increasing for diag < 0
+        for (Map.Entry<Integer, List<Integer>> entry : map.entrySet()) {
+            List<Integer> list = entry.getValue();
+            if (entry.getKey() >= 0) {
+                Collections.sort(list);
+            } else {
+                list.sort(Collections.reverseOrder());
+            }
         }
 
-        // Top-right diagonals → sort in non-decreasing order
-        for (int col = 1; col < n; col++) {
-            sortDiagonal(0, col, grid, true);
+        // Fill grid back using elements from the map
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                int diagonal = i - j;
+                List<Integer> list = map.get(diagonal);
+                grid[i][j] = list.remove(list.size() - 1); // Take from raer of list to have O(1) time complexity
+            }
         }
-
         return grid;
     }
 }
