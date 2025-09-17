@@ -1,63 +1,38 @@
 class FoodRatings {
-
-    class Pair implements Comparable<Pair> {
-        String foodName;
-        int rating;
-
-        Pair(String name, int rate) {
-            foodName = name;
-            rating = rate;
-        }
-
-        public int compareTo(Pair obj) {
-            if (this.rating != obj.rating) {
-                return obj.rating - this.rating;
-            }
-
-            return this.foodName.compareTo(obj.foodName);
-        }
-    }
-
-    Map<String, PriorityQueue<Pair>> cuisineToRatingsMap;
-    Map<String, Integer> foodNameToIndex;
-    Map<String, String> foodToCuisine;
-    Pair[] foodRatingsArray;
+    private Map<String, String> foodToCuisineMap = new HashMap<>();
+    private Map<String, Integer> foodToRatingMap = new HashMap<>();
+    private Map<String, TreeSet<Pair<Integer, String>>> cuisineToRatingFoodMap = new HashMap<>();
 
     public FoodRatings(String[] foods, String[] cuisines, int[] ratings) {
         int n = foods.length;
-
-        cuisineToRatingsMap = new HashMap<>();
-        foodNameToIndex = new HashMap<>();
-        foodToCuisine = new HashMap<>();
-
-        foodRatingsArray = new Pair[n];
-
         for (int i = 0; i < n; i++) {
-            foodRatingsArray[i] = new Pair(foods[i], ratings[i]);
-
-            foodNameToIndex.put(foods[i], i);
-            foodToCuisine.put(foods[i], cuisines[i]);
-
-            if (!cuisineToRatingsMap.containsKey(cuisines[i])) {
-                cuisineToRatingsMap.put(cuisines[i], new PriorityQueue<>());
-            }
-
-            PriorityQueue<Pair> temp = cuisineToRatingsMap.get(cuisines[i]);
-            temp.offer(foodRatingsArray[i]);
-            cuisineToRatingsMap.put(cuisines[i], temp);
+            foodToCuisineMap.put(foods[i], cuisines[i]);
+            foodToRatingMap.put(foods[i], ratings[i]);
+            cuisineToRatingFoodMap
+                    .computeIfAbsent(
+                            cuisines[i], k -> new TreeSet<>((a, b) -> {
+                                int compareByRating = Integer.compare(a.getKey(), b.getKey());
+                                if (compareByRating == 0) {
+                                    return a.getValue().compareTo(b.getValue());
+                                }
+                                return compareByRating;
+                            }))
+                    .add(new Pair(-ratings[i], foods[i]));
         }
     }
 
     public void changeRating(String food, int newRating) {
-        int position = foodNameToIndex.get(food);
-
-        cuisineToRatingsMap.get(foodToCuisine.get(food)).remove(foodRatingsArray[position]);
-        foodRatingsArray[position].rating = newRating;
-        cuisineToRatingsMap.get(foodToCuisine.get(food)).offer(foodRatingsArray[position]);
+        String cuisineName = foodToCuisineMap.get(food);
+        TreeSet<Pair<Integer, String>> cuisinSet = cuisineToRatingFoodMap.get(cuisineName);
+        Pair<Integer, String> oldElement = new Pair<>(-foodToRatingMap.get(food), food);
+        cuisinSet.remove(oldElement);
+        foodToRatingMap.put(food, newRating);
+        cuisinSet.add(new Pair<>(-newRating, food));
     }
 
     public String highestRated(String cuisine) {
-        return cuisineToRatingsMap.get(cuisine).peek().foodName;
+        Pair<Integer, String> hishestRated = cuisineToRatingFoodMap.get(cuisine).first();
+        return hishestRated.getValue();
     }
 }
 
