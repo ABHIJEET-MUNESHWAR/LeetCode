@@ -15,7 +15,7 @@ class Solution {
         int right = size - 1;
         while (left <= right) {
             int mid = left + (right - left) / 2;
-            long searchKey = (long)potions[mid] * spell;
+            long searchKey = (long) potions[mid] * spell;
             if (searchKey < success) {
                 left = mid + 1;
             } else {
