@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/smallest-number-with-all-set-bits">Smallest Number With All Set Bits</a></h2> <img src='https://img.shields.io/badge/Difficulty-Easy-brightgreen' alt='Difficulty: Easy' /><hr><p>You are given a <em>positive</em> number <code>n</code>.</p>
+<h2><a href="https://leetcode.com/problems/smallest-number-with-all-set-bits">3676. Smallest Number With All Set Bits</a></h2><h3>Easy</h3><hr><p>You are given a <em>positive</em> number <code>n</code>.</p>
 
 <p>Return the <strong>smallest</strong> number <code>x</code> <strong>greater than</strong> or <strong>equal to</strong> <code>n</code>, such that the binary representation of <code>x</code> contains only <span data-keyword="set-bit">set bits</span></p>
 
