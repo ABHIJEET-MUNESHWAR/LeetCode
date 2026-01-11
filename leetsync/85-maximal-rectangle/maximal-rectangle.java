@@ -1,36 +1,40 @@
 public class Solution {
     public int maximalRectangle(char[][] matrix) {
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0)
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return 0;
-        int cLen = matrix[0].length; // column length
-        int rLen = matrix.length; // row length
-        // height array
-        int[] h = new int[cLen + 1];
-        h[cLen] = 0;
-        int max = 0;
-
-        for (int row = 0; row < rLen; row++) {
-            Stack<Integer> s = new Stack<Integer>();
-            for (int i = 0; i < cLen + 1; i++) {
-                if (i < cLen)
-                    if (matrix[row][i] == '1')
-                        h[i] += 1;
-                    else
-                        h[i] = 0;
-
-                if (s.isEmpty() || h[s.peek()] <= h[i])
-                    s.push(i);
-                else {
-                    while (!s.isEmpty() && h[i] < h[s.peek()]) {
-                        int top = s.pop();
-                        int area = h[top] * (s.isEmpty() ? i : (i - s.peek() - 1));
-                        if (area > max)
-                            max = area;
-                    }
-                    s.push(i);
+        }
+        int[] heights = new int[matrix[0].length];
+        int largestArea = 0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                int val = matrix[i][j] - '0';
+                if (val == 0) {
+                    heights[j] = 0;
+                } else {
+                    heights[j] += val;
                 }
             }
+            int maxArea = largestRectangleArea(heights);
+            largestArea = Math.max(maxArea, largestArea);
         }
-        return max;
+        return largestArea;
+    }
+
+    private int largestRectangleArea(int[] heights) {
+        int maxArea = Integer.MIN_VALUE;
+        int size = heights.length;
+        int[] stack = new int[size + 1];
+        int index = -1;
+        for (int i = 0; i <= size; i++) {
+            int element = (i == size) ? 0 : heights[i];
+            while ((index != -1) && ((heights[stack[index]]) > element)) {
+                int h = heights[stack[index--]];
+                int ps = (index == -1) ? -1 : stack[index];
+                int w = i - ps - 1;
+                maxArea = Math.max(maxArea, h * w);
+            }
+            stack[++index] = i;
+        }
+        return maxArea == Integer.MIN_VALUE ? 0 : maxArea;
     }
 }
