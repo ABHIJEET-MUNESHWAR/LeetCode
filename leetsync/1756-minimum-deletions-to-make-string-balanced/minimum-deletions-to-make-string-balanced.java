@@ -1,24 +1,14 @@
 class Solution {
     public int minimumDeletions(String s) {
-        int n = s.length();
-        int leftBCount = 0;
-        int rightACount = 0;
-        int result = Integer.MAX_VALUE;
-        for (int i = n - 1; i >= 0; i--) {
-            char c = s.charAt(i);
-            if (c == 'a') {
-                rightACount++;
+        int res = 0, count = 0;
+        for (char c : s.toCharArray()) {
+            if (c == 'b')
+                count++;
+            else if (count != 0) {
+                res++;
+                count--;
             }
         }
-        for (int i = 0; i < n; i++) {
-            if (s.charAt(i) == 'a') {
-                rightACount--;
-            }
-            result = Math.min(result, leftBCount + rightACount);
-            if (s.charAt(i) == 'b') {
-                leftBCount++;
-            }
-        }
-        return result;
+        return res;
     }
 }
