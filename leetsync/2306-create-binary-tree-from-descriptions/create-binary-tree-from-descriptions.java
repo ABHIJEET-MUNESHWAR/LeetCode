@@ -15,7 +15,7 @@
  */
 class Solution {
     public TreeNode createBinaryTree(int[][] descriptions) {
-        
+
         Map<Integer, TreeNode> map = new HashMap<>();
         Set<Integer> childSet = new HashSet<>();
 
