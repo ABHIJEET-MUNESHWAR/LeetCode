@@ -1,15 +1,3 @@
-# LeetCode
-This repository contains solutions to LeetCode problems solved in Java, Golang & Rust.
-
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Math
-|  |
-| ------- |
-| [3676-smallest-number-with-all-set-bits](https://github.com/ABHIJEET-MUNESHWAR/LeetCode/tree/master/3676-smallest-number-with-all-set-bits) |
-## Bit Manipulation
-|  |
-| ------- |
-| [3676-smallest-number-with-all-set-bits](https://github.com/ABHIJEET-MUNESHWAR/LeetCode/tree/master/3676-smallest-number-with-all-set-bits) |
-<!---LeetCode Topics End-->
+| # | Problem | Platform | Difficulty | Date Solved | Time |
+|---|---------|----------|------------|-------------|------|
+| 1 | [Detect Cycle using DSU](./GeeksForGeeks/Medium/Detect%20Cycle%20using%20DSU) | [GeeksForGeeks](https://www.geeksforgeeks.org/problems/detect-cycle-using-dsu/1) | Medium | 21 Jul 2026 | 06:22 pm |
