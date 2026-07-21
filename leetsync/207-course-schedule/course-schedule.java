@@ -1,38 +1,34 @@
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        ArrayList<Integer>[] adjacencyList = (ArrayList<Integer>[]) new ArrayList[numCourses];
-        int[] inDegree = new int[numCourses];
-        for (int i = 0; i < numCourses; i++) {
-            adjacencyList[i] = new ArrayList<>();
+        Map<Integer, ArrayList<Integer>> adj = new HashMap<>();
+        for(int i=0; i<numCourses; i++){
+            adj.put(i, new ArrayList<>());
         }
-        for (int[] edge : prerequisites) {
+        for(int[] edge: prerequisites){
             int u = edge[0];
             int v = edge[1];
-            adjacencyList[v].add(u);
-            inDegree[u]++;
+            adj.get(v).add(u);
         }
-        return topologicalSortCheck(numCourses, adjacencyList, inDegree);
+        boolean[] visited = new boolean[numCourses];
+        boolean[] inRecursion = new boolean[numCourses];
+        for(int i=0; i<numCourses; i++){
+            if(!visited[i] && isCycleDFS(adj, visited, inRecursion, i)){
+                return false;
+            }
+        }
+        return true;
     }
-
-    private boolean topologicalSortCheck(int numCourses, ArrayList<Integer>[] adjacencyList, int[] inDegree) {
-        int count = 0;
-        Queue<Integer> queue = new LinkedList<>();
-        for (int i = 0; i < numCourses; i++) {
-            if (inDegree[i] == 0) {
-                count++;
-                queue.add(i);
+    public boolean isCycleDFS(Map<Integer, ArrayList<Integer>> adj, boolean[] visited, boolean[] inRecursion, int u){
+        visited[u]=true;
+        inRecursion[u]=true;
+        for(int v: adj.get(u)){
+            if(!visited[v] && isCycleDFS(adj, visited, inRecursion, v)){
+                return true;
+            } else if(inRecursion[v]){
+                return true;
             }
         }
-        while (!queue.isEmpty()) {
-            int u = queue.poll();
-            for (int v : adjacencyList[u]) {
-                inDegree[v]--;
-                if (inDegree[v] == 0) {
-                    queue.add(v);
-                    count++;
-                }
-            }
-        }
-        return count == numCourses;
+        inRecursion[u]=false;
+        return false;
     }
 }
