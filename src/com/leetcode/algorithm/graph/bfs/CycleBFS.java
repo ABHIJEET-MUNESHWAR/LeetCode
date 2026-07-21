@@ -26,26 +26,7 @@ public class CycleBFS {
         }
         boolean[] visited = new boolean[node];
         for (int i = 0; i<node; i++) {
-			/*
-			if (!visited[i] && isCycleDFS(adj, visited, i, -1)) {
-				return true;
-			} */
             if (!visited[i] && isCycleBFS(adj, visited, i)) {
-                return true;
-            }
-        }
-        return false;
-    }
-    public boolean isCycleDFS(Map<Integer, ArrayList<Integer>> adj, boolean[] visited, int u, int parent) {
-        visited[u] = true;
-        for (int v: adj.get(u)) {
-            if (v == parent) {
-                continue;
-            }
-            if (visited[v]) {
-                return true;
-            }
-            if (isCycleDFS(adj, visited, v, u)) {
                 return true;
             }
         }
