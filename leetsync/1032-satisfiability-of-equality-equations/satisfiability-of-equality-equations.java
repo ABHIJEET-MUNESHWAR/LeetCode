@@ -1,7 +1,6 @@
 class Solution {
-
     public int find(int i, int[] parent) {
-        if (parent[i] == i) {
+        if (i == parent[i]) {
             return i;
         }
         return parent[i] = find(parent[i], parent);
@@ -26,22 +25,22 @@ class Solution {
     public boolean equationsPossible(String[] equations) {
         int[] parent = new int[27];
         int[] rank = new int[27];
-        for (int i = 1; i <= 26; i++) {
+        for (int i = 1; i < 27; i++) {
             parent[i] = i;
             rank[i] = 0;
         }
-        // First do union of equal chars
         for (String equation : equations) {
+            // a==b
             if (equation.charAt(1) == '=') {
-                // a == b
                 union(equation.charAt(0) - 'a', equation.charAt(3) - 'a', parent, rank);
             }
         }
-        // Find not equal to cases & validate
         for (String equation : equations) {
+            // a==b
             if (equation.charAt(1) == '!') {
-                // a != b
-                if (find(equation.charAt(0) - 'a', parent) == find(equation.charAt(3) - 'a', parent)) {
+                int parentOfFirst = find(equation.charAt(0) - 'a', parent);
+                int parentOfSecond = find(equation.charAt(3) - 'a', parent);
+                if (parentOfFirst == parentOfSecond) {
                     return false;
                 }
             }
