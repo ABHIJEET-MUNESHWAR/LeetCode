@@ -20,7 +20,7 @@ class Solution {
             if (u == destination) {
                 return true;
             }
-            for (int v : adj.getOrDefault(u, new ArrayList<>())) {
+            for (int v : adj.getOrDefault(u, Collections.emptyList())) {
                 if (!isVisited[v]) {
                     isVisited[v] = true;
                     queue.offer(v);
