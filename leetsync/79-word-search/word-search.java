@@ -4,9 +4,9 @@ class Solution {
     public boolean exist(char[][] board, String word) {
         int m = board.length;
         int n = board[0].length;
+        boolean[][] isVisited = new boolean[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                boolean[][] isVisited = new boolean[m][n];
                 if (board[i][j] == word.charAt(0)) {
                     if (wordSearchDFS(board, word, 0, i, j, isVisited)) {
                         return true;
