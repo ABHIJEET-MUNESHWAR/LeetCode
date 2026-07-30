@@ -1,32 +1,41 @@
 class Solution {
+    public int find(int i, int[] parent) {
+        if (i == parent[i]) {
+            return i;
+        }
+        return parent[i] = find(parent[i], parent);
+    }
+
+    public void union(int i, int j, int[] parent, int[] rank) {
+        int parentOfI = find(i, parent);
+        int parentOfJ = find(j, parent);
+        if (parentOfI == parentOfJ) {
+            return;
+        }
+        if (rank[parentOfI] > rank[parentOfJ]) {
+            parent[parentOfJ] = parentOfI;
+        } else if (rank[parentOfI] < rank[parentOfJ]) {
+            parent[parentOfI] = parentOfJ;
+        } else {
+            parent[parentOfI] = parentOfJ;
+            rank[parentOfJ]++;
+        }
+    }
+
     public boolean validPath(int n, int[][] edges, int source, int destination) {
-        Map<Integer, List<Integer>> adj = new HashMap<>();
+        int[] parent = new int[n];
+        int[] rank = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+            rank[i] = 1;
+        }
         for (int[] edge : edges) {
             int u = edge[0];
             int v = edge[1];
-            adj.computeIfAbsent(u, key -> new ArrayList<>()).add(v);
-            adj.computeIfAbsent(v, key -> new ArrayList<>()).add(u);
+            union(u, v, parent, rank);
         }
-        return bfs(n, adj, source, destination);
-    }
-
-    public boolean bfs(int n, Map<Integer, List<Integer>> adj, int source, int destination) {
-        boolean[] isVisited = new boolean[n];
-        isVisited[source] = true;
-        Queue<Integer> queue = new LinkedList<>();
-        queue.offer(source);
-        while (!queue.isEmpty()) {
-            int u = queue.poll();
-            if (u == destination) {
-                return true;
-            }
-            for (int v : adj.getOrDefault(u, Collections.emptyList())) {
-                if (!isVisited[v]) {
-                    isVisited[v] = true;
-                    queue.offer(v);
-                }
-            }
-        }
-        return false;
+        int parentOfSource = find(source, parent);
+        int parentOfDestination = find(destination, parent);
+        return parentOfSource == parentOfDestination;
     }
 }
