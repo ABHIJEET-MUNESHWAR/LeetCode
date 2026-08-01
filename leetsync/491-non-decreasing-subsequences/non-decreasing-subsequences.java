@@ -1,25 +1,25 @@
 class Solution {
     public List<List<Integer>> findSubsequences(int[] nums) {
-        int n = nums.length;
-        List<List<Integer>> result = new ArrayList<>();
-        List<Integer> current = new ArrayList<>();
-        backtrack(nums, result, current, 0);
-        return result;
+        List<List<Integer>> resultList = new ArrayList<>();
+        List<Integer> currentList = new ArrayList<>();
+        backTracking(nums, resultList, currentList, 0);
+        return resultList;
     }
 
-    public void backtrack(int[] nums, List<List<Integer>> result, List<Integer> current, int index) {
-        if (current.size() > 1) {
-            result.add(new ArrayList(current));
+    public void backTracking(int[] nums, List<List<Integer>> resultList, List<Integer> currentList, int index) {
+        if (currentList.size() > 1) {
+            resultList.add(new ArrayList(currentList));
         }
+        int n = nums.length;
         Set<Integer> isUsed = new HashSet<>();
-        for (int i = index; i < nums.length; i++) {
-            if (isUsed.contains(nums[i])) {
-                continue;
-            }
-            if (current.isEmpty() || nums[i] >= current.get(current.size() - 1)) {
-                current.add(nums[i]); // Do
-                backtrack(nums, result, current, i + 1); // Explore
-                current.remove(current.size() - 1);// Undo
+        for (int i = index; i < n; i++) {
+            if (currentList.size() == 0 || (nums[i] >= currentList.get(currentList.size() - 1))) {
+                if (isUsed.contains(nums[i])) {
+                    continue;
+                }
+                currentList.add(nums[i]);
+                backTracking(nums, resultList, currentList, i + 1);
+                currentList.remove(currentList.size() - 1);
                 isUsed.add(nums[i]);
             }
         }
