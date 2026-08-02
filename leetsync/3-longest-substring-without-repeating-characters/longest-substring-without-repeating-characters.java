@@ -11,10 +11,10 @@ class Solution {
             if (!set.contains(ch)) {
                 set.add(ch);
                 j++;
+                maxLength = Math.max(maxLength, set.size());
             } else {
                 set.remove(s.charAt(i++));
             }
-            maxLength = Math.max(maxLength, set.size());
         }
         return maxLength;
     }
