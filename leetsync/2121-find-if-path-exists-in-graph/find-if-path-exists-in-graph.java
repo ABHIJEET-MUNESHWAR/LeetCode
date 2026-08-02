@@ -1,37 +1,41 @@
 class Solution {
-    public boolean validPath(int n, int[][] edges, int source, int destination) {
-        // Create Adjacency List
-        List<List<Integer>> adjacencyList = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            adjacencyList.add(new ArrayList<>());
+    public int find(int i, int[] parent) {
+        if (i == parent[i]) {
+            return i;
         }
-        // Fill values
-        for (int i = 0; i < edges.length; i++) {
-            int u = edges[i][0];
-            int v = edges[i][1];
-            adjacencyList.get(u).add(v);
-            adjacencyList.get(v).add(u);
-        }
-        boolean[] isVisited = new boolean[n];
-        return dfs(adjacencyList, source, destination, isVisited);
+        return parent[i] = find(parent[i], parent);
     }
 
-    private boolean dfs(List<List<Integer>> adjacencyList, int currentNode, int destination,
-            boolean[] isVisited) {
-        isVisited[currentNode] = true;
-        if (currentNode == destination) {
-            return true;
+    public void union(int i, int j, int[] parent, int[] rank) {
+        int parentOfI = find(i, parent);
+        int parentOfJ = find(j, parent);
+        if (parentOfI == parentOfJ) {
+            return;
         }
-        // Visit all neighbours of current node
-        for (Integer neighbor : adjacencyList.get(currentNode)) {
-            if (!isVisited[neighbor]) {
-                isVisited[neighbor] = true;
-                boolean isFound = dfs(adjacencyList, neighbor, destination, isVisited);
-                if (isFound) {
-                    return true;
-                }
-            }
+        if (rank[parentOfI] > rank[parentOfJ]) {
+            parent[parentOfJ] = parentOfI;
+        } else if (rank[parentOfI] < rank[parentOfJ]) {
+            parent[parentOfI] = parentOfJ;
+        } else {
+            parent[parentOfI] = parentOfJ;
+            rank[parentOfJ]++;
         }
-        return false;
+    }
+
+    public boolean validPath(int n, int[][] edges, int source, int destination) {
+        int[] parent = new int[n];
+        int[] rank = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+            rank[i] = 1;
+        }
+        for (int[] edge : edges) {
+            int u = edge[0];
+            int v = edge[1];
+            union(u, v, parent, rank);
+        }
+        int parentOfSource = find(source, parent);
+        int parentOfDestination = find(destination, parent);
+        return parentOfSource == parentOfDestination;
     }
 }
