@@ -1,22 +1,29 @@
 class Solution {
+    List<List<Integer>> resultList = new ArrayList<>();
+    Set<Integer> isUsed = new HashSet<>();
+
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        backtrack(result, new ArrayList<>(), nums);
-        return result;
+        List<Integer> currentList = new ArrayList<>();
+        backtrack(nums, currentList);
+        return resultList;
     }
 
-    private void backtrack(List<List<Integer>> result, ArrayList<Integer> tempList, int[] nums) {
-        if (tempList.size() == nums.length) {
-            result.add(new ArrayList<>(tempList));
-        } else {
-            for (int i = 0; i < nums.length; i++) {
-                if (tempList.contains(nums[i])) {
-                    continue;
-                }
-                tempList.add(nums[i]);
-                backtrack(result, tempList, nums);
-                tempList.remove(tempList.size() - 1);
+    public void backtrack(int[] nums, List<Integer> currentList) {
+        int n = nums.length;
+        if (currentList.size() == n) {
+            resultList.add(new ArrayList<>(currentList));
+            return;
+        }
+        for (int i = 0; i < n; i++) {
+            if (isUsed.contains(nums[i])) {
+                continue;
             }
+            isUsed.add(nums[i]);
+            currentList.add(nums[i]);
+            backtrack(nums, currentList);
+
+            isUsed.remove(nums[i]);
+            currentList.remove(currentList.size() - 1);
         }
     }
 }
