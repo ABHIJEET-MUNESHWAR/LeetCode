@@ -1,25 +1,24 @@
 class Solution {
     public int minTime(int n, int[][] edges, List<Boolean> hasApple) {
-        Map<Integer, List<Integer>> adjacencyList = new HashMap<>();
-        for (int i = 0; i < n; i++) {
-            adjacencyList.put(i, new ArrayList<>());
-        }
+        Map<Integer, List<Integer>> adj = new HashMap<>();
         for (int[] edge : edges) {
-            adjacencyList.get(edge[0]).add(edge[1]);
-            adjacencyList.get(edge[1]).add(edge[0]);
+            int u = edge[0];
+            int v = edge[1];
+            adj.computeIfAbsent(u, key -> new ArrayList<>()).add(v);
+            adj.computeIfAbsent(v, key -> new ArrayList<>()).add(u);
         }
-        return dfs(adjacencyList, 0, -1, hasApple);
+        return dfs(adj, hasApple, 0, -1);
     }
 
-    private int dfs(Map<Integer, List<Integer>> adjacencyList, int current, int parent, List<Boolean> hasApple) {
+    public int dfs(Map<Integer, List<Integer>> adj, List<Boolean> hasApple, int u, int previousNode) {
         int time = 0;
-        for (int child : adjacencyList.get(current)) {
-            if (child == parent) {
+        for (int v : adj.getOrDefault(u, Collections.emptyList())) {
+            if (v == previousNode) {
                 continue;
             }
-            int timeFromChild = dfs(adjacencyList, child, current, hasApple);
-            if (timeFromChild > 0 || hasApple.get(child)) {
-                time += timeFromChild + 2;
+            int timeFromMyChild = dfs(adj, hasApple, v, u);
+            if (timeFromMyChild > 0 || hasApple.get(v)) {
+                time += timeFromMyChild + 2;
             }
         }
         return time;

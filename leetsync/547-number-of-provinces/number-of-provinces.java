@@ -1,24 +1,48 @@
 class Solution {
+    public int find(int i, int[] parent) {
+        if (i == parent[i]) {
+            return i;
+        }
+        return parent[i] = find(parent[i], parent);
+    }
+
+    public void union(int i, int j, int[] parent, int[] rank) {
+        int parentOfI = find(i, parent);
+        int parentOfJ = find(j, parent);
+        if (parentOfI == parentOfJ) {
+            return;
+        }
+        if (rank[parentOfI] > rank[parentOfJ]) {
+            parent[parentOfJ] = parentOfI;
+        } else if (rank[parentOfI] < rank[parentOfJ]) {
+            parent[parentOfI] = parentOfJ;
+        } else {
+            parent[parentOfI] = parentOfJ;
+            rank[parentOfJ]++;
+        }
+    }
 
     public int findCircleNum(int[][] isConnected) {
         int n = isConnected.length;
-        boolean[] visited = new boolean[n];
-        int count = 0;
+        int[] parent = new int[n];
+        int[] rank = new int[n];
+        int noOfProvince = 0;
         for (int i = 0; i < n; i++) {
-            if (!visited[i]) {
-                dfs(isConnected, visited, i);
-                count++;
+            parent[i] = i;
+            rank[i] = 0;
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (isConnected[i][j] == 1) {
+                    union(i, j, parent, rank);
+                }
             }
         }
-        return count;
-    }
-
-    private void dfs(int[][] isConnected, boolean[] visited, int i) {
-        for (int j = 0; j < isConnected.length; j++) {
-            if (isConnected[i][j] == 1 && !visited[j]) {
-                visited[j] = true;
-                dfs(isConnected, visited, j);
+        for (int i = 0; i < n; i++) {
+            if (parent[i] == i) {
+                noOfProvince++;
             }
         }
+        return noOfProvince;
     }
 }
