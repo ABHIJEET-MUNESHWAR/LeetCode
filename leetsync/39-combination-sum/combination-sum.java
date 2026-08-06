@@ -3,23 +3,21 @@ class Solution {
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<Integer> currentList = new ArrayList<>();
-        int n = candidates.length;
-        Arrays.sort(candidates);
-        backTrack(candidates, target, n, 0, currentList);
+        combinationSum(candidates, target, candidates.length, currentList, 0);
         return resultList;
     }
 
-    public void backTrack(int[] candidates, int target, int n, int index, List<Integer> currentList) {
-        if (target == 0) {
+    public void combinationSum(int[] candidates, int remainingTarget, int n, List<Integer> currentList, int index) {
+        if (remainingTarget == 0) {
             resultList.add(new ArrayList<>(currentList));
             return;
         }
-        if (target < 0 || index == n) {
+        if (index >= n || remainingTarget < 0) {
             return;
         }
         for (int i = index; i < n; i++) {
             currentList.add(candidates[i]);
-            backTrack(candidates, target - candidates[i], n, i, currentList);
+            combinationSum(candidates, remainingTarget - candidates[i], n, currentList, i);
             currentList.remove(currentList.size() - 1);
         }
     }
