@@ -1,28 +1,28 @@
 class Solution {
 
     public List<String> wordBreak(String s, List<String> wordDict) {
-        Set<String> set = new HashSet<>();
-        set.addAll(wordDict);
-        List<String> result = new ArrayList<>();
-        solve(s, 0, "", set, result);
-        return result;
+        List<String> resultList = new ArrayList<>();
+        String currentList = new String();
+        Set<String> wordDictSet = new HashSet<>();
+        wordDictSet.addAll(wordDict);
+        backTrackWordBreak(s, wordDictSet, currentList, resultList, 0);
+        return resultList;
     }
 
-    private void solve(String s, int index, String currentSentence, Set<String> set, List<String> result) {
-        if (index >= s.length()) {
-            result.add(currentSentence);
+    public void backTrackWordBreak(String s, Set<String> wordDictSet, String currentList, List<String> resultList,
+            int i) {
+        int n = s.length();
+        if (i == n) {
+            resultList.add(new String(currentList));
             return;
         }
-        for (int endIndex = index; endIndex < s.length(); endIndex++) {
-            String subString = s.substring(index, endIndex + 1);
-            if (set.contains(subString)) {
-                String tempSentence = currentSentence;
-                if (!currentSentence.isEmpty()) {
-                    currentSentence += " ";
-                }
-                currentSentence += subString;
-                solve(s, endIndex + 1, currentSentence, set, result);
-                currentSentence = tempSentence;
+        for (int j = i + 1; j <= n; j++) {
+            String subString = s.substring(i, j);
+            if (wordDictSet.contains(subString)) {
+                String temp = currentList;
+                currentList = currentList.isEmpty() ? subString : currentList + " " + subString;
+                backTrackWordBreak(s, wordDictSet, currentList, resultList, j);
+                currentList = temp;
             }
         }
     }

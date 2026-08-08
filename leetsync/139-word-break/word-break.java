@@ -1,24 +1,29 @@
 class Solution {
-
-    HashSet<String> set = new HashSet<String>();
-
     public boolean wordBreak(String s, List<String> wordDict) {
-        set.addAll(wordDict);
-        return solveBottomUp(s);
+        Set<String> wordDictSet = new HashSet<>();
+        wordDictSet.addAll(wordDict);
+        Boolean[] dp = new Boolean[301];
+        return wordBreakBackTrack(s, wordDictSet, s.length(), 0, dp);
     }
 
-    private boolean solveBottomUp(String s) {
-        boolean[] dp = new boolean[s.length() + 1];
-        dp[0] = true;
-        int size = s.length();
-        for (int i = 1; i <= size; i++) {
-            for (int j = 0; j < i; j++) {
-                if (dp[j] && set.contains(s.substring(j, i))) {
-                    dp[i] = true;
-                    break;
-                }
+    public boolean wordBreakBackTrack(String s, Set<String> wordDictSet, int n, int i, Boolean[] dp) {
+        if (i >= n) {
+            return true;
+        }
+        if (wordDictSet.contains(s)) {
+            return true;
+        }
+        if (dp[i] != null) {
+            return dp[i];
+        }
+        for (int j = i + 1; j <= n; j++) {
+            String subString = s.substring(i, j);
+            if (wordDictSet.contains(subString) && wordBreakBackTrack(s, wordDictSet, n, j, dp)) {
+                dp[i] = true;
+                return true;
             }
         }
-        return dp[s.length()];
+        dp[i] = false;
+        return false;
     }
 }
