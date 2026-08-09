@@ -5,12 +5,10 @@ class Solution {
         int i = 0, j = 0, maxLength = 0;
         while (j < n) {
             char ch = s.charAt(j);
-            int currentLength = 0;
             if (!set.contains(ch)) {
                 set.add(ch);
                 j++;
-                currentLength = j - i;
-                maxLength = Math.max(maxLength, currentLength);
+                maxLength = Math.max(maxLength, set.size());
             } else {
                 set.remove(s.charAt(i));
                 i++;
