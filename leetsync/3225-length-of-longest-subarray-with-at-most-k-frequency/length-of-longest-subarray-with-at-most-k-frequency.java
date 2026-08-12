@@ -1,25 +1,17 @@
 class Solution {
     public int maxSubarrayLength(int[] nums, int k) {
-        int start = 0;
-        int end = 0;
-        int maxLength = 0;
-        int size = nums.length;
-        Map<Integer, Integer> frequencyMap = new HashMap<>();
-        while (end < size) {
-            // expansion
-            // Include elements into window
-            frequencyMap.put(nums[end], frequencyMap.getOrDefault(nums[end], 0) + 1);
-
-            // shrinking
-            // If window is invalid, then shrink it
-            while (frequencyMap.get(nums[end]) > k) {
-                frequencyMap.put(nums[start], frequencyMap.get(nums[start]) - 1);
-                start++;
+        int mapLength = 0, left = 0, right = 0;
+        Map<Integer, Integer> numToFreqMap = new HashMap<>();
+        int n = nums.length;
+        while (right < n) {
+            numToFreqMap.put(nums[right], numToFreqMap.getOrDefault(nums[right], 0) + 1);
+            while (numToFreqMap.get(nums[right]) > k) {
+                numToFreqMap.put(nums[left], numToFreqMap.getOrDefault(nums[left], 0) - 1);
+                left++;
             }
-
-            maxLength = Math.max(maxLength, end - start + 1);
-            end++;
+            mapLength = Math.max(mapLength, right - left + 1);
+            right++;
         }
-        return maxLength;
+        return mapLength;
     }
 }
