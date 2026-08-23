@@ -1,46 +1,47 @@
 class Solution {
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
-        ArrayList<Integer>[] adjacencyList = (ArrayList<Integer>[]) new ArrayList[numCourses];
-        int[] inDegree = new int[numCourses];
-        for (int i = 0; i < numCourses; i++) {
-            adjacencyList[i] = new ArrayList<>();
+    boolean hasCycle = false;
+
+    public void hasCycleDFS(Map<Integer, List<Integer>> adj, int numCourses, boolean[] isVisited, boolean[] inRecursion,
+            int u,
+            Stack<Integer> stack) {
+        isVisited[u] = true;
+        inRecursion[u] = true;
+        for (int v : adj.getOrDefault(u, new ArrayList<>())) {
+            if (inRecursion[v]) {
+                hasCycle = true;
+                return;
+            }
+            if (!isVisited[v]) {
+                hasCycleDFS(adj, numCourses, isVisited, inRecursion, v, stack);
+            }
         }
-        for (int[] prerequisite : prerequisites) {
-            int u = prerequisite[0];
-            int v = prerequisite[1];
-            adjacencyList[v].add(u);
-            inDegree[u]++;
-        }
-        return topologicalSort(adjacencyList, numCourses, inDegree);
+        stack.add(u);
+        inRecursion[u] = false;
     }
 
-    private int[] topologicalSort(ArrayList<Integer>[] adjacencyList, int numCourses, int[] inDegree) {
-        int[] result = new int[numCourses];
-        Queue<Integer> queue = new LinkedList<>();
-        int count = 0;
-        int j = 0;
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        boolean[] isVisited = new boolean[numCourses];
+        boolean[] inRecursion = new boolean[numCourses];
+        Map<Integer, List<Integer>> adj = new HashMap<>();
+        Stack<Integer> stack = new Stack<>();
+        for (int[] edge : prerequisites) {
+            int u = edge[0];
+            int v = edge[1];
+            adj.computeIfAbsent(v, key -> new ArrayList<>()).add(u);
+        }
         for (int i = 0; i < numCourses; i++) {
-            if (inDegree[i] == 0) {
-                queue.add(i);
-                count++;
-                result[j++] = i;
+            if (!isVisited[i]) {
+                hasCycleDFS(adj, numCourses, isVisited, inRecursion, i, stack);
             }
         }
-        while (!queue.isEmpty()) {
-            int u = queue.poll();
-            for (int v : adjacencyList[u]) {
-                inDegree[v]--;
-                if (inDegree[v] == 0) {
-                    queue.add(v);
-                    count++;
-                    result[j++] = v;
-                }
-            }
+        if (hasCycle) {
+            return new int[] {};
         }
-        if (count == numCourses) {
-            return result;
-        } else {
-            return new int[0];
+        int[] result = new int[stack.size()];
+        int i = 0;
+        while (!stack.isEmpty()) {
+            result[i++] = stack.pop();
         }
+        return result;
     }
 }
