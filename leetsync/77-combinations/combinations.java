@@ -1,23 +1,21 @@
 class Solution {
-    List<List<Integer>> resultList = new ArrayList<>();
-
-    public List<List<Integer>> combine(int n, int k) {
-        List<Integer> currentList = new ArrayList<>();
-        backtrack(n, k, 1, currentList);
-        return resultList;
-    }
-
-    public void backtrack(int n, int k, int index, List<Integer> currentList) {
-        if (k == 0) {
+    public void combinationBackTrack(int n, int k, int index, List<Integer> currentList,
+            List<List<Integer>> resultList) {
+        if (currentList.size() == k) {
             resultList.add(new ArrayList<>(currentList));
             return;
         }
-        if (index > n) {
-            return;
+        for (int i = index; i <= n; i++) {
+            currentList.add(i);
+            combinationBackTrack(n, k, i + 1, currentList, resultList);
+            currentList.remove(currentList.size() - 1);
         }
-        currentList.add(index);
-        backtrack(n, k - 1, index + 1, currentList);
-        currentList.remove(currentList.size() - 1);
-        backtrack(n, k, index + 1, currentList);
+    }
+
+    public List<List<Integer>> combine(int n, int k) {
+        List<List<Integer>> resultList = new ArrayList<>();
+        List<Integer> currentList = new ArrayList<>();
+        combinationBackTrack(n, k, 1, currentList, resultList);
+        return resultList;
     }
 }
