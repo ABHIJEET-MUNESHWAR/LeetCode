@@ -17,24 +17,26 @@
   },
   "syncedProblems": {
     "GeeksForGeeks_Detect_Cycle_using_DSU": true,
-    "LeetCode_Smallest_Stable_Index_I": true
+    "LeetCode_Smallest_Stable_Index_I": true,
+    "LeetCode_Permutations": true
   },
-  "totalSolved": 2,
+  "totalSolved": 3,
   "difficultyCounts": {
     "easy": 1,
-    "medium": 1,
+    "medium": 2,
     "hard": 0,
     "basic": 0
   },
   "todayProblems": [
-    "Smallest Stable Index I"
+    "Smallest Stable Index I",
+    "Permutations"
   ],
   "currentStreak": 1,
-  "todayCount": 1,
+  "todayCount": 2,
   "lastSyncDate": "2026-09-04",
   "maxStreak": 1,
   "activityHistory": {
     "2026-07-21": 1,
-    "2026-09-04": 1
+    "2026-09-04": 2
   }
 }
