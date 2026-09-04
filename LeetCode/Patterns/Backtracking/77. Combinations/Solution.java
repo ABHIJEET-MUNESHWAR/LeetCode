@@ -1,24 +1,23 @@
 class Solution {
-
-    List<List<Integer>> result = new ArrayList<>();
+    List<List<Integer>> resultList = new ArrayList<>();
 
     public List<List<Integer>> combine(int n, int k) {
-        List<Integer> temp = new ArrayList<>();
-        solve(n, k, 1, temp);
-        return result;
+        List<Integer> currentList = new ArrayList<>();
+        backtrack(n, k, 1, currentList);
+        return resultList;
     }
 
-    private void solve(int n, int k, int start, List<Integer> temp) {
+    public void backtrack(int n, int k, int index, List<Integer> currentList) {
         if (k == 0) {
-            result.add(new ArrayList<>(temp));
+            resultList.add(new ArrayList<>(currentList));
             return;
         }
-        if (start > n) {
+        if (index > n) {
             return;
         }
-        temp.add(start);
-        solve(n, k - 1, start + 1, temp);
-        temp.remove(temp.size() - 1);
-        solve(n, k, start + 1, temp);
+        currentList.add(index);
+        backtrack(n, k - 1, index + 1, currentList);
+        currentList.remove(currentList.size() - 1);
+        backtrack(n, k, index + 1, currentList);
     }
 }
