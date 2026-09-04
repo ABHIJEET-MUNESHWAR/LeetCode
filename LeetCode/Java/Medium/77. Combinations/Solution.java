@@ -1,21 +1,24 @@
 class Solution {
-    public void combinationBackTrack(int n, int k, int index, List<Integer> currentList,
-            List<List<Integer>> resultList) {
-        if (currentList.size() == k) {
-            resultList.add(new ArrayList<>(currentList));
-            return;
-        }
-        for (int i = index; i <= n; i++) {
-            currentList.add(i);
-            combinationBackTrack(n, k, i + 1, currentList, resultList);
-            currentList.remove(currentList.size() - 1);
-        }
-    }
+
+    List<List<Integer>> result = new ArrayList<>();
 
     public List<List<Integer>> combine(int n, int k) {
-        List<List<Integer>> resultList = new ArrayList<>();
-        List<Integer> currentList = new ArrayList<>();
-        combinationBackTrack(n, k, 1, currentList, resultList);
-        return resultList;
+        List<Integer> temp = new ArrayList<>();
+        solve(n, k, 1, temp);
+        return result;
+    }
+
+    private void solve(int n, int k, int start, List<Integer> temp) {
+        if (k == 0) {
+            result.add(new ArrayList<>(temp));
+            return;
+        }
+        if (start > n) {
+            return;
+        }
+        temp.add(start);
+        solve(n, k - 1, start + 1, temp);
+        temp.remove(temp.size() - 1);
+        solve(n, k, start + 1, temp);
     }
 }
