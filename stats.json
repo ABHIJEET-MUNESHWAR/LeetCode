@@ -20,25 +20,27 @@
     "LeetCode_Smallest_Stable_Index_I": true,
     "LeetCode_Permutations": true,
     "LeetCode_Combinations": true,
-    "GeeksForGeeks_Undirected_Graph_Cycle": true
+    "GeeksForGeeks_Undirected_Graph_Cycle": true,
+    "LeetCode_Smallest_Stable_Index_II": true
   },
-  "totalSolved": 5,
+  "totalSolved": 6,
   "difficultyCounts": {
     "easy": 1,
-    "medium": 4,
+    "medium": 5,
     "hard": 0,
     "basic": 0
   },
   "todayProblems": [
-    "Undirected Graph Cycle"
+    "Undirected Graph Cycle",
+    "Smallest Stable Index II"
   ],
   "currentStreak": 2,
-  "todayCount": 1,
+  "todayCount": 2,
   "lastSyncDate": "2026-09-05",
   "maxStreak": 2,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
-    "2026-09-05": 1
+    "2026-09-05": 2
   }
 }
