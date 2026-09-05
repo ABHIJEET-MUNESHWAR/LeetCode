@@ -25,12 +25,13 @@
     "LeetCode_Fibonacci_Number": true,
     "LeetCode_Subsets_II": true,
     "LeetCode_Climbing_Stairs": true,
-    "LeetCode_Combination_Sum_II": true
+    "LeetCode_Combination_Sum_II": true,
+    "LeetCode_Combination_Sum_III": true
   },
-  "totalSolved": 10,
+  "totalSolved": 11,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 7,
+    "medium": 8,
     "hard": 0,
     "basic": 0
   },
@@ -40,15 +41,16 @@
     "Fibonacci Number",
     "Subsets II",
     "Climbing Stairs",
-    "Combination Sum II"
+    "Combination Sum II",
+    "Combination Sum III"
   ],
   "currentStreak": 2,
-  "todayCount": 6,
+  "todayCount": 7,
   "lastSyncDate": "2026-09-05",
   "maxStreak": 2,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
-    "2026-09-05": 6
+    "2026-09-05": 7
   }
 }
