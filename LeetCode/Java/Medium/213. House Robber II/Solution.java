@@ -3,27 +3,34 @@ class Solution {
 
     public int rob(int[] nums) {
         int size = nums.length;
+        int prevPrev = 0;
+        int prev = 0;
+        int temp = 0;
+
         if (size == 1) {
             return nums[0];
         }
-        int[] dp = new int[size + 1];
-        dp[0] = 0;
-
         for (int i = 1; i <= size - 1; i++) {
-            int steal = nums[i - 1] + (((i - 2) >= 0) ? dp[i - 2] : 0);
-            int skip = dp[i - 1];
-            dp[i] = Math.max(steal, skip);
+            int steal = nums[i - 1] + prevPrev;
+            int skip = prev;
+            temp = Math.max(steal, skip);
+            prevPrev = prev;
+            prev = temp;
         }
-        int result1 = dp[size - 1];
-        dp[0] = 0;
-        dp[1] = 0;
+        int result1 = prev;
+
+        prevPrev = 0;
+        prev = 0;
+        temp = 0;
         dp = new int[size + 1];
         for (int i = 2; i <= size; i++) {
-            int steal = nums[i - 1] + dp[i - 2];
-            int skip = dp[i - 1];
-            dp[i] = Math.max(steal, skip);
+            int steal = nums[i - 1] + prevPrev;
+            int skip = prev;
+            temp = Math.max(steal, skip);
+            prevPrev = prev;
+            prev = temp;
         }
-        int result2 = dp[size];
+        int result2 = prev;
         return Math.max(result1, result2);
     }
 
