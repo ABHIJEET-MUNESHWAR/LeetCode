@@ -1,17 +1,23 @@
 class Solution {
-    public int robRecursion(int[] nums, int n, int index) {
-        if (index > n) {
-            return 0;
+    public int rob(int[] nums) {
+        if (nums.length == 1) {
+            return nums[0];
         }
-        int take = nums[index] + robRecursion(nums, n, index + 2);
-        int skip = robRecursion(nums, n, index + 1);
-        return Math.max(take, skip);
+        return Math.max(rob(nums, 0, nums.length - 2), rob(nums, 1, nums.length - 1));
     }
 
-    public int rob(int[] nums) {
-        int n = nums.length;
-        int take0thIndexHouse = robRecursion(nums, n - 2, 0);
-        int take1stIndexHouse = robRecursion(nums, n - 1, 1);
-        return Math.max(take0thIndexHouse, take1stIndexHouse);
+    private int rob(int[] nums, int start, int end) {
+        int prevPrev = 0;
+        int prev = 0;
+
+        for (int i = start; i <= end; i++) {
+            int steal = nums[i] + prevPrev;
+            int skip = prev;
+            int temp = Math.max(steal, skip);
+            prevPrev = prev;
+            prev = temp;
+        }
+
+        return prev;
     }
 }
