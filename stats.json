@@ -23,11 +23,12 @@
     "GeeksForGeeks_Undirected_Graph_Cycle": true,
     "LeetCode_Smallest_Stable_Index_II": true,
     "LeetCode_Fibonacci_Number": true,
-    "LeetCode_Subsets_II": true
+    "LeetCode_Subsets_II": true,
+    "LeetCode_Climbing_Stairs": true
   },
-  "totalSolved": 8,
+  "totalSolved": 9,
   "difficultyCounts": {
-    "easy": 2,
+    "easy": 3,
     "medium": 6,
     "hard": 0,
     "basic": 0
@@ -36,15 +37,16 @@
     "Undirected Graph Cycle",
     "Smallest Stable Index II",
     "Fibonacci Number",
-    "Subsets II"
+    "Subsets II",
+    "Climbing Stairs"
   ],
   "currentStreak": 2,
-  "todayCount": 4,
+  "todayCount": 5,
   "lastSyncDate": "2026-09-05",
   "maxStreak": 2,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
-    "2026-09-05": 4
+    "2026-09-05": 5
   }
 }
