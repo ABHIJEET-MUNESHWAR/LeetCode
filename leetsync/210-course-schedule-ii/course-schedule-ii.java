@@ -1,9 +1,6 @@
 class Solution {
-    boolean hasCycle = false;
-
-    public void hasCycleDFS(Map<Integer, List<Integer>> adj, int numCourses, boolean[] isVisited, boolean[] inRecursion,
-            int u,
-            Stack<Integer> stack) {
+    public void isCycleDfs(int numCourses, Map<Integer, List<Integer>> adj, int u, boolean[] isVisited,
+            boolean[] inRecursion, Stack<Integer> stack) {
         isVisited[u] = true;
         inRecursion[u] = true;
         for (int v : adj.getOrDefault(u, new ArrayList<>())) {
@@ -12,35 +9,37 @@ class Solution {
                 return;
             }
             if (!isVisited[v]) {
-                hasCycleDFS(adj, numCourses, isVisited, inRecursion, v, stack);
+                isCycleDfs(numCourses, adj, v, isVisited, inRecursion, stack);
             }
         }
-        stack.add(u);
         inRecursion[u] = false;
+        stack.push(u);
     }
 
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
+    boolean hasCycle = false;
+
+    public int[] findOrder(int numCourses, int[][] edges) {
+        Stack<Integer> stack = new Stack<>();
         boolean[] isVisited = new boolean[numCourses];
         boolean[] inRecursion = new boolean[numCourses];
         Map<Integer, List<Integer>> adj = new HashMap<>();
-        Stack<Integer> stack = new Stack<>();
-        for (int[] edge : prerequisites) {
+        for (int[] edge : edges) {
             int u = edge[0];
             int v = edge[1];
             adj.computeIfAbsent(v, key -> new ArrayList<>()).add(u);
         }
         for (int i = 0; i < numCourses; i++) {
             if (!isVisited[i]) {
-                hasCycleDFS(adj, numCourses, isVisited, inRecursion, i, stack);
+                isCycleDfs(numCourses, adj, i, isVisited, inRecursion, stack);
             }
         }
         if (hasCycle) {
             return new int[] {};
         }
         int[] result = new int[stack.size()];
-        int i = 0;
+        int itr = 0;
         while (!stack.isEmpty()) {
-            result[i++] = stack.pop();
+            result[itr++] = stack.pop();
         }
         return result;
     }
