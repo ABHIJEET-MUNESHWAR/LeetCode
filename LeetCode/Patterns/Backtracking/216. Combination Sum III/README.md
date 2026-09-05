@@ -1,6 +1,6 @@
 # 📝 216. Combination Sum III (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/combination-sum-iii)
+🔗 [Problem Link](https://leetcode.com/problems/combination-sum-iii/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
@@ -8,8 +8,8 @@
 Array, Backtracking
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 0 ms
+- **Memory:** 42.4 MB
 
 ---
 
