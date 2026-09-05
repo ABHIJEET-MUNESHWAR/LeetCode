@@ -26,12 +26,13 @@
     "LeetCode_Subsets_II": true,
     "LeetCode_Climbing_Stairs": true,
     "LeetCode_Combination_Sum_II": true,
-    "LeetCode_Combination_Sum_III": true
+    "LeetCode_Combination_Sum_III": true,
+    "LeetCode_Course_Schedule_II": true
   },
-  "totalSolved": 11,
+  "totalSolved": 12,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 8,
+    "medium": 9,
     "hard": 0,
     "basic": 0
   },
@@ -42,15 +43,16 @@
     "Subsets II",
     "Climbing Stairs",
     "Combination Sum II",
-    "Combination Sum III"
+    "Combination Sum III",
+    "Course Schedule II"
   ],
   "currentStreak": 2,
-  "todayCount": 7,
+  "todayCount": 8,
   "lastSyncDate": "2026-09-05",
   "maxStreak": 2,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
-    "2026-09-05": 7
+    "2026-09-05": 8
   }
 }
