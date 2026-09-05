@@ -1,11 +1,11 @@
 class Solution {
     public int fib(int n) {
-        int a = 0, b = 1, c = 0;
-        while (n-- > 0) {
-            a = b;
-            b = c;
-            c = b + a;
+        if (n == 0) {
+            return 0;
         }
-        return c;
+        if (n == 1) {
+            return 1;
+        }
+        return fib(n - 1) + fib(n - 2);
     }
 }
