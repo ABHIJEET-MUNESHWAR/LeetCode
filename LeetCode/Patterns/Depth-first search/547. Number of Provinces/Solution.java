@@ -26,7 +26,6 @@ class Solution {
         int n = isConnected.length;
         int[] parent = new int[n];
         int[] rank = new int[n];
-        int noOfProvince = 0;
         for (int i = 0; i < n; i++) {
             parent[i] = i;
             rank[i] = 0;
@@ -38,11 +37,12 @@ class Solution {
                 }
             }
         }
+        int noOfProvinces = 0;
         for (int i = 0; i < n; i++) {
             if (parent[i] == i) {
-                noOfProvince++;
+                noOfProvinces++;
             }
         }
-        return noOfProvince;
+        return noOfProvinces;
     }
 }
