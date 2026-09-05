@@ -27,12 +27,13 @@
     "LeetCode_Climbing_Stairs": true,
     "LeetCode_Combination_Sum_II": true,
     "LeetCode_Combination_Sum_III": true,
-    "LeetCode_Course_Schedule_II": true
+    "LeetCode_Course_Schedule_II": true,
+    "LeetCode_House_Robber_II": true
   },
-  "totalSolved": 12,
+  "totalSolved": 13,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 9,
+    "medium": 10,
     "hard": 0,
     "basic": 0
   },
@@ -44,15 +45,16 @@
     "Climbing Stairs",
     "Combination Sum II",
     "Combination Sum III",
-    "Course Schedule II"
+    "Course Schedule II",
+    "House Robber II"
   ],
   "currentStreak": 2,
-  "todayCount": 8,
+  "todayCount": 9,
   "lastSyncDate": "2026-09-05",
   "maxStreak": 2,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
-    "2026-09-05": 8
+    "2026-09-05": 9
   }
 }
