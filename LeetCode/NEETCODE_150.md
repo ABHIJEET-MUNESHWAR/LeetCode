@@ -3,7 +3,7 @@
 Track your progress on the NeetCode 150 roadmap practice problems.
 
 ## Progress
-- **Completed:** 8 / 150 (5.3%)
+- **Completed:** 9 / 150 (6.0%)
 
 ---
 
@@ -117,7 +117,7 @@ Track your progress on the NeetCode 150 roadmap practice problems.
 - [ ] Rotting Oranges
 - [ ] Walls and Gates
 - [x] [Course Schedule](./Java/Medium/207. Course Schedule/)
-- [ ] Course Schedule II
+- [x] [Course Schedule II](./Java/Medium/210. Course Schedule II/)
 - [ ] Redundant Connection
 - [ ] Number of Connected Components in an Undirected Graph
 - [ ] Graph Valid Tree
