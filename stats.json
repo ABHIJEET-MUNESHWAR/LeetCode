@@ -22,27 +22,29 @@
     "LeetCode_Combinations": true,
     "GeeksForGeeks_Undirected_Graph_Cycle": true,
     "LeetCode_Smallest_Stable_Index_II": true,
-    "LeetCode_Fibonacci_Number": true
+    "LeetCode_Fibonacci_Number": true,
+    "LeetCode_Subsets_II": true
   },
-  "totalSolved": 7,
+  "totalSolved": 8,
   "difficultyCounts": {
     "easy": 2,
-    "medium": 5,
+    "medium": 6,
     "hard": 0,
     "basic": 0
   },
   "todayProblems": [
     "Undirected Graph Cycle",
     "Smallest Stable Index II",
-    "Fibonacci Number"
+    "Fibonacci Number",
+    "Subsets II"
   ],
   "currentStreak": 2,
-  "todayCount": 3,
+  "todayCount": 4,
   "lastSyncDate": "2026-09-05",
   "maxStreak": 2,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
-    "2026-09-05": 3
+    "2026-09-05": 4
   }
 }
