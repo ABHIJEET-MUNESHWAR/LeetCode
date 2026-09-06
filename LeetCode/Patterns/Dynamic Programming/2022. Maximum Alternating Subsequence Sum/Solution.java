@@ -1,13 +1,26 @@
 class Solution {
-    public long maxAlternatingSum(int[] nums) {
-        int size = nums.length;
-        long[][] dp = new long[size + 1][2];
-        dp[0][0] = Math.max(-nums[0], 0);
-        dp[0][1] = Math.max(nums[0], 0);
-        for (int i = 1; i < size; i++) {
-            dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] - nums[i]);
-            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] + nums[i]);
+    public long maxAlternatingSumRecursion(int[] nums, int n, int index, int isEven, long[][] dp) {
+        if (index >= n) {
+            return 0;
         }
-        return Math.max(dp[size - 1][0], dp[size - 1][1]);
+        if (dp[index][isEven] != -1) {
+            return dp[index][isEven];
+        }
+        long skip = maxAlternatingSumRecursion(nums, n, index + 1, isEven, dp);
+        int val = nums[index];
+        if (isEven == 0) {
+            val = -val;
+        }
+        long take = val + maxAlternatingSumRecursion(nums, n, index + 1, 1 - isEven, dp);
+        return dp[index][isEven] = Math.max(skip, take);
+    }
+
+    public long maxAlternatingSum(int[] nums) {
+        int n = nums.length;
+        long[][] dp = new long[n + 1][2];
+        for (int i = 0; i <= n; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+        return maxAlternatingSumRecursion(nums, n, 0, 1, dp);
     }
 }
