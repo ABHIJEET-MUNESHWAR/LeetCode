@@ -20,3 +20,4 @@
 | 18 | [Longest Increasing Subsequence](./LeetCode/Medium/Longest%20Increasing%20Subsequence) | [LeetCode](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 06 Sept 2026 | 08:07 pm |
 | 19 | [Unique Paths](./LeetCode/Medium/Unique%20Paths) | [LeetCode](https://leetcode.com/problems/unique-paths/) | Medium | 06 Sept 2026 | 08:21 pm |
 | 20 | [Unique Paths II](./LeetCode/Medium/Unique%20Paths%20II) | [LeetCode](https://leetcode.com/problems/unique-paths-ii/) | Medium | 06 Sept 2026 | 09:02 pm |
+| 21 | [Shortest Path in Binary Matrix](./LeetCode/Medium/Shortest%20Path%20in%20Binary%20Matrix) | [LeetCode](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | Medium | 06 Sept 2026 | 09:32 pm |
