@@ -1,34 +1,35 @@
 class Solution {
+    int[][] directions = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 1 }, { -1, -1 }, { -1, 1 }, { 1, -1 } };
+
     public int shortestPathBinaryMatrix(int[][] grid) {
         int n = grid.length;
-        if (n == 0 || grid[0][0] == 1 || grid[n - 1][n - 1] == 1) {
+        if (grid[0][0] == 1 || grid[n - 1][n - 1] == 1) {
             return -1;
         }
-        boolean[][] isVisited = new boolean[n][n];
         Queue<int[]> queue = new LinkedList<>();
-        queue.offer(new int[] { 0, 0 });
-        int path = 1;
-        int[][] directions = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 1 }, { -1, -1 }, { 1, -1 }, { -1, 1 } };
+        int steps = 1;
+        queue.add(new int[] { 0, 0 });
+        boolean[][] isVisited = new boolean[n][n];
+        isVisited[0][0] = true;
         while (!queue.isEmpty()) {
-            int queueSize = queue.size();
-            while (queueSize-- > 0) {
-                int[] currentPosition = queue.poll();
-                int currentX = currentPosition[0];
-                int currentY = currentPosition[1];
-                if ((currentX == (n - 1)) && (currentY == (n - 1))) {
-                    return path;
-                }
+            int size = queue.size();
+            while (size-- > 0) {
+                int[] current = queue.poll();
+                int i = current[0];
+                int j = current[1];
                 for (int[] direction : directions) {
-                    int nextX = currentX + direction[0];
-                    int nextY = currentY + direction[1];
-                    if (nextX >= 0 && nextX < n && nextY >= 0 && nextY < n && grid[nextX][nextY] == 0
-                            && !isVisited[nextX][nextY]) {
-                        isVisited[nextX][nextY] = true;
-                        queue.offer(new int[] { nextX, nextY });
+                    int i_ = i + direction[0];
+                    int j_ = j + direction[1];
+                    if (i_ == n - 1 && j_ == n - 1) {
+                        return steps + 1;
+                    }
+                    if (i_ >= 0 && j_ >= 0 && i_ < n && j_ < n && grid[i_][j_] != 1 && !isVisited[i_][j_]) {
+                        isVisited[i_][j_] = true;
+                        queue.add(new int[] { i_, j_ });
                     }
                 }
             }
-            path++;
+            steps++;
         }
         return -1;
     }
