@@ -1,21 +1,29 @@
 class Solution {
-
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-
-        int row = obstacleGrid.length;
-        int col = obstacleGrid[0].length;
-        if (obstacleGrid[row - 1][col - 1] == 1) {
+    public int uniquePathsWithObstaclesRecursionMemoization(int[][] obstacleGrid, int m, int n, int i, int j,
+            int[][] dp) {
+        if (i == m - 1 && j == n - 1) {
+            return 1;
+        }
+        if (i < 0 || j < 0 || i >= m || j >= n || obstacleGrid[i][j] == 1) {
             return 0;
         }
-        int[][] dp = new int[row + 1][col + 1];
-        dp[0][1] = 1;
-        for (int i = 1; i <= row; i++) {
-            for (int j = 1; j <= col; j++) {
-                if (obstacleGrid[i - 1][j - 1] == 0) {
-                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
-                }
-            }
+        if (dp[i][j] != -1) {
+            return dp[i][j];
         }
-        return dp[row][col];
+        return dp[i][j] = uniquePathsWithObstaclesRecursionMemoization(obstacleGrid, m, n, i + 1, j, dp)
+                + uniquePathsWithObstaclesRecursionMemoization(obstacleGrid, m, n, i, j + 1, dp);
+    }
+
+    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        int m = obstacleGrid.length;
+        int n = obstacleGrid[0].length;
+        if (obstacleGrid[m - 1][n - 1] == 1) {
+            return 0;
+        }
+        int[][] dp = new int[m + 1][n + 1];
+        for (int i = 0; i < m; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+        return uniquePathsWithObstaclesRecursionMemoization(obstacleGrid, m, n, 0, 0, dp);
     }
 }
