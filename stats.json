@@ -31,28 +31,30 @@
     "LeetCode_House_Robber_II": true,
     "LeetCode_Combination_Sum_IV": true,
     "LeetCode_Satisfiability_of_Equality_Equations": true,
-    "LeetCode_Maximum_Alternating_Subsequence_Sum": true
+    "LeetCode_Maximum_Alternating_Subsequence_Sum": true,
+    "LeetCode_Distinct_Subsequences": true
   },
-  "totalSolved": 16,
+  "totalSolved": 17,
   "difficultyCounts": {
     "easy": 3,
     "medium": 13,
-    "hard": 0,
+    "hard": 1,
     "basic": 0
   },
   "todayProblems": [
     "Combination Sum IV",
     "Satisfiability of Equality Equations",
-    "Maximum Alternating Subsequence Sum"
+    "Maximum Alternating Subsequence Sum",
+    "Distinct Subsequences"
   ],
   "currentStreak": 3,
-  "todayCount": 3,
+  "todayCount": 4,
   "lastSyncDate": "2026-09-06",
   "maxStreak": 3,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
     "2026-09-05": 9,
-    "2026-09-06": 3
+    "2026-09-06": 4
   }
 }
