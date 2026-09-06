@@ -18,3 +18,4 @@
 | 16 | [Maximum Alternating Subsequence Sum](./LeetCode/Medium/Maximum%20Alternating%20Subsequence%20Sum) | [LeetCode](https://leetcode.com/problems/maximum-alternating-subsequence-sum/) | Medium | 06 Sept 2026 | 04:01 pm |
 | 17 | [Distinct Subsequences](./LeetCode/Hard/Distinct%20Subsequences) | [LeetCode](https://leetcode.com/problems/distinct-subsequences/) | Hard | 06 Sept 2026 | 06:50 pm |
 | 18 | [Longest Increasing Subsequence](./LeetCode/Medium/Longest%20Increasing%20Subsequence) | [LeetCode](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium | 06 Sept 2026 | 08:07 pm |
+| 19 | [Unique Paths](./LeetCode/Medium/Unique%20Paths) | [LeetCode](https://leetcode.com/problems/unique-paths/) | Medium | 06 Sept 2026 | 08:21 pm |

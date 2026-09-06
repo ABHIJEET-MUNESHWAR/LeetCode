@@ -33,12 +33,13 @@
     "LeetCode_Satisfiability_of_Equality_Equations": true,
     "LeetCode_Maximum_Alternating_Subsequence_Sum": true,
     "LeetCode_Distinct_Subsequences": true,
-    "LeetCode_Longest_Increasing_Subsequence": true
+    "LeetCode_Longest_Increasing_Subsequence": true,
+    "LeetCode_Unique_Paths": true
   },
-  "totalSolved": 18,
+  "totalSolved": 19,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 14,
+    "medium": 15,
     "hard": 1,
     "basic": 0
   },
@@ -47,16 +48,17 @@
     "Satisfiability of Equality Equations",
     "Maximum Alternating Subsequence Sum",
     "Distinct Subsequences",
-    "Longest Increasing Subsequence"
+    "Longest Increasing Subsequence",
+    "Unique Paths"
   ],
   "currentStreak": 3,
-  "todayCount": 5,
+  "todayCount": 6,
   "lastSyncDate": "2026-09-06",
   "maxStreak": 3,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
     "2026-09-05": 9,
-    "2026-09-06": 5
+    "2026-09-06": 6
   }
 }
