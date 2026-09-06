@@ -23,26 +23,25 @@ class Solution {
     }
 
     public boolean equationsPossible(String[] equations) {
-        int[] parent = new int[27];
-        int[] rank = new int[27];
-        for (int i = 1; i < 27; i++) {
+        int n = equations.length;
+        int[] parent = new int[n];
+        int[] rank = new int[n];
+        for (int i = 0; i < n; i++) {
             parent[i] = i;
             rank[i] = 0;
         }
         for (String equation : equations) {
-            // a==b
+            int a = equation.charAt(0) - 'a';
+            int b = equation.charAt(3) - 'a';
             if (equation.charAt(1) == '=') {
-                union(equation.charAt(0) - 'a', equation.charAt(3) - 'a', parent, rank);
-            }
-        }
-        for (String equation : equations) {
-            // a==b
-            if (equation.charAt(1) == '!') {
-                int parentOfFirst = find(equation.charAt(0) - 'a', parent);
-                int parentOfSecond = find(equation.charAt(3) - 'a', parent);
-                if (parentOfFirst == parentOfSecond) {
+                union(a, b, parent, rank);
+            } else {
+                int parentOfA = find(a, parent);
+                int parentOfB = find(b, parent);
+                if (parentOfA == parentOfB) {
                     return false;
                 }
+                union(a, b, parent, rank);
             }
         }
         return true;
