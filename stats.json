@@ -34,12 +34,13 @@
     "LeetCode_Maximum_Alternating_Subsequence_Sum": true,
     "LeetCode_Distinct_Subsequences": true,
     "LeetCode_Longest_Increasing_Subsequence": true,
-    "LeetCode_Unique_Paths": true
+    "LeetCode_Unique_Paths": true,
+    "LeetCode_Unique_Paths_II": true
   },
-  "totalSolved": 19,
+  "totalSolved": 20,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 15,
+    "medium": 16,
     "hard": 1,
     "basic": 0
   },
@@ -49,16 +50,17 @@
     "Maximum Alternating Subsequence Sum",
     "Distinct Subsequences",
     "Longest Increasing Subsequence",
-    "Unique Paths"
+    "Unique Paths",
+    "Unique Paths II"
   ],
   "currentStreak": 3,
-  "todayCount": 6,
+  "todayCount": 7,
   "lastSyncDate": "2026-09-06",
   "maxStreak": 3,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
     "2026-09-05": 9,
-    "2026-09-06": 6
+    "2026-09-06": 7
   }
 }
