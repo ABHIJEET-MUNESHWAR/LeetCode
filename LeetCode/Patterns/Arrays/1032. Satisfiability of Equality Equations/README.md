@@ -8,8 +8,8 @@
 Array, String, Union-Find, Graph Theory
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 1 ms
+- **Memory:** 43.8 MB
 
 ---
 
