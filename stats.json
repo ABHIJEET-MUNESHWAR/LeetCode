@@ -28,33 +28,27 @@
     "LeetCode_Combination_Sum_II": true,
     "LeetCode_Combination_Sum_III": true,
     "LeetCode_Course_Schedule_II": true,
-    "LeetCode_House_Robber_II": true
+    "LeetCode_House_Robber_II": true,
+    "LeetCode_Combination_Sum_IV": true
   },
-  "totalSolved": 13,
+  "totalSolved": 14,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 10,
+    "medium": 11,
     "hard": 0,
     "basic": 0
   },
   "todayProblems": [
-    "Undirected Graph Cycle",
-    "Smallest Stable Index II",
-    "Fibonacci Number",
-    "Subsets II",
-    "Climbing Stairs",
-    "Combination Sum II",
-    "Combination Sum III",
-    "Course Schedule II",
-    "House Robber II"
+    "Combination Sum IV"
   ],
-  "currentStreak": 2,
-  "todayCount": 9,
-  "lastSyncDate": "2026-09-05",
-  "maxStreak": 2,
+  "currentStreak": 3,
+  "todayCount": 1,
+  "lastSyncDate": "2026-09-06",
+  "maxStreak": 3,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
-    "2026-09-05": 9
+    "2026-09-05": 9,
+    "2026-09-06": 1
   }
 }
