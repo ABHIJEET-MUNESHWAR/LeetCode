@@ -16,3 +16,4 @@
 | 14 | [Combination Sum IV](./LeetCode/Medium/Combination%20Sum%20IV) | [LeetCode](https://leetcode.com/problems/combination-sum-iv/) | Medium | 06 Sept 2026 | 12:17 pm |
 | 15 | [Satisfiability of Equality Equations](./LeetCode/Medium/Satisfiability%20of%20Equality%20Equations) | [LeetCode](https://leetcode.com/problems/satisfiability-of-equality-equations/) | Medium | 06 Sept 2026 | 02:57 pm |
 | 16 | [Maximum Alternating Subsequence Sum](./LeetCode/Medium/Maximum%20Alternating%20Subsequence%20Sum) | [LeetCode](https://leetcode.com/problems/maximum-alternating-subsequence-sum/) | Medium | 06 Sept 2026 | 04:01 pm |
+| 17 | [Distinct Subsequences](./LeetCode/Hard/Distinct%20Subsequences) | [LeetCode](https://leetcode.com/problems/distinct-subsequences/) | Hard | 06 Sept 2026 | 06:50 pm |
