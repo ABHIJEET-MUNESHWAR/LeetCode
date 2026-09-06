@@ -1,17 +1,26 @@
 class Solution {
+    int[][] dp;
+
     public int combinationSum4(int[] nums, int target) {
-        return solve(nums, target, 0);
+        dp = new int[nums.length][target + 1];
+        for (int i = 0; i < nums.length; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+        return solveRecursionMemoization(nums, target, 0);
     }
 
-    private int solve(int[] nums, int target, int indexs) {
+    private int solveRecursionMemoization(int[] nums, int target, int index) {
         if (target == 0) {
             return 1;
         }
-        if (indexs >= nums.length || target < 0) {
+        if (index >= nums.length || target < 0) {
             return 0;
         }
-        int take = solve(nums, target - nums[indexs], 0);
-        int skip = solve(nums, target, indexs + 1);
-        return take + skip;
+        if (dp[index][target] != -1) {
+            return dp[index][target];
+        }
+        int take = solveRecursionMemoization(nums, target - nums[index], 0);
+        int skip = solveRecursionMemoization(nums, target, index + 1);
+        return dp[index][target] = (take + skip);
     }
 }
