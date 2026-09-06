@@ -29,26 +29,28 @@
     "LeetCode_Combination_Sum_III": true,
     "LeetCode_Course_Schedule_II": true,
     "LeetCode_House_Robber_II": true,
-    "LeetCode_Combination_Sum_IV": true
+    "LeetCode_Combination_Sum_IV": true,
+    "LeetCode_Satisfiability_of_Equality_Equations": true
   },
-  "totalSolved": 14,
+  "totalSolved": 15,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 11,
+    "medium": 12,
     "hard": 0,
     "basic": 0
   },
   "todayProblems": [
-    "Combination Sum IV"
+    "Combination Sum IV",
+    "Satisfiability of Equality Equations"
   ],
   "currentStreak": 3,
-  "todayCount": 1,
+  "todayCount": 2,
   "lastSyncDate": "2026-09-06",
   "maxStreak": 3,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
     "2026-09-05": 9,
-    "2026-09-06": 1
+    "2026-09-06": 2
   }
 }

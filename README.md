@@ -14,3 +14,4 @@
 | 12 | [Course Schedule II](./LeetCode/Medium/Course%20Schedule%20II) | [LeetCode](https://leetcode.com/problems/course-schedule-ii/) | Medium | 05 Sept 2026 | 09:26 pm |
 | 13 | [House Robber II](./LeetCode/Medium/House%20Robber%20II) | [LeetCode](https://leetcode.com/problems/house-robber-ii/) | Medium | 05 Sept 2026 | 10:02 pm |
 | 14 | [Combination Sum IV](./LeetCode/Medium/Combination%20Sum%20IV) | [LeetCode](https://leetcode.com/problems/combination-sum-iv/) | Medium | 06 Sept 2026 | 12:17 pm |
+| 15 | [Satisfiability of Equality Equations](./LeetCode/Medium/Satisfiability%20of%20Equality%20Equations) | [LeetCode](https://leetcode.com/problems/satisfiability-of-equality-equations/) | Medium | 06 Sept 2026 | 02:57 pm |
