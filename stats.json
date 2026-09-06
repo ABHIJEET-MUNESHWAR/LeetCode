@@ -36,12 +36,13 @@
     "LeetCode_Longest_Increasing_Subsequence": true,
     "LeetCode_Unique_Paths": true,
     "LeetCode_Unique_Paths_II": true,
-    "LeetCode_Shortest_Path_in_Binary_Matrix": true
+    "LeetCode_Shortest_Path_in_Binary_Matrix": true,
+    "LeetCode_Rotting_Oranges": true
   },
-  "totalSolved": 21,
+  "totalSolved": 22,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 17,
+    "medium": 18,
     "hard": 1,
     "basic": 0
   },
@@ -53,16 +54,17 @@
     "Longest Increasing Subsequence",
     "Unique Paths",
     "Unique Paths II",
-    "Shortest Path in Binary Matrix"
+    "Shortest Path in Binary Matrix",
+    "Rotting Oranges"
   ],
   "currentStreak": 3,
-  "todayCount": 8,
+  "todayCount": 9,
   "lastSyncDate": "2026-09-06",
   "maxStreak": 3,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
     "2026-09-05": 9,
-    "2026-09-06": 8
+    "2026-09-06": 9
   }
 }
