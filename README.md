@@ -22,3 +22,4 @@
 | 20 | [Unique Paths II](./LeetCode/Medium/Unique%20Paths%20II) | [LeetCode](https://leetcode.com/problems/unique-paths-ii/) | Medium | 06 Sept 2026 | 09:02 pm |
 | 21 | [Shortest Path in Binary Matrix](./LeetCode/Medium/Shortest%20Path%20in%20Binary%20Matrix) | [LeetCode](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | Medium | 06 Sept 2026 | 09:32 pm |
 | 22 | [Rotting Oranges](./LeetCode/Medium/Rotting%20Oranges) | [LeetCode](https://leetcode.com/problems/rotting-oranges/) | Medium | 06 Sept 2026 | 10:00 pm |
+| 23 | [Distinct Subsequences II](./LeetCode/Hard/Distinct%20Subsequences%20II) | [LeetCode](https://leetcode.com/problems/distinct-subsequences-ii/) | Hard | 07 Sept 2026 | 06:19 pm |
