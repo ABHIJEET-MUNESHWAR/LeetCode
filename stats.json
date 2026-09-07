@@ -37,34 +37,28 @@
     "LeetCode_Unique_Paths": true,
     "LeetCode_Unique_Paths_II": true,
     "LeetCode_Shortest_Path_in_Binary_Matrix": true,
-    "LeetCode_Rotting_Oranges": true
+    "LeetCode_Rotting_Oranges": true,
+    "LeetCode_Distinct_Subsequences_II": true
   },
-  "totalSolved": 22,
+  "totalSolved": 23,
   "difficultyCounts": {
     "easy": 3,
     "medium": 18,
-    "hard": 1,
+    "hard": 2,
     "basic": 0
   },
   "todayProblems": [
-    "Combination Sum IV",
-    "Satisfiability of Equality Equations",
-    "Maximum Alternating Subsequence Sum",
-    "Distinct Subsequences",
-    "Longest Increasing Subsequence",
-    "Unique Paths",
-    "Unique Paths II",
-    "Shortest Path in Binary Matrix",
-    "Rotting Oranges"
+    "Distinct Subsequences II"
   ],
-  "currentStreak": 3,
-  "todayCount": 9,
-  "lastSyncDate": "2026-09-06",
-  "maxStreak": 3,
+  "currentStreak": 4,
+  "todayCount": 1,
+  "lastSyncDate": "2026-09-07",
+  "maxStreak": 4,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
     "2026-09-05": 9,
-    "2026-09-06": 9
+    "2026-09-06": 9,
+    "2026-09-07": 1
   }
 }
