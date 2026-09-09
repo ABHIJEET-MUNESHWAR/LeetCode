@@ -38,27 +38,29 @@
     "LeetCode_Unique_Paths_II": true,
     "LeetCode_Shortest_Path_in_Binary_Matrix": true,
     "LeetCode_Rotting_Oranges": true,
-    "LeetCode_Distinct_Subsequences_II": true
+    "LeetCode_Distinct_Subsequences_II": true,
+    "LeetCode_Count_Commas_in_Range_II": true
   },
-  "totalSolved": 23,
+  "totalSolved": 24,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 18,
+    "medium": 19,
     "hard": 2,
     "basic": 0
   },
   "todayProblems": [
-    "Distinct Subsequences II"
+    "Count Commas in Range II"
   ],
-  "currentStreak": 4,
+  "currentStreak": 1,
   "todayCount": 1,
-  "lastSyncDate": "2026-09-07",
+  "lastSyncDate": "2026-09-09",
   "maxStreak": 4,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
     "2026-09-05": 9,
     "2026-09-06": 9,
-    "2026-09-07": 1
+    "2026-09-07": 1,
+    "2026-09-09": 1
   }
 }
