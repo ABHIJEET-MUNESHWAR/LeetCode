@@ -40,21 +40,22 @@
     "LeetCode_Rotting_Oranges": true,
     "LeetCode_Distinct_Subsequences_II": true,
     "LeetCode_Count_Commas_in_Range_II": true,
-    "LeetCode_Count_Nodes_Equal_to_Average_of_Subtree": true
+    "LeetCode_Count_Nodes_Equal_to_Average_of_Subtree": true,
+    "LeetCode_Maximum_Score_of_Non-overlapping_Intervals": true
   },
-  "totalSolved": 25,
+  "totalSolved": 26,
   "difficultyCounts": {
     "easy": 3,
     "medium": 20,
-    "hard": 2,
+    "hard": 3,
     "basic": 0
   },
   "todayProblems": [
-    "Count Nodes Equal to Average of Subtree"
+    "Maximum Score of Non-overlapping Intervals"
   ],
-  "currentStreak": 2,
+  "currentStreak": 1,
   "todayCount": 1,
-  "lastSyncDate": "2026-09-10",
+  "lastSyncDate": "2026-09-12",
   "maxStreak": 4,
   "activityHistory": {
     "2026-07-21": 1,
@@ -63,6 +64,7 @@
     "2026-09-06": 9,
     "2026-09-07": 1,
     "2026-09-09": 1,
-    "2026-09-10": 1
+    "2026-09-10": 1,
+    "2026-09-12": 1
   }
 }
