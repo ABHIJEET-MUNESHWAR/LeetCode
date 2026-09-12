@@ -25,3 +25,4 @@
 | 23 | [Distinct Subsequences II](./LeetCode/Hard/Distinct%20Subsequences%20II) | [LeetCode](https://leetcode.com/problems/distinct-subsequences-ii/) | Hard | 07 Sept 2026 | 06:19 pm |
 | 24 | [Count Commas in Range II](./LeetCode/Medium/Count%20Commas%20in%20Range%20II) | [LeetCode](https://leetcode.com/problems/count-commas-in-range-ii/) | Medium | 09 Sept 2026 | 11:46 am |
 | 25 | [Count Nodes Equal to Average of Subtree](./LeetCode/Medium/Count%20Nodes%20Equal%20to%20Average%20of%20Subtree) | [LeetCode](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | Medium | 10 Sept 2026 | 02:53 pm |
+| 26 | [Maximum Score of Non-overlapping Intervals](./LeetCode/Hard/Maximum%20Score%20of%20Non-overlapping%20Intervals) | [LeetCode](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | Hard | 12 Sept 2026 | 07:36 pm |
