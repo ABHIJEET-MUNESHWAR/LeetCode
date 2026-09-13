@@ -41,21 +41,22 @@
     "LeetCode_Distinct_Subsequences_II": true,
     "LeetCode_Count_Commas_in_Range_II": true,
     "LeetCode_Count_Nodes_Equal_to_Average_of_Subtree": true,
-    "LeetCode_Maximum_Score_of_Non-overlapping_Intervals": true
+    "LeetCode_Maximum_Score_of_Non-overlapping_Intervals": true,
+    "LeetCode_Image_Overlap": true
   },
-  "totalSolved": 26,
+  "totalSolved": 27,
   "difficultyCounts": {
     "easy": 3,
-    "medium": 20,
+    "medium": 21,
     "hard": 3,
     "basic": 0
   },
   "todayProblems": [
-    "Maximum Score of Non-overlapping Intervals"
+    "Image Overlap"
   ],
-  "currentStreak": 1,
+  "currentStreak": 2,
   "todayCount": 1,
-  "lastSyncDate": "2026-09-12",
+  "lastSyncDate": "2026-09-13",
   "maxStreak": 4,
   "activityHistory": {
     "2026-07-21": 1,
@@ -65,6 +66,7 @@
     "2026-09-07": 1,
     "2026-09-09": 1,
     "2026-09-10": 1,
-    "2026-09-12": 1
+    "2026-09-12": 1,
+    "2026-09-13": 1
   }
 }
