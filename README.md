@@ -35,3 +35,4 @@
 | 33 | [Rotate Array](./LeetCode/Medium/Rotate%20Array) | [LeetCode](https://leetcode.com/problems/rotate-array/) | Medium | 15 Sept 2026 | 04:51 pm |
 | 34 | [Jump Game](./LeetCode/Medium/Jump%20Game) | [LeetCode](https://leetcode.com/problems/jump-game/) | Medium | 15 Sept 2026 | 05:43 pm |
 | 35 | [Jump Game II](./LeetCode/Medium/Jump%20Game%20II) | [LeetCode](https://leetcode.com/problems/jump-game-ii/) | Medium | 15 Sept 2026 | 07:09 pm |
+| 36 | [H-Index](./LeetCode/Medium/H-Index) | [LeetCode](https://leetcode.com/problems/h-index/) | Medium | 15 Sept 2026 | 10:02 pm |
