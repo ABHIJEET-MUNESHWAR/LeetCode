@@ -28,3 +28,4 @@
 | 26 | [Maximum Score of Non-overlapping Intervals](./LeetCode/Hard/Maximum%20Score%20of%20Non-overlapping%20Intervals) | [LeetCode](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals/) | Hard | 12 Sept 2026 | 07:36 pm |
 | 27 | [Image Overlap](./LeetCode/Medium/Image%20Overlap) | [LeetCode](https://leetcode.com/problems/image-overlap/) | Medium | 13 Sept 2026 | 06:19 pm |
 | 28 | [Maximum Number of Non-overlapping Palindrome Substrings](./LeetCode/Hard/Maximum%20Number%20of%20Non-overlapping%20Palindrome%20Substrings) | [LeetCode](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) | Hard | 15 Sept 2026 | 10:48 am |
+| 29 | [Minimum Genetic Mutation](./LeetCode/Medium/Minimum%20Genetic%20Mutation) | [LeetCode](https://leetcode.com/problems/minimum-genetic-mutation/) | Medium | 15 Sept 2026 | 03:47 pm |
