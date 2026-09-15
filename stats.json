@@ -51,12 +51,13 @@
     "LeetCode_Rotate_Array": true,
     "LeetCode_Jump_Game": true,
     "LeetCode_Jump_Game_II": true,
-    "LeetCode_H-Index": true
+    "LeetCode_H-Index": true,
+    "LeetCode_Insert_Delete_GetRandom_O(1)": true
   },
-  "totalSolved": 36,
+  "totalSolved": 37,
   "difficultyCounts": {
     "easy": 5,
-    "medium": 27,
+    "medium": 28,
     "hard": 4,
     "basic": 0
   },
@@ -69,10 +70,11 @@
     "Rotate Array",
     "Jump Game",
     "Jump Game II",
-    "H-Index"
+    "H-Index",
+    "Insert Delete GetRandom O(1)"
   ],
   "currentStreak": 1,
-  "todayCount": 9,
+  "todayCount": 10,
   "lastSyncDate": "2026-09-15",
   "maxStreak": 4,
   "activityHistory": {
@@ -85,6 +87,6 @@
     "2026-09-10": 1,
     "2026-09-12": 1,
     "2026-09-13": 1,
-    "2026-09-15": 9
+    "2026-09-15": 10
   }
 }
