@@ -47,12 +47,13 @@
     "LeetCode_Minimum_Genetic_Mutation": true,
     "LeetCode_Merge_Sorted_Array": true,
     "LeetCode_Remove_Duplicates_from_Sorted_Array": true,
-    "LeetCode_Remove_Duplicates_from_Sorted_Array_II": true
+    "LeetCode_Remove_Duplicates_from_Sorted_Array_II": true,
+    "LeetCode_Rotate_Array": true
   },
-  "totalSolved": 32,
+  "totalSolved": 33,
   "difficultyCounts": {
     "easy": 5,
-    "medium": 23,
+    "medium": 24,
     "hard": 4,
     "basic": 0
   },
@@ -61,10 +62,11 @@
     "Minimum Genetic Mutation",
     "Merge Sorted Array",
     "Remove Duplicates from Sorted Array",
-    "Remove Duplicates from Sorted Array II"
+    "Remove Duplicates from Sorted Array II",
+    "Rotate Array"
   ],
   "currentStreak": 1,
-  "todayCount": 5,
+  "todayCount": 6,
   "lastSyncDate": "2026-09-15",
   "maxStreak": 4,
   "activityHistory": {
@@ -77,6 +79,6 @@
     "2026-09-10": 1,
     "2026-09-12": 1,
     "2026-09-13": 1,
-    "2026-09-15": 5
+    "2026-09-15": 6
   }
 }
