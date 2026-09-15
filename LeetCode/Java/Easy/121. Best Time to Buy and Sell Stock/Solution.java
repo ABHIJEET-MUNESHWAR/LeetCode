@@ -1,15 +1,21 @@
 class Solution {
     public int maxProfit(int[] prices) {
         int n = prices.length;
-        int left = 0, right = 0, profit = 0, maxProfit = 0;
-        while (right < n) {
-            if (prices[left] < prices[right]) {
-                profit = prices[right] - prices[left];
-                maxProfit = Math.max(maxProfit, profit);
-            } else {
-                left = right;
+        int min = Integer.MAX_VALUE; //
+        int maxProfit = Integer.MIN_VALUE;
+        int pist = 0; // Profit if sold today
+        if (n == 0) {
+          return 0;
+        } else {
+          for (int i = 0; i < n; i++) {
+            if (min > prices[i]) {
+              min = prices[i];
             }
-            right++;
+            pist = prices[i] - min;
+            if (maxProfit < pist) {
+              maxProfit = pist;
+            }
+          }
         }
         return maxProfit;
     }
