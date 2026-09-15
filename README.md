@@ -31,3 +31,4 @@
 | 29 | [Minimum Genetic Mutation](./LeetCode/Medium/Minimum%20Genetic%20Mutation) | [LeetCode](https://leetcode.com/problems/minimum-genetic-mutation/) | Medium | 15 Sept 2026 | 03:47 pm |
 | 30 | [Merge Sorted Array](./LeetCode/Easy/Merge%20Sorted%20Array) | [LeetCode](https://leetcode.com/problems/merge-sorted-array/) | Easy | 15 Sept 2026 | 04:07 pm |
 | 31 | [Remove Duplicates from Sorted Array](./LeetCode/Easy/Remove%20Duplicates%20from%20Sorted%20Array) | [LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | 15 Sept 2026 | 04:29 pm |
+| 32 | [Remove Duplicates from Sorted Array II](./LeetCode/Medium/Remove%20Duplicates%20from%20Sorted%20Array%20II) | [LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | Medium | 15 Sept 2026 | 04:39 pm |
