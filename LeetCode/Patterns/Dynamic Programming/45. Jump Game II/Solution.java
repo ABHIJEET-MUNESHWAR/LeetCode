@@ -1,22 +1,26 @@
 class Solution {
-    public int jump(int[] nums) {
-        int[] memo = new int[nums.length];
-        Arrays.fill(memo, -1);
-        return canJumpRecursionMemoization(nums, nums.length, 0, memo);
-    }
-
-    private int canJumpRecursionMemoization(int[] nums, int size, int currentIndex, int[] memo) {
-        if (currentIndex == size - 1) {
+    public int jumpRecursion(int[] nums, int n, int index, int[] dp) {
+        if (index >= n - 1) {
             return 0;
         }
-        if (memo[currentIndex] != -1) {
-            return memo[currentIndex];
+        if (dp[index] != -1) {
+            return dp[index];
         }
-        int minJump = 99999;
-        for (int i = currentIndex + 1; (i <= currentIndex + nums[currentIndex] && i < size); i++) {
-            int value = 1 + canJumpRecursionMemoization(nums, size, i, memo);
-            minJump = Math.min(minJump, value);
+        int minJumps = Integer.MAX_VALUE;
+        int maxJump = nums[index];
+        for (int i = 1; i <= maxJump; i++) {
+            int jump = jumpRecursion(nums, n, index + i, dp);
+            if (jump != Integer.MAX_VALUE) {
+                minJumps = Math.min(minJumps, 1 + jump);
+            }
         }
-        return memo[currentIndex] = minJump;
+        return dp[index] = minJumps;
+    }
+
+    public int jump(int[] nums) {
+        int n = nums.length;
+        int[] dp = new int[n + 1];
+        Arrays.fill(dp, -1);
+        return jumpRecursion(nums, n, 0, dp);
     }
 }
