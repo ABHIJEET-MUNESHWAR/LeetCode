@@ -30,3 +30,4 @@
 | 28 | [Maximum Number of Non-overlapping Palindrome Substrings](./LeetCode/Hard/Maximum%20Number%20of%20Non-overlapping%20Palindrome%20Substrings) | [LeetCode](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/) | Hard | 15 Sept 2026 | 10:48 am |
 | 29 | [Minimum Genetic Mutation](./LeetCode/Medium/Minimum%20Genetic%20Mutation) | [LeetCode](https://leetcode.com/problems/minimum-genetic-mutation/) | Medium | 15 Sept 2026 | 03:47 pm |
 | 30 | [Merge Sorted Array](./LeetCode/Easy/Merge%20Sorted%20Array) | [LeetCode](https://leetcode.com/problems/merge-sorted-array/) | Easy | 15 Sept 2026 | 04:07 pm |
+| 31 | [Remove Duplicates from Sorted Array](./LeetCode/Easy/Remove%20Duplicates%20from%20Sorted%20Array) | [LeetCode](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | 15 Sept 2026 | 04:29 pm |
