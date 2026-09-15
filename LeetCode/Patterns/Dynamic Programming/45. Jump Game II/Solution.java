@@ -1,5 +1,5 @@
 class Solution {
-    public int jumpRecursion(int[] nums, int n, int index, int[] dp) {
+    public int jumpRecursionMemoization(int[] nums, int n, int index, int[] dp) {
         if (index >= n - 1) {
             return 0;
         }
@@ -9,7 +9,7 @@ class Solution {
         int minJumps = Integer.MAX_VALUE;
         int maxJump = nums[index];
         for (int i = 1; i <= maxJump; i++) {
-            int jump = jumpRecursion(nums, n, index + i, dp);
+            int jump = jumpRecursionMemoization(nums, n, index + i, dp);
             if (jump != Integer.MAX_VALUE) {
                 minJumps = Math.min(minJumps, 1 + jump);
             }
@@ -21,6 +21,6 @@ class Solution {
         int n = nums.length;
         int[] dp = new int[n + 1];
         Arrays.fill(dp, -1);
-        return jumpRecursion(nums, n, 0, dp);
+        return jumpRecursionMemoization(nums, n, 0, dp);
     }
 }
