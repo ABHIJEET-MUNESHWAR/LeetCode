@@ -44,21 +44,23 @@
     "LeetCode_Maximum_Score_of_Non-overlapping_Intervals": true,
     "LeetCode_Image_Overlap": true,
     "LeetCode_Maximum_Number_of_Non-overlapping_Palindrome_Substrings": true,
-    "LeetCode_Minimum_Genetic_Mutation": true
+    "LeetCode_Minimum_Genetic_Mutation": true,
+    "LeetCode_Merge_Sorted_Array": true
   },
-  "totalSolved": 29,
+  "totalSolved": 30,
   "difficultyCounts": {
-    "easy": 3,
+    "easy": 4,
     "medium": 22,
     "hard": 4,
     "basic": 0
   },
   "todayProblems": [
     "Maximum Number of Non-overlapping Palindrome Substrings",
-    "Minimum Genetic Mutation"
+    "Minimum Genetic Mutation",
+    "Merge Sorted Array"
   ],
   "currentStreak": 1,
-  "todayCount": 2,
+  "todayCount": 3,
   "lastSyncDate": "2026-09-15",
   "maxStreak": 4,
   "activityHistory": {
@@ -71,6 +73,6 @@
     "2026-09-10": 1,
     "2026-09-12": 1,
     "2026-09-13": 1,
-    "2026-09-15": 2
+    "2026-09-15": 3
   }
 }
