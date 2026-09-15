@@ -48,12 +48,13 @@
     "LeetCode_Merge_Sorted_Array": true,
     "LeetCode_Remove_Duplicates_from_Sorted_Array": true,
     "LeetCode_Remove_Duplicates_from_Sorted_Array_II": true,
-    "LeetCode_Rotate_Array": true
+    "LeetCode_Rotate_Array": true,
+    "LeetCode_Jump_Game": true
   },
-  "totalSolved": 33,
+  "totalSolved": 34,
   "difficultyCounts": {
     "easy": 5,
-    "medium": 24,
+    "medium": 25,
     "hard": 4,
     "basic": 0
   },
@@ -63,10 +64,11 @@
     "Merge Sorted Array",
     "Remove Duplicates from Sorted Array",
     "Remove Duplicates from Sorted Array II",
-    "Rotate Array"
+    "Rotate Array",
+    "Jump Game"
   ],
   "currentStreak": 1,
-  "todayCount": 6,
+  "todayCount": 7,
   "lastSyncDate": "2026-09-15",
   "maxStreak": 4,
   "activityHistory": {
@@ -79,6 +81,6 @@
     "2026-09-10": 1,
     "2026-09-12": 1,
     "2026-09-13": 1,
-    "2026-09-15": 6
+    "2026-09-15": 7
   }
 }
