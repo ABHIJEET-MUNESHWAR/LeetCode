@@ -64,12 +64,13 @@
     "LeetCode_Valid_Palindrome": true,
     "LeetCode_Is_Subsequence": true,
     "LeetCode_Two_Sum_II_-_Input_Array_Is_Sorted": true,
-    "LeetCode_3Sum": true
+    "LeetCode_3Sum": true,
+    "LeetCode_Minimum_Size_Subarray_Sum": true
   },
-  "totalSolved": 49,
+  "totalSolved": 50,
   "difficultyCounts": {
     "easy": 10,
-    "medium": 35,
+    "medium": 36,
     "hard": 4,
     "basic": 0
   },
@@ -85,10 +86,11 @@
     "Valid Palindrome",
     "Is Subsequence",
     "Two Sum II - Input Array Is Sorted",
-    "3Sum"
+    "3Sum",
+    "Minimum Size Subarray Sum"
   ],
   "currentStreak": 2,
-  "todayCount": 12,
+  "todayCount": 13,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -102,6 +104,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 12
+    "2026-09-16": 13
   }
 }
