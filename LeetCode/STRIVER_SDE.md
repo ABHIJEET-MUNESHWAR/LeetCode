@@ -3,7 +3,7 @@
 Track your progress on the Striver's SDE Sheet top interview problems.
 
 ## Progress
-- **Completed:** 10 / 76 (13.2%)
+- **Completed:** 11 / 76 (14.5%)
 
 ---
 
@@ -30,7 +30,7 @@ Track your progress on the Striver's SDE Sheet top interview problems.
 - [ ] Two Sum
 - [ ] 4Sum
 - [ ] Longest Consecutive Sequence
-- [ ] Longest Substring Without Repeating Characters
+- [x] [Longest Substring Without Repeating Characters](./Java/Medium/3. Longest Substring Without Repeating Characters/)
 
 ### 📂 Linked List
 - [ ] Reverse Linked List
