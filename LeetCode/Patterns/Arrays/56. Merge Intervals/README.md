@@ -8,8 +8,8 @@
 Array, Sorting, Quicksort
 
 ### 🚀 Performance
-- **Runtime:** 9 ms
-- **Memory:** 46.7 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
