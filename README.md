@@ -52,3 +52,4 @@
 | 50 | [Minimum Size Subarray Sum](./LeetCode/Medium/Minimum%20Size%20Subarray%20Sum) | [LeetCode](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium | 16 Sept 2026 | 06:08 pm |
 | 51 | [Longest Substring Without Repeating Characters](./LeetCode/Medium/Longest%20Substring%20Without%20Repeating%20Characters) | [LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | 16 Sept 2026 | 06:15 pm |
 | 52 | [Substring with Concatenation of All Words](./LeetCode/Hard/Substring%20with%20Concatenation%20of%20All%20Words) | [LeetCode](https://leetcode.com/problems/substring-with-concatenation-of-all-words/) | Hard | 16 Sept 2026 | 06:17 pm |
+| 53 | [Minimum Window Substring](./LeetCode/Hard/Minimum%20Window%20Substring) | [LeetCode](https://leetcode.com/problems/minimum-window-substring/) | Hard | 16 Sept 2026 | 06:18 pm |
