@@ -75,12 +75,13 @@
     "LeetCode_Isomorphic_Strings": true,
     "LeetCode_Group_Anagrams": true,
     "LeetCode_Two_Sum": true,
-    "LeetCode_Happy_Number": true
+    "LeetCode_Happy_Number": true,
+    "LeetCode_Longest_Consecutive_Sequence": true
   },
-  "totalSolved": 60,
+  "totalSolved": 61,
   "difficultyCounts": {
     "easy": 13,
-    "medium": 41,
+    "medium": 42,
     "hard": 6,
     "basic": 0
   },
@@ -107,10 +108,11 @@
     "Isomorphic Strings",
     "Group Anagrams",
     "Two Sum",
-    "Happy Number"
+    "Happy Number",
+    "Longest Consecutive Sequence"
   ],
   "currentStreak": 2,
-  "todayCount": 23,
+  "todayCount": 24,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -124,6 +126,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 23
+    "2026-09-16": 24
   }
 }
