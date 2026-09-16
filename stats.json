@@ -78,12 +78,13 @@
     "LeetCode_Happy_Number": true,
     "LeetCode_Longest_Consecutive_Sequence": true,
     "LeetCode_Insert_Interval": true,
-    "LeetCode_Minimum_Number_of_Arrows_to_Burst_Balloons": true
+    "LeetCode_Minimum_Number_of_Arrows_to_Burst_Balloons": true,
+    "LeetCode_Simplify_Path": true
   },
-  "totalSolved": 63,
+  "totalSolved": 64,
   "difficultyCounts": {
     "easy": 13,
-    "medium": 44,
+    "medium": 45,
     "hard": 6,
     "basic": 0
   },
@@ -113,10 +114,11 @@
     "Happy Number",
     "Longest Consecutive Sequence",
     "Insert Interval",
-    "Minimum Number of Arrows to Burst Balloons"
+    "Minimum Number of Arrows to Burst Balloons",
+    "Simplify Path"
   ],
   "currentStreak": 2,
-  "todayCount": 26,
+  "todayCount": 27,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -130,6 +132,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 26
+    "2026-09-16": 27
   }
 }
