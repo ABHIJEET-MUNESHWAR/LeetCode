@@ -61,11 +61,12 @@
     "LeetCode_Reverse_Words_in_a_String": true,
     "LeetCode_Zigzag_Conversion": true,
     "LeetCode_Find_the_Index_of_the_First_Occurrence_in_a_String": true,
-    "LeetCode_Valid_Palindrome": true
+    "LeetCode_Valid_Palindrome": true,
+    "LeetCode_Is_Subsequence": true
   },
-  "totalSolved": 46,
+  "totalSolved": 47,
   "difficultyCounts": {
-    "easy": 9,
+    "easy": 10,
     "medium": 33,
     "hard": 4,
     "basic": 0
@@ -79,10 +80,11 @@
     "Reverse Words in a String",
     "Zigzag Conversion",
     "Find the Index of the First Occurrence in a String",
-    "Valid Palindrome"
+    "Valid Palindrome",
+    "Is Subsequence"
   ],
   "currentStreak": 2,
-  "todayCount": 9,
+  "todayCount": 10,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -96,6 +98,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 9
+    "2026-09-16": 10
   }
 }
