@@ -62,3 +62,4 @@
 | 60 | [Happy Number](./LeetCode/Easy/Happy%20Number) | [LeetCode](https://leetcode.com/problems/happy-number/) | Easy | 16 Sept 2026 | 09:57 pm |
 | 61 | [Longest Consecutive Sequence](./LeetCode/Medium/Longest%20Consecutive%20Sequence) | [LeetCode](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | 16 Sept 2026 | 10:01 pm |
 | 62 | [Insert Interval](./LeetCode/Medium/Insert%20Interval) | [LeetCode](https://leetcode.com/problems/insert-interval/) | Medium | 16 Sept 2026 | 10:38 pm |
+| 63 | [Minimum Number of Arrows to Burst Balloons](./LeetCode/Medium/Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons) | [LeetCode](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | Medium | 16 Sept 2026 | 10:51 pm |
