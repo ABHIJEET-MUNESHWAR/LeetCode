@@ -68,12 +68,13 @@
     "LeetCode_Minimum_Size_Subarray_Sum": true,
     "LeetCode_Longest_Substring_Without_Repeating_Characters": true,
     "LeetCode_Substring_with_Concatenation_of_All_Words": true,
-    "LeetCode_Minimum_Window_Substring": true
+    "LeetCode_Minimum_Window_Substring": true,
+    "LeetCode_Spiral_Matrix": true
   },
-  "totalSolved": 53,
+  "totalSolved": 54,
   "difficultyCounts": {
     "easy": 10,
-    "medium": 37,
+    "medium": 38,
     "hard": 6,
     "basic": 0
   },
@@ -93,10 +94,11 @@
     "Minimum Size Subarray Sum",
     "Longest Substring Without Repeating Characters",
     "Substring with Concatenation of All Words",
-    "Minimum Window Substring"
+    "Minimum Window Substring",
+    "Spiral Matrix"
   ],
   "currentStreak": 2,
-  "todayCount": 16,
+  "todayCount": 17,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -110,6 +112,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 16
+    "2026-09-16": 17
   }
 }
