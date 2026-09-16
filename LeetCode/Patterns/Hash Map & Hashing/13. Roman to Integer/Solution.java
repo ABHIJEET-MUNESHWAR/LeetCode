@@ -13,14 +13,14 @@ class Solution {
         int intNo = romanToIntMap.get(currentChar);
         char previousChar = currentChar;
         while (--len >= 0) {
-          currentChar = romanNo.charAt(len);
-          if (romanToIntMap.get(currentChar) < romanToIntMap.get(previousChar)) {
-            intNo -= romanToIntMap.get(currentChar);
-          } else {
-            intNo += romanToIntMap.get(currentChar);
-          }
-          previousChar = currentChar;
+            currentChar = romanNo.charAt(len);
+            if (romanToIntMap.get(currentChar) < romanToIntMap.get(previousChar)) {
+                intNo -= romanToIntMap.get(currentChar);
+            } else {
+                intNo += romanToIntMap.get(currentChar);
+            }
+            previousChar = currentChar;
         }
-        return intNo;        
+        return intNo;
     }
 }
