@@ -1,6 +1,6 @@
 # 📝 12. Integer to Roman (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/integer-to-roman/?envType=study-plan-v2&envId=top-interview-150)
+🔗 [Problem Link](https://leetcode.com/problems/integer-to-roman/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
@@ -8,8 +8,8 @@
 Hash Table, Math, String
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 3 ms
+- **Memory:** 46.5 MB
 
 ---
 
@@ -17,7 +17,42 @@ Hash Table, Math, String
 
 Seven different symbols represent Roman numerals with the following values:
 
-SymbolValueI1V5X10L50C100D500M1000
+	
+		
+			Symbol
+			Value
+		
+	
+	
+		
+			I
+			1
+		
+		
+			V
+			5
+		
+		
+			X
+			10
+		
+		
+			L
+			50
+		
+		
+			C
+			100
+		
+		
+			D
+			500
+		
+		
+			M
+			1000
+		
+	
 
 Roman numerals are formed by appending the conversions of decimal place values from highest to lowest. Converting a decimal place value into a Roman numeral has the following rules:
 
