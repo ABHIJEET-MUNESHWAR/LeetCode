@@ -61,3 +61,4 @@
 | 59 | [Two Sum](./LeetCode/Easy/Two%20Sum) | [LeetCode](https://leetcode.com/problems/two-sum/) | Easy | 16 Sept 2026 | 09:50 pm |
 | 60 | [Happy Number](./LeetCode/Easy/Happy%20Number) | [LeetCode](https://leetcode.com/problems/happy-number/) | Easy | 16 Sept 2026 | 09:57 pm |
 | 61 | [Longest Consecutive Sequence](./LeetCode/Medium/Longest%20Consecutive%20Sequence) | [LeetCode](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium | 16 Sept 2026 | 10:01 pm |
+| 62 | [Insert Interval](./LeetCode/Medium/Insert%20Interval) | [LeetCode](https://leetcode.com/problems/insert-interval/) | Medium | 16 Sept 2026 | 10:38 pm |
