@@ -1,6 +1,6 @@
 # 📝 30. Substring with Concatenation of All Words (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/substring-with-concatenation-of-all-words/?envType=study-plan-v2&envId=top-interview-150)
+🔗 [Problem Link](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Hard-red) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
