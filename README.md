@@ -50,3 +50,4 @@
 | 48 | [Two Sum II - Input Array Is Sorted](./LeetCode/Medium/Two%20Sum%20II%20-%20Input%20Array%20Is%20Sorted) | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | 16 Sept 2026 | 06:00 pm |
 | 49 | [3Sum](./LeetCode/Medium/3Sum) | [LeetCode](https://leetcode.com/problems/3sum/) | Medium | 16 Sept 2026 | 06:06 pm |
 | 50 | [Minimum Size Subarray Sum](./LeetCode/Medium/Minimum%20Size%20Subarray%20Sum) | [LeetCode](https://leetcode.com/problems/minimum-size-subarray-sum/) | Medium | 16 Sept 2026 | 06:08 pm |
+| 51 | [Longest Substring Without Repeating Characters](./LeetCode/Medium/Longest%20Substring%20Without%20Repeating%20Characters) | [LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | 16 Sept 2026 | 06:15 pm |
