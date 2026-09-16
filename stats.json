@@ -73,11 +73,12 @@
     "LeetCode_Rotate_Image": true,
     "LeetCode_Game_of_Life": true,
     "LeetCode_Isomorphic_Strings": true,
-    "LeetCode_Group_Anagrams": true
+    "LeetCode_Group_Anagrams": true,
+    "LeetCode_Two_Sum": true
   },
-  "totalSolved": 58,
+  "totalSolved": 59,
   "difficultyCounts": {
-    "easy": 11,
+    "easy": 12,
     "medium": 41,
     "hard": 6,
     "basic": 0
@@ -103,10 +104,11 @@
     "Rotate Image",
     "Game of Life",
     "Isomorphic Strings",
-    "Group Anagrams"
+    "Group Anagrams",
+    "Two Sum"
   ],
   "currentStreak": 2,
-  "todayCount": 21,
+  "todayCount": 22,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -120,6 +122,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 21
+    "2026-09-16": 22
   }
 }
