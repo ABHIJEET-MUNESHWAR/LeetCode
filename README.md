@@ -55,3 +55,4 @@
 | 53 | [Minimum Window Substring](./LeetCode/Hard/Minimum%20Window%20Substring) | [LeetCode](https://leetcode.com/problems/minimum-window-substring/) | Hard | 16 Sept 2026 | 06:18 pm |
 | 54 | [Spiral Matrix](./LeetCode/Medium/Spiral%20Matrix) | [LeetCode](https://leetcode.com/problems/spiral-matrix/) | Medium | 16 Sept 2026 | 07:54 pm |
 | 55 | [Rotate Image](./LeetCode/Medium/Rotate%20Image) | [LeetCode](https://leetcode.com/problems/rotate-image/) | Medium | 16 Sept 2026 | 07:56 pm |
+| 56 | [Game of Life](./LeetCode/Medium/Game%20of%20Life) | [LeetCode](https://leetcode.com/problems/game-of-life/) | Medium | 16 Sept 2026 | 07:59 pm |
