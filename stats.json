@@ -70,12 +70,13 @@
     "LeetCode_Substring_with_Concatenation_of_All_Words": true,
     "LeetCode_Minimum_Window_Substring": true,
     "LeetCode_Spiral_Matrix": true,
-    "LeetCode_Rotate_Image": true
+    "LeetCode_Rotate_Image": true,
+    "LeetCode_Game_of_Life": true
   },
-  "totalSolved": 55,
+  "totalSolved": 56,
   "difficultyCounts": {
     "easy": 10,
-    "medium": 39,
+    "medium": 40,
     "hard": 6,
     "basic": 0
   },
@@ -97,10 +98,11 @@
     "Substring with Concatenation of All Words",
     "Minimum Window Substring",
     "Spiral Matrix",
-    "Rotate Image"
+    "Rotate Image",
+    "Game of Life"
   ],
   "currentStreak": 2,
-  "todayCount": 18,
+  "todayCount": 19,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -114,6 +116,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 18
+    "2026-09-16": 19
   }
 }
