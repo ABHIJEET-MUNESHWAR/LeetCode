@@ -8,8 +8,8 @@
 Array, Hash Table, Union-Find
 
 ### 🚀 Performance
-- **Runtime:** 29 ms
-- **Memory:** 68.1 MB
+- **Runtime:** 48 ms
+- **Memory:** 88.2 MB
 
 ---
 
