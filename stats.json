@@ -59,11 +59,12 @@
     "LeetCode_Integer_to_Roman": true,
     "LeetCode_Longest_Common_Prefix": true,
     "LeetCode_Reverse_Words_in_a_String": true,
-    "LeetCode_Zigzag_Conversion": true
+    "LeetCode_Zigzag_Conversion": true,
+    "LeetCode_Find_the_Index_of_the_First_Occurrence_in_a_String": true
   },
-  "totalSolved": 44,
+  "totalSolved": 45,
   "difficultyCounts": {
-    "easy": 7,
+    "easy": 8,
     "medium": 33,
     "hard": 4,
     "basic": 0
@@ -75,10 +76,11 @@
     "Integer to Roman",
     "Longest Common Prefix",
     "Reverse Words in a String",
-    "Zigzag Conversion"
+    "Zigzag Conversion",
+    "Find the Index of the First Occurrence in a String"
   ],
   "currentStreak": 2,
-  "todayCount": 7,
+  "todayCount": 8,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -92,6 +94,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 7
+    "2026-09-16": 8
   }
 }
