@@ -63,12 +63,13 @@
     "LeetCode_Find_the_Index_of_the_First_Occurrence_in_a_String": true,
     "LeetCode_Valid_Palindrome": true,
     "LeetCode_Is_Subsequence": true,
-    "LeetCode_Two_Sum_II_-_Input_Array_Is_Sorted": true
+    "LeetCode_Two_Sum_II_-_Input_Array_Is_Sorted": true,
+    "LeetCode_3Sum": true
   },
-  "totalSolved": 48,
+  "totalSolved": 49,
   "difficultyCounts": {
     "easy": 10,
-    "medium": 34,
+    "medium": 35,
     "hard": 4,
     "basic": 0
   },
@@ -83,10 +84,11 @@
     "Find the Index of the First Occurrence in a String",
     "Valid Palindrome",
     "Is Subsequence",
-    "Two Sum II - Input Array Is Sorted"
+    "Two Sum II - Input Array Is Sorted",
+    "3Sum"
   ],
   "currentStreak": 2,
-  "todayCount": 11,
+  "todayCount": 12,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -100,6 +102,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 11
+    "2026-09-16": 12
   }
 }
