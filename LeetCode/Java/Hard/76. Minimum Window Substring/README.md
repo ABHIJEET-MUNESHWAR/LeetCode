@@ -1,6 +1,6 @@
 # 📝 76. Minimum Window Substring (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/minimum-window-substring)
+🔗 [Problem Link](https://leetcode.com/problems/minimum-window-substring/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Hard-red) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
