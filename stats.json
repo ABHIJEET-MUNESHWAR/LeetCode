@@ -56,11 +56,12 @@
     "LeetCode_Product_of_Array_Except_Self": true,
     "LeetCode_Gas_Station": true,
     "LeetCode_Roman_to_Integer": true,
-    "LeetCode_Integer_to_Roman": true
+    "LeetCode_Integer_to_Roman": true,
+    "LeetCode_Longest_Common_Prefix": true
   },
-  "totalSolved": 41,
+  "totalSolved": 42,
   "difficultyCounts": {
-    "easy": 6,
+    "easy": 7,
     "medium": 31,
     "hard": 4,
     "basic": 0
@@ -69,10 +70,11 @@
     "Product of Array Except Self",
     "Gas Station",
     "Roman to Integer",
-    "Integer to Roman"
+    "Integer to Roman",
+    "Longest Common Prefix"
   ],
   "currentStreak": 2,
-  "todayCount": 4,
+  "todayCount": 5,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -86,6 +88,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 4
+    "2026-09-16": 5
   }
 }
