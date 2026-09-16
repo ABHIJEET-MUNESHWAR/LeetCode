@@ -69,12 +69,13 @@
     "LeetCode_Longest_Substring_Without_Repeating_Characters": true,
     "LeetCode_Substring_with_Concatenation_of_All_Words": true,
     "LeetCode_Minimum_Window_Substring": true,
-    "LeetCode_Spiral_Matrix": true
+    "LeetCode_Spiral_Matrix": true,
+    "LeetCode_Rotate_Image": true
   },
-  "totalSolved": 54,
+  "totalSolved": 55,
   "difficultyCounts": {
     "easy": 10,
-    "medium": 38,
+    "medium": 39,
     "hard": 6,
     "basic": 0
   },
@@ -95,10 +96,11 @@
     "Longest Substring Without Repeating Characters",
     "Substring with Concatenation of All Words",
     "Minimum Window Substring",
-    "Spiral Matrix"
+    "Spiral Matrix",
+    "Rotate Image"
   ],
   "currentStreak": 2,
-  "todayCount": 17,
+  "todayCount": 18,
   "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
@@ -112,6 +114,6 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 17
+    "2026-09-16": 18
   }
 }
