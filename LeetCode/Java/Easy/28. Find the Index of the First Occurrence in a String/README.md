@@ -8,8 +8,8 @@
 Two Pointers, String, String Matching, Z Algorithm, Knuth–Morris–Pratt Algorithm, Boyer–Moore String-Search Algorithm
 
 ### 🚀 Performance
-- **Runtime:** 0 ms
-- **Memory:** 40.7 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
