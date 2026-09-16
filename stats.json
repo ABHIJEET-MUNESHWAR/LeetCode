@@ -52,30 +52,22 @@
     "LeetCode_Jump_Game": true,
     "LeetCode_Jump_Game_II": true,
     "LeetCode_H-Index": true,
-    "LeetCode_Insert_Delete_GetRandom_O(1)": true
+    "LeetCode_Insert_Delete_GetRandom_O(1)": true,
+    "LeetCode_Product_of_Array_Except_Self": true
   },
-  "totalSolved": 37,
+  "totalSolved": 38,
   "difficultyCounts": {
     "easy": 5,
-    "medium": 28,
+    "medium": 29,
     "hard": 4,
     "basic": 0
   },
   "todayProblems": [
-    "Maximum Number of Non-overlapping Palindrome Substrings",
-    "Minimum Genetic Mutation",
-    "Merge Sorted Array",
-    "Remove Duplicates from Sorted Array",
-    "Remove Duplicates from Sorted Array II",
-    "Rotate Array",
-    "Jump Game",
-    "Jump Game II",
-    "H-Index",
-    "Insert Delete GetRandom O(1)"
+    "Product of Array Except Self"
   ],
-  "currentStreak": 1,
-  "todayCount": 10,
-  "lastSyncDate": "2026-09-15",
+  "currentStreak": 2,
+  "todayCount": 1,
+  "lastSyncDate": "2026-09-16",
   "maxStreak": 4,
   "activityHistory": {
     "2026-07-21": 1,
@@ -87,6 +79,7 @@
     "2026-09-10": 1,
     "2026-09-12": 1,
     "2026-09-13": 1,
-    "2026-09-15": 10
+    "2026-09-15": 10,
+    "2026-09-16": 1
   }
 }
