@@ -57,3 +57,4 @@
 | 55 | [Rotate Image](./LeetCode/Medium/Rotate%20Image) | [LeetCode](https://leetcode.com/problems/rotate-image/) | Medium | 16 Sept 2026 | 07:56 pm |
 | 56 | [Game of Life](./LeetCode/Medium/Game%20of%20Life) | [LeetCode](https://leetcode.com/problems/game-of-life/) | Medium | 16 Sept 2026 | 07:59 pm |
 | 57 | [Isomorphic Strings](./LeetCode/Easy/Isomorphic%20Strings) | [LeetCode](https://leetcode.com/problems/isomorphic-strings/) | Easy | 16 Sept 2026 | 09:33 pm |
+| 58 | [Group Anagrams](./LeetCode/Medium/Group%20Anagrams) | [LeetCode](https://leetcode.com/problems/group-anagrams/) | Medium | 16 Sept 2026 | 09:47 pm |
