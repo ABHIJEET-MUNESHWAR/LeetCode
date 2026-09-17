@@ -3,7 +3,7 @@
 Track your progress on the NeetCode 150 roadmap practice problems.
 
 ## Progress
-- **Completed:** 38 / 150 (25.3%)
+- **Completed:** 39 / 150 (26.0%)
 
 ---
 
@@ -62,7 +62,7 @@ Track your progress on the NeetCode 150 roadmap practice problems.
 - [ ] Add Two Numbers
 - [ ] Linked List Cycle
 - [ ] Find the Duplicate Number
-- [ ] LRU Cache
+- [x] [LRU Cache](./Java/Medium/146. LRU Cache/)
 - [ ] Merge k Sorted Lists
 - [ ] Reverse Nodes in k-Group
 
