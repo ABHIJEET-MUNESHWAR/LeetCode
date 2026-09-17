@@ -1,18 +1,28 @@
 class Solution {
-    public int lengthOfLISRecursion(int[] nums, int n, int index, int previousIndex) {
-        if (index >= n) {
+    public int lengthOfLISRecursionMemoization(int[] nums, int n, int currentIndex, int previousIndex, int[][] dp) {
+        if (currentIndex >= n) {
             return 0;
         }
-        int take = 0;
-        if (previousIndex == -1 || (nums[previousIndex] < nums[index])) {
-            take = 1 + lengthOfLISRecursion(nums, n, index + 1, index);
+        if (previousIndex != -1 && dp[currentIndex][previousIndex] != -1) {
+            return dp[currentIndex][previousIndex];
         }
-        int skip = lengthOfLISRecursion(nums, n, index + 1, previousIndex);
+        int take = 0;
+        if (previousIndex == -1 || nums[previousIndex] < nums[currentIndex]) {
+            take = 1 + lengthOfLISRecursionMemoization(nums, n, currentIndex + 1, currentIndex, dp);
+        }
+        int skip = lengthOfLISRecursionMemoization(nums, n, currentIndex + 1, previousIndex, dp);
+        if (previousIndex != -1) {
+            dp[currentIndex][previousIndex] = Math.max(take, skip);
+        }
         return Math.max(take, skip);
     }
 
     public int lengthOfLIS(int[] nums) {
         int n = nums.length;
-        return lengthOfLISRecursion(nums, n, 0, -1);
+        int[][] dp = new int[n + 1][n + 1];
+        for (int i = 0; i <= n; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+        return lengthOfLISRecursionMemoization(nums, n, 0, -1, dp);
     }
 }
