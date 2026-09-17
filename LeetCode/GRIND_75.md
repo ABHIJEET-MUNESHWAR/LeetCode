@@ -3,7 +3,7 @@
 Track your progress on the Grind 75 coding interview preparation list.
 
 ## Progress
-- **Completed:** 27 / 75 (36.0%)
+- **Completed:** 28 / 75 (37.3%)
 
 ---
 
@@ -85,7 +85,7 @@ Track your progress on the Grind 75 coding interview preparation list.
 - [ ] Encode and Decode Strings
 
 ### 📂 Tree
-- [ ] Maximum Depth of Binary Tree
+- [x] [Maximum Depth of Binary Tree](./Java/Easy/104. Maximum Depth of Binary Tree/)
 - [ ] Same Tree
 - [ ] Invert Binary Tree
 - [ ] Binary Tree Maximum Path Sum
