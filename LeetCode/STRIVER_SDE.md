@@ -22,7 +22,7 @@ Track your progress on the Striver's SDE Sheet top interview problems.
 - [x] [Trapping Rain Water](./Java/Hard/42. Trapping Rain Water/)
 
 ### 📂 Two Pointers & Hashing
-- [x] [Search a 2D Matrix](./Java/Medium/74. Search a 2D Matrix/)
+- [ ] Search a 2D Matrix
 - [ ] Pow(x, n)
 - [x] [Majority Element](./Java/Easy/169. Majority Element/)
 - [ ] Majority Element II
@@ -57,7 +57,7 @@ Track your progress on the Striver's SDE Sheet top interview problems.
 
 ### 📂 Binary Search
 - [ ] Single Element in a Sorted Array
-- [ ] Search in Rotated Sorted Array
+- [x] [Search in Rotated Sorted Array](./Java/Medium/33. Search in Rotated Sorted Array/)
 - [ ] Median of Two Sorted Arrays
 - [ ] Kth Element of Two Sorted Arrays
 
