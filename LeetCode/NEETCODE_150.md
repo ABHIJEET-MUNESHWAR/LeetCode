@@ -3,7 +3,7 @@
 Track your progress on the NeetCode 150 roadmap practice problems.
 
 ## Progress
-- **Completed:** 50 / 150 (33.3%)
+- **Completed:** 51 / 150 (34.0%)
 
 ---
 
@@ -92,7 +92,7 @@ Track your progress on the NeetCode 150 roadmap practice problems.
 - [ ] Kth Largest Element in a Stream
 - [ ] Last Stone Weight
 - [ ] K Closest Points to Origin
-- [ ] Kth Largest Element in an Array
+- [x] [Kth Largest Element in an Array](./Java/Medium/215. Kth Largest Element in an Array/)
 - [ ] Task Scheduler
 - [ ] Design Twitter
 - [ ] Find Median from Data Stream
