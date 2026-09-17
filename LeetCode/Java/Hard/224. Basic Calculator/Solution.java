@@ -1,6 +1,6 @@
 class Solution {
     public int calculate(String s) {
-        
+
         Stack<Integer> stack = new Stack<>();
         int result = 0, number = 0, sign = 1;
         int n = s.length();
