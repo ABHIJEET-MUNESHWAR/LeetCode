@@ -1,1 +1,1 @@
-<h2>house-robber Notes</h2><hr>Top Down: Recursion + 
+<h2>house-robber Notes</h2><hr>Recursion 
