@@ -1,5 +1,5 @@
 class Solution {
-    public void combinationSumBackTrack(int[] nums, int target, int n, int index, List<Integer> currentList,
+    public void combinationSumBackTrack(int[] nums, int n, int target, int index, List<Integer> currentList,
             List<List<Integer>> resultList) {
         if (target == 0) {
             resultList.add(new ArrayList<>(currentList));
@@ -8,18 +8,21 @@ class Solution {
         if (target < 0) {
             return;
         }
+        if (index >= n) {
+            return;
+        }
         for (int i = index; i < n; i++) {
             currentList.add(nums[i]);
-            combinationSumBackTrack(nums, target - nums[i], n, i, currentList, resultList);
+            combinationSumBackTrack(nums, n, target - nums[i], i, currentList, resultList);
             currentList.remove(currentList.size() - 1);
         }
     }
 
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    public List<List<Integer>> combinationSum(int[] nums, int target) {
         List<List<Integer>> resultList = new ArrayList<>();
         List<Integer> currentList = new ArrayList<>();
-        int n = candidates.length;
-        combinationSumBackTrack(candidates, target, n, 0, currentList, resultList);
+        int n = nums.length;
+        combinationSumBackTrack(nums, n, target, 0, currentList, resultList);
         return resultList;
     }
 }
