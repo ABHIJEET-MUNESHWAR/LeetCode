@@ -3,7 +3,7 @@
 Track your progress on the Grind 100 coding interview preparation list.
 
 ## Progress
-- **Completed:** 36 / 100 (36.0%)
+- **Completed:** 37 / 100 (37.0%)
 
 ---
 
@@ -91,7 +91,7 @@ Track your progress on the Grind 100 coding interview preparation list.
 ### 📂 Dynamic Programming
 - [x] [Climbing Stairs](./Java/Easy/70. Climbing Stairs/)
 - [ ] Coin Change
-- [ ] Word Break
+- [x] [Word Break](./Java/Medium/139. Word Break/)
 - [x] [Longest Increasing Subsequence](./Java/Medium/300. Longest Increasing Subsequence/)
 - [x] [House Robber](./Java/Medium/198. House Robber/)
 - [ ] Partition Equal Subset Sum
