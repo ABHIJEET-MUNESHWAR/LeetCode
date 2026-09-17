@@ -82,22 +82,24 @@
     "LeetCode_Simplify_Path": true,
     "LeetCode_Basic_Calculator": true,
     "LeetCode_Sum_Root_to_Leaf_Numbers": true,
-    "LeetCode_Lowest_Common_Ancestor_of_a_Binary_Tree": true
+    "LeetCode_Lowest_Common_Ancestor_of_a_Binary_Tree": true,
+    "LeetCode_House_Robber": true
   },
-  "totalSolved": 67,
+  "totalSolved": 68,
   "difficultyCounts": {
     "easy": 13,
-    "medium": 47,
+    "medium": 48,
     "hard": 7,
     "basic": 0
   },
   "todayProblems": [
     "Basic Calculator",
     "Sum Root to Leaf Numbers",
-    "Lowest Common Ancestor of a Binary Tree"
+    "Lowest Common Ancestor of a Binary Tree",
+    "House Robber"
   ],
   "currentStreak": 3,
-  "todayCount": 3,
+  "todayCount": 4,
   "lastSyncDate": "2026-09-17",
   "maxStreak": 4,
   "activityHistory": {
@@ -112,6 +114,6 @@
     "2026-09-13": 1,
     "2026-09-15": 10,
     "2026-09-16": 27,
-    "2026-09-17": 3
+    "2026-09-17": 4
   }
 }
