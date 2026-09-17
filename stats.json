@@ -80,20 +80,22 @@
     "LeetCode_Insert_Interval": true,
     "LeetCode_Minimum_Number_of_Arrows_to_Burst_Balloons": true,
     "LeetCode_Simplify_Path": true,
-    "LeetCode_Basic_Calculator": true
+    "LeetCode_Basic_Calculator": true,
+    "LeetCode_Sum_Root_to_Leaf_Numbers": true
   },
-  "totalSolved": 65,
+  "totalSolved": 66,
   "difficultyCounts": {
     "easy": 13,
-    "medium": 45,
+    "medium": 46,
     "hard": 7,
     "basic": 0
   },
   "todayProblems": [
-    "Basic Calculator"
+    "Basic Calculator",
+    "Sum Root to Leaf Numbers"
   ],
   "currentStreak": 3,
-  "todayCount": 1,
+  "todayCount": 2,
   "lastSyncDate": "2026-09-17",
   "maxStreak": 4,
   "activityHistory": {
@@ -108,6 +110,6 @@
     "2026-09-13": 1,
     "2026-09-15": 10,
     "2026-09-16": 27,
-    "2026-09-17": 1
+    "2026-09-17": 2
   }
 }
