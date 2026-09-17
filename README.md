@@ -67,3 +67,4 @@
 | 65 | [Basic Calculator](./LeetCode/Hard/Basic%20Calculator) | [LeetCode](https://leetcode.com/problems/basic-calculator/) | Hard | 17 Sept 2026 | 10:44 am |
 | 66 | [Sum Root to Leaf Numbers](./LeetCode/Medium/Sum%20Root%20to%20Leaf%20Numbers) | [LeetCode](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | Medium | 17 Sept 2026 | 11:07 am |
 | 67 | [Lowest Common Ancestor of a Binary Tree](./LeetCode/Medium/Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree) | [LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Medium | 17 Sept 2026 | 11:09 am |
+| 68 | [House Robber](./LeetCode/Medium/House%20Robber) | [LeetCode](https://leetcode.com/problems/house-robber/) | Medium | 17 Sept 2026 | 09:33 pm |
