@@ -3,7 +3,7 @@
 Track your progress on the NeetCode 150 roadmap practice problems.
 
 ## Progress
-- **Completed:** 41 / 150 (27.3%)
+- **Completed:** 42 / 150 (28.0%)
 
 ---
 
@@ -75,7 +75,7 @@ Track your progress on the NeetCode 150 roadmap practice problems.
 - [ ] Subtree of Another Tree
 - [ ] Lowest Common Ancestor of a Binary Search Tree
 - [ ] Binary Tree Level Order Traversal
-- [ ] Binary Tree Right Side View
+- [x] [Binary Tree Right Side View](./Java/Medium/199. Binary Tree Right Side View/)
 - [ ] Count Good Nodes in Binary Tree
 - [ ] Validate Binary Search Tree
 - [ ] Kth Smallest Element in a BST
