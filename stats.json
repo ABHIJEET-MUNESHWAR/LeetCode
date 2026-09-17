@@ -79,47 +79,22 @@
     "LeetCode_Longest_Consecutive_Sequence": true,
     "LeetCode_Insert_Interval": true,
     "LeetCode_Minimum_Number_of_Arrows_to_Burst_Balloons": true,
-    "LeetCode_Simplify_Path": true
+    "LeetCode_Simplify_Path": true,
+    "LeetCode_Basic_Calculator": true
   },
-  "totalSolved": 64,
+  "totalSolved": 65,
   "difficultyCounts": {
     "easy": 13,
     "medium": 45,
-    "hard": 6,
+    "hard": 7,
     "basic": 0
   },
   "todayProblems": [
-    "Product of Array Except Self",
-    "Gas Station",
-    "Roman to Integer",
-    "Integer to Roman",
-    "Longest Common Prefix",
-    "Reverse Words in a String",
-    "Zigzag Conversion",
-    "Find the Index of the First Occurrence in a String",
-    "Valid Palindrome",
-    "Is Subsequence",
-    "Two Sum II - Input Array Is Sorted",
-    "3Sum",
-    "Minimum Size Subarray Sum",
-    "Longest Substring Without Repeating Characters",
-    "Substring with Concatenation of All Words",
-    "Minimum Window Substring",
-    "Spiral Matrix",
-    "Rotate Image",
-    "Game of Life",
-    "Isomorphic Strings",
-    "Group Anagrams",
-    "Two Sum",
-    "Happy Number",
-    "Longest Consecutive Sequence",
-    "Insert Interval",
-    "Minimum Number of Arrows to Burst Balloons",
-    "Simplify Path"
+    "Basic Calculator"
   ],
-  "currentStreak": 2,
-  "todayCount": 27,
-  "lastSyncDate": "2026-09-16",
+  "currentStreak": 3,
+  "todayCount": 1,
+  "lastSyncDate": "2026-09-17",
   "maxStreak": 4,
   "activityHistory": {
     "2026-07-21": 1,
@@ -132,6 +107,7 @@
     "2026-09-12": 1,
     "2026-09-13": 1,
     "2026-09-15": 10,
-    "2026-09-16": 27
+    "2026-09-16": 27,
+    "2026-09-17": 1
   }
 }

@@ -64,3 +64,4 @@
 | 62 | [Insert Interval](./LeetCode/Medium/Insert%20Interval) | [LeetCode](https://leetcode.com/problems/insert-interval/) | Medium | 16 Sept 2026 | 10:38 pm |
 | 63 | [Minimum Number of Arrows to Burst Balloons](./LeetCode/Medium/Minimum%20Number%20of%20Arrows%20to%20Burst%20Balloons) | [LeetCode](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | Medium | 16 Sept 2026 | 10:51 pm |
 | 64 | [Simplify Path](./LeetCode/Medium/Simplify%20Path) | [LeetCode](https://leetcode.com/problems/simplify-path/) | Medium | 16 Sept 2026 | 11:03 pm |
+| 65 | [Basic Calculator](./LeetCode/Hard/Basic%20Calculator) | [LeetCode](https://leetcode.com/problems/basic-calculator/) | Hard | 17 Sept 2026 | 10:44 am |
