@@ -85,20 +85,22 @@
     "LeetCode_Lowest_Common_Ancestor_of_a_Binary_Tree": true,
     "LeetCode_House_Robber": true,
     "LeetCode_Combination_Sum": true,
-    "LeetCode_LRU_Cache": true
+    "LeetCode_LRU_Cache": true,
+    "LeetCode_LFU_Cache": true
   },
-  "totalSolved": 70,
+  "totalSolved": 71,
   "difficultyCounts": {
     "easy": 13,
     "medium": 50,
-    "hard": 7,
+    "hard": 8,
     "basic": 0
   },
   "todayProblems": [
-    "LRU Cache"
+    "LRU Cache",
+    "LFU Cache"
   ],
   "currentStreak": 4,
-  "todayCount": 1,
+  "todayCount": 2,
   "lastSyncDate": "2026-09-18",
   "maxStreak": 4,
   "activityHistory": {
@@ -114,6 +116,6 @@
     "2026-09-15": 10,
     "2026-09-16": 27,
     "2026-09-17": 5,
-    "2026-09-18": 1
+    "2026-09-18": 2
   }
 }
