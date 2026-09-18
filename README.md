@@ -69,3 +69,4 @@
 | 67 | [Lowest Common Ancestor of a Binary Tree](./LeetCode/Medium/Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree) | [LeetCode](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Medium | 17 Sept 2026 | 11:09 am |
 | 68 | [House Robber](./LeetCode/Medium/House%20Robber) | [LeetCode](https://leetcode.com/problems/house-robber/) | Medium | 17 Sept 2026 | 09:33 pm |
 | 69 | [Combination Sum](./LeetCode/Medium/Combination%20Sum) | [LeetCode](https://leetcode.com/problems/combination-sum/) | Medium | 17 Sept 2026 | 09:39 pm |
+| 70 | [LRU Cache](./LeetCode/Medium/LRU%20Cache) | [LeetCode](https://leetcode.com/problems/lru-cache/) | Medium | 18 Sept 2026 | 12:16 pm |
