@@ -8,8 +8,8 @@
 Hash Table, Linked List, Design, Doubly-Linked List
 
 ### 🚀 Performance
-- **Runtime:** 59 ms
-- **Memory:** 144 MB
+- **Runtime:** N/A
+- **Memory:** N/A
 
 ---
 
