@@ -3,7 +3,7 @@
 Track your progress on the Striver's SDE Sheet top interview problems.
 
 ## Progress
-- **Completed:** 31 / 76 (40.8%)
+- **Completed:** 32 / 76 (42.1%)
 
 ---
 
@@ -44,7 +44,7 @@ Track your progress on the Striver's SDE Sheet top interview problems.
 - [ ] Reverse Nodes in k-Group
 - [ ] Palindrome Linked List
 - [x] [LRU Cache](./Java/Medium/146. LRU Cache/)
-- [ ] LFU Cache
+- [x] [LFU Cache](./Java/Hard/460. LFU Cache/)
 
 ### 📂 Greedy & Backtracking
 - [x] [Combination Sum](./Java/Medium/39. Combination Sum/)
