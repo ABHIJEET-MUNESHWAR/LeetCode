@@ -9,7 +9,7 @@ Hash Table, Linked List
 
 ### 🚀 Performance
 - **Runtime:** 0 ms
-- **Memory:** 44.2 MB
+- **Memory:** 46.5 MB
 
 ---
 
