@@ -16,7 +16,7 @@ class Node {
 class Solution {
     public Node copyRandomList(Node head) {
         if (head == null) {
-            return null;
+            return head;
         }
         Node current = head;
         Node nextNode = null;
@@ -41,12 +41,10 @@ class Solution {
         while (current != null) {
             Node next = current.next.next;
 
-            // Extract the copy
             copy = current.next;
             copyIterator.next = copy;
             copyIterator = copy;
 
-            // Restore original list
             current.next = next;
             current = next;
         }
