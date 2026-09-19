@@ -88,21 +88,23 @@
     "LeetCode_LRU_Cache": true,
     "LeetCode_LFU_Cache": true,
     "LeetCode_Merge_Two_Sorted_Lists": true,
-    "LeetCode_Circle_and_Rectangle_Overlapping": true
+    "LeetCode_Circle_and_Rectangle_Overlapping": true,
+    "LeetCode_Copy_List_with_Random_Pointer": true
   },
-  "totalSolved": 73,
+  "totalSolved": 74,
   "difficultyCounts": {
     "easy": 14,
-    "medium": 51,
+    "medium": 52,
     "hard": 8,
     "basic": 0
   },
   "todayProblems": [
     "Merge Two Sorted Lists",
-    "Circle and Rectangle Overlapping"
+    "Circle and Rectangle Overlapping",
+    "Copy List with Random Pointer"
   ],
   "currentStreak": 5,
-  "todayCount": 2,
+  "todayCount": 3,
   "lastSyncDate": "2026-09-19",
   "maxStreak": 5,
   "activityHistory": {
@@ -119,6 +121,6 @@
     "2026-09-16": 27,
     "2026-09-17": 5,
     "2026-09-18": 2,
-    "2026-09-19": 2
+    "2026-09-19": 3
   }
 }
