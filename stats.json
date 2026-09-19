@@ -87,20 +87,22 @@
     "LeetCode_Combination_Sum": true,
     "LeetCode_LRU_Cache": true,
     "LeetCode_LFU_Cache": true,
-    "LeetCode_Merge_Two_Sorted_Lists": true
+    "LeetCode_Merge_Two_Sorted_Lists": true,
+    "LeetCode_Circle_and_Rectangle_Overlapping": true
   },
-  "totalSolved": 72,
+  "totalSolved": 73,
   "difficultyCounts": {
     "easy": 14,
-    "medium": 50,
+    "medium": 51,
     "hard": 8,
     "basic": 0
   },
   "todayProblems": [
-    "Merge Two Sorted Lists"
+    "Merge Two Sorted Lists",
+    "Circle and Rectangle Overlapping"
   ],
   "currentStreak": 5,
-  "todayCount": 1,
+  "todayCount": 2,
   "lastSyncDate": "2026-09-19",
   "maxStreak": 5,
   "activityHistory": {
@@ -117,6 +119,6 @@
     "2026-09-16": 27,
     "2026-09-17": 5,
     "2026-09-18": 2,
-    "2026-09-19": 1
+    "2026-09-19": 2
   }
 }
