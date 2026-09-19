@@ -71,3 +71,4 @@
 | 69 | [Combination Sum](./LeetCode/Medium/Combination%20Sum) | [LeetCode](https://leetcode.com/problems/combination-sum/) | Medium | 17 Sept 2026 | 09:39 pm |
 | 70 | [LRU Cache](./LeetCode/Medium/LRU%20Cache) | [LeetCode](https://leetcode.com/problems/lru-cache/) | Medium | 18 Sept 2026 | 12:16 pm |
 | 71 | [LFU Cache](./LeetCode/Hard/LFU%20Cache) | [LeetCode](https://leetcode.com/problems/lfu-cache/) | Hard | 18 Sept 2026 | 02:58 pm |
+| 72 | [Merge Two Sorted Lists](./LeetCode/Easy/Merge%20Two%20Sorted%20Lists) | [LeetCode](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | 19 Sept 2026 | 07:38 pm |

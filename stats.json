@@ -86,23 +86,23 @@
     "LeetCode_House_Robber": true,
     "LeetCode_Combination_Sum": true,
     "LeetCode_LRU_Cache": true,
-    "LeetCode_LFU_Cache": true
+    "LeetCode_LFU_Cache": true,
+    "LeetCode_Merge_Two_Sorted_Lists": true
   },
-  "totalSolved": 71,
+  "totalSolved": 72,
   "difficultyCounts": {
-    "easy": 13,
+    "easy": 14,
     "medium": 50,
     "hard": 8,
     "basic": 0
   },
   "todayProblems": [
-    "LRU Cache",
-    "LFU Cache"
+    "Merge Two Sorted Lists"
   ],
-  "currentStreak": 4,
-  "todayCount": 2,
-  "lastSyncDate": "2026-09-18",
-  "maxStreak": 4,
+  "currentStreak": 5,
+  "todayCount": 1,
+  "lastSyncDate": "2026-09-19",
+  "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
@@ -116,6 +116,7 @@
     "2026-09-15": 10,
     "2026-09-16": 27,
     "2026-09-17": 5,
-    "2026-09-18": 2
+    "2026-09-18": 2,
+    "2026-09-19": 1
   }
 }
