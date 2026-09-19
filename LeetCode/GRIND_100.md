@@ -3,7 +3,7 @@
 Track your progress on the Grind 100 coding interview preparation list.
 
 ## Progress
-- **Completed:** 39 / 100 (39.0%)
+- **Completed:** 40 / 100 (40.0%)
 
 ---
 
@@ -50,7 +50,7 @@ Track your progress on the Grind 100 coding interview preparation list.
 - [ ] Remove Nth Node From End of List
 - [ ] Intersection of Two Linked Lists
 - [x] [Add Two Numbers](./Java/Medium/2. Add Two Numbers/)
-- [ ] Copy List with Random Pointer
+- [x] [Copy List with Random Pointer](./Java/Medium/138. Copy List with Random Pointer/)
 - [x] [LRU Cache](./Java/Medium/146. LRU Cache/)
 - [ ] Sort List
 - [ ] Merge k Sorted Lists
