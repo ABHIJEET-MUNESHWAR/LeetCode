@@ -3,26 +3,27 @@ class Solution {
     String[] numToStrMap = { "0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
 
     public List<String> letterCombinations(String digits) {
-        if (digits.length() == 0) {
+        int n = digits.length();
+        if (n == 0) {
             return combinations;
         }
-        solve(digits, 0, "");
+        backtrack(digits, n, "", 0);
         return combinations;
     }
 
-    public void solve(String digits, int index, String temp) {
-        if (index >= digits.length()) {
-            combinations.add(temp);
+    public void backtrack(String digits, int n, String currentString, int index) {
+        if (index >= n) {
+            combinations.add(currentString);
             return;
         }
         char ch = digits.charAt(index);
-        String str = numToStrMap[ch - '0'];
-        int length = str.length();
+        String buttonString = numToStrMap[ch - '0'];
+        int length = buttonString.length();
         for (int i = 0; i < length; i++) {
-            String tmp = temp;
-            temp += str.charAt(i); // Do
-            solve(digits, index + 1, temp); // Explore
-            temp = tmp; // Undo
+            String temp = currentString;
+            currentString += buttonString.charAt(i);
+            backtrack(digits, n, currentString, index + 1);
+            currentString = temp;
         }
     }
 }
