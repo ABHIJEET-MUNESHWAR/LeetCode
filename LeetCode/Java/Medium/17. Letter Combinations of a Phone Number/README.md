@@ -8,8 +8,8 @@
 Hash Table, String, Backtracking
 
 ### 🚀 Performance
-- **Runtime:** 2 ms
-- **Memory:** 43.4 MB
+- **Runtime:** 3 ms
+- **Memory:** 48.8 MB
 
 ---
 
