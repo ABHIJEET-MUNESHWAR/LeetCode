@@ -8,7 +8,7 @@
 String, Simulation
 
 ### 🚀 Performance
-- **Runtime:** 86 ms
+- **Runtime:** 1 ms
 - **Memory:** 44.3 MB
 
 ---
