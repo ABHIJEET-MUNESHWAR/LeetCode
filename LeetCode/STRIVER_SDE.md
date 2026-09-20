@@ -3,48 +3,48 @@
 Track your progress on the Striver's SDE Sheet top interview problems.
 
 ## Progress
-- **Completed:** 3 / 76 (3.9%)
+- **Completed:** 34 / 76 (44.7%)
 
 ---
 
 ## Checklist
 
 ### 📂 Arrays & Matrix
-- [ ] Set Matrix Zeroes
+- [x] [Set Matrix Zeroes](./Java/Medium/73. Set Matrix Zeroes/)
 - [ ] Pascal's Triangle
 - [ ] Next Permutation
 - [ ] Maximum Subarray
 - [ ] Sort Colors
-- [ ] Best Time to Buy and Sell Stock
-- [ ] Rotate Image
-- [ ] Merge Intervals
+- [x] [Best Time to Buy and Sell Stock](./Java/Easy/121. Best Time to Buy and Sell Stock/)
+- [x] [Rotate Image](./Java/Medium/48. Rotate Image/)
+- [x] [Merge Intervals](./Java/Medium/56. Merge Intervals/)
 - [ ] Find the Duplicate Number
-- [ ] Trapping Rain Water
+- [x] [Trapping Rain Water](./Java/Hard/42. Trapping Rain Water/)
 
 ### 📂 Two Pointers & Hashing
-- [ ] Search a 2D Matrix
+- [x] [Search a 2D Matrix](./Java/Medium/74. Search a 2D Matrix/)
 - [ ] Pow(x, n)
-- [ ] Majority Element
+- [x] [Majority Element](./Java/Easy/169. Majority Element/)
 - [ ] Majority Element II
-- [ ] Unique Paths
-- [ ] Two Sum
+- [x] [Unique Paths](./Java/Medium/62. Unique Paths/)
+- [x] [Two Sum](./Java/Easy/1. Two Sum/)
 - [ ] 4Sum
-- [ ] Longest Consecutive Sequence
-- [ ] Longest Substring Without Repeating Characters
+- [x] [Longest Consecutive Sequence](./Java/Medium/128. Longest Consecutive Sequence/)
+- [x] [Longest Substring Without Repeating Characters](./Java/Medium/3. Longest Substring Without Repeating Characters/)
 
 ### 📂 Linked List
 - [ ] Reverse Linked List
 - [ ] Middle of the Linked List
-- [ ] Merge Two Sorted Lists
+- [x] [Merge Two Sorted Lists](./Java/Easy/21. Merge Two Sorted Lists/)
 - [ ] Remove Nth Node From End of List
-- [ ] Add Two Numbers
+- [x] [Add Two Numbers](./Java/Medium/2. Add Two Numbers/)
 - [ ] Delete Node in a Linked List
 - [ ] Intersection of Two Linked Lists
-- [ ] Linked List Cycle
+- [x] [Linked List Cycle](./Java/Easy/141. Linked List Cycle/)
 - [ ] Reverse Nodes in k-Group
 - [ ] Palindrome Linked List
-- [ ] LRU Cache
-- [ ] LFU Cache
+- [x] [LRU Cache](./Java/Medium/146. LRU Cache/)
+- [x] [LFU Cache](./Java/Hard/460. LFU Cache/)
 
 ### 📂 Greedy & Backtracking
 - [x] [Combination Sum](./Java/Medium/39. Combination Sum/)
@@ -52,37 +52,37 @@ Track your progress on the Striver's SDE Sheet top interview problems.
 - [ ] Palindrome Partitioning
 - [x] [Permutations](./Java/Medium/46. Permutations/)
 - [ ] N-Queens
-- [ ] Sudoku Solver
-- [ ] Word Break
+- [x] [Sudoku Solver](./Java/Hard/37. Sudoku Solver/)
+- [x] [Word Break](./Java/Medium/139. Word Break/)
 
 ### 📂 Binary Search
 - [ ] Single Element in a Sorted Array
-- [ ] Search in Rotated Sorted Array
+- [x] [Search in Rotated Sorted Array](./Java/Medium/33. Search in Rotated Sorted Array/)
 - [ ] Median of Two Sorted Arrays
 - [ ] Kth Element of Two Sorted Arrays
 
 ### 📂 Stack & Queue
-- [ ] Valid Parentheses
+- [x] [Valid Parentheses](./Java/Easy/20. Valid Parentheses/)
 - [ ] Next Greater Element I
 - [ ] Next Greater Element II
 - [ ] Largest Rectangle in Histogram
 - [ ] Sliding Window Maximum
-- [ ] Min Stack
-- [ ] Rotting Oranges
+- [x] [Min Stack](./Java/Medium/155. Min Stack/)
+- [x] [Rotting Oranges](./Java/Medium/1036. Rotting Oranges/)
 - [ ] Daily Temperatures
 
 ### 📂 Binary Tree & BST
 - [ ] Binary Tree Inorder Traversal
 - [ ] Binary Tree Preorder Traversal
 - [ ] Binary Tree Postorder Traversal
-- [ ] Binary Tree Level Order Traversal
-- [ ] Maximum Depth of Binary Tree
+- [x] [Binary Tree Level Order Traversal](./Java/Medium/102. Binary Tree Level Order Traversal/)
+- [x] [Maximum Depth of Binary Tree](./Java/Easy/104. Maximum Depth of Binary Tree/)
 - [ ] Diameter of Binary Tree
 - [ ] Balanced Binary Tree
-- [ ] Lowest Common Ancestor of a Binary Tree
+- [x] [Lowest Common Ancestor of a Binary Tree](./Java/Medium/236. Lowest Common Ancestor of a Binary Tree/)
 - [ ] Same Tree
-- [ ] Binary Tree Zigzag Level Order Traversal
-- [ ] Binary Tree Maximum Path Sum
+- [x] [Binary Tree Zigzag Level Order Traversal](./Java/Medium/103. Binary Tree Zigzag Level Order Traversal/)
+- [x] [Binary Tree Maximum Path Sum](./Java/Hard/124. Binary Tree Maximum Path Sum/)
 - [ ] Construct Binary Tree from Preorder and Inorder Traversal
 - [ ] Symmetric Tree
 - [ ] Validate Binary Search Tree
@@ -91,10 +91,10 @@ Track your progress on the Striver's SDE Sheet top interview problems.
 - [ ] Serialize and Deserialize Binary Tree
 
 ### 📂 Dynamic Programming & Graphs
-- [ ] Clone Graph
-- [ ] Course Schedule
-- [ ] Number of Islands
-- [ ] Longest Increasing Subsequence
+- [x] [Clone Graph](./Java/Medium/133. Clone Graph/)
+- [x] [Course Schedule](./Java/Medium/207. Course Schedule/)
+- [x] [Number of Islands](./Java/Medium/200. Number of Islands/)
+- [x] [Longest Increasing Subsequence](./Java/Medium/300. Longest Increasing Subsequence/)
 - [ ] Longest Common Subsequence
 - [ ] 01 Knapsack
 - [ ] Edit Distance

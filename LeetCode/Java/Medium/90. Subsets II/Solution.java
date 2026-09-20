@@ -1,20 +1,25 @@
 class Solution {
-    public List<List<Integer>> subsetsWithDup(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        Arrays.sort(nums);
-        backtrack(result, new ArrayList<Integer>(), nums, 0);
-        return result;
+    public void subsetsWithDupBackTrack(int[] nums, int n, int index, List<Integer> currentList,
+            List<List<Integer>> resultList) {
+        if (index == n) {
+            resultList.add(new ArrayList<>(currentList));
+            return;
+        }
+        currentList.add(nums[index]);
+        subsetsWithDupBackTrack(nums, n, index + 1, currentList, resultList);
+        currentList.remove(currentList.size() - 1);
+        while ((index + 1) < n && nums[index] == nums[index + 1]) {
+            index++;
+        }
+        subsetsWithDupBackTrack(nums, n, index + 1, currentList, resultList);
     }
 
-    private void backtrack(List<List<Integer>> result, ArrayList<Integer> tempList, int[] nums, int start) {
-        result.add(new ArrayList<>(tempList));
-        for (int i = start; i < nums.length; i++) {
-            if (i > start && nums[i] == nums[i - 1]) {
-                continue;
-            }
-            tempList.add(nums[i]);
-            backtrack(result, tempList, nums, i + 1);
-            tempList.remove(tempList.size() - 1);
-        }
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        List<List<Integer>> resultList = new ArrayList<>();
+        List<Integer> currentList = new ArrayList<>();
+        int n = nums.length;
+        Arrays.sort(nums);
+        subsetsWithDupBackTrack(nums, n, 0, currentList, resultList);
+        return resultList;
     }
 }

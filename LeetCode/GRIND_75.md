@@ -3,23 +3,23 @@
 Track your progress on the Grind 75 coding interview preparation list.
 
 ## Progress
-- **Completed:** 1 / 75 (1.3%)
+- **Completed:** 35 / 75 (46.7%)
 
 ---
 
 ## Checklist
 
 ### 📂 Array
-- [ ] Two Sum
-- [ ] Best Time to Buy and Sell Stock
+- [x] [Two Sum](./Java/Easy/1. Two Sum/)
+- [x] [Best Time to Buy and Sell Stock](./Java/Easy/121. Best Time to Buy and Sell Stock/)
 - [ ] Contains Duplicate
-- [ ] Product of Array Except Self
+- [x] [Product of Array Except Self](./Java/Medium/238. Product of Array Except Self/)
 - [ ] Maximum Subarray
 - [ ] Maximum Product Subarray
 - [ ] Find Minimum in Rotated Sorted Array
-- [ ] Search in Rotated Sorted Array
-- [ ] 3Sum
-- [ ] Container With Most Water
+- [x] [Search in Rotated Sorted Array](./Java/Medium/33. Search in Rotated Sorted Array/)
+- [x] [3Sum](./Java/Medium/15. 3Sum/)
+- [x] [Container With Most Water](./Java/Medium/11. Container With Most Water/)
 
 ### 📂 Binary
 - [ ] Sum of Two Integers
@@ -29,67 +29,67 @@ Track your progress on the Grind 75 coding interview preparation list.
 - [ ] Reverse Bits
 
 ### 📂 Dynamic Programming
-- [ ] Climbing Stairs
+- [x] [Climbing Stairs](./Java/Easy/70. Climbing Stairs/)
 - [ ] Coin Change
-- [ ] Longest Increasing Subsequence
+- [x] [Longest Increasing Subsequence](./Java/Medium/300. Longest Increasing Subsequence/)
 - [ ] Longest Common Subsequence
-- [ ] Word Break
+- [x] [Word Break](./Java/Medium/139. Word Break/)
 - [x] [Combination Sum](./Java/Medium/39. Combination Sum/)
-- [ ] House Robber
-- [ ] House Robber II
+- [x] [House Robber](./Java/Medium/198. House Robber/)
+- [x] [House Robber II](./Java/Medium/213. House Robber II/)
 - [ ] Decode Ways
-- [ ] Unique Paths
-- [ ] Jump Game
+- [x] [Unique Paths](./Java/Medium/62. Unique Paths/)
+- [x] [Jump Game](./Java/Medium/55. Jump Game/)
 
 ### 📂 Graph
-- [ ] Clone Graph
-- [ ] Course Schedule
+- [x] [Clone Graph](./Java/Medium/133. Clone Graph/)
+- [x] [Course Schedule](./Java/Medium/207. Course Schedule/)
 - [ ] Pacific Atlantic Water Flow
-- [ ] Number of Islands
-- [ ] Longest Consecutive Sequence
+- [x] [Number of Islands](./Java/Medium/200. Number of Islands/)
+- [x] [Longest Consecutive Sequence](./Java/Medium/128. Longest Consecutive Sequence/)
 - [ ] Alien Dictionary
 - [ ] Graph Valid Tree
 - [ ] Number of Connected Components in an Undirected Graph
 
 ### 📂 Interval
-- [ ] Insert Interval
-- [ ] Merge Intervals
+- [x] [Insert Interval](./Java/Medium/57. Insert Interval/)
+- [x] [Merge Intervals](./Java/Medium/56. Merge Intervals/)
 - [ ] Non-overlapping Intervals
 - [ ] Meeting Rooms
 - [ ] Meeting Rooms II
 
 ### 📂 Linked List
 - [ ] Reverse Linked List
-- [ ] Linked List Cycle
-- [ ] Merge Two Sorted Lists
+- [x] [Linked List Cycle](./Java/Easy/141. Linked List Cycle/)
+- [x] [Merge Two Sorted Lists](./Java/Easy/21. Merge Two Sorted Lists/)
 - [ ] Merge k Sorted Lists
 - [ ] Remove Nth Node From End of List
 - [ ] Reorder List
 
 ### 📂 Matrix
-- [ ] Set Matrix Zeroes
-- [ ] Spiral Matrix
-- [ ] Rotate Image
-- [ ] Word Search
+- [x] [Set Matrix Zeroes](./Java/Medium/73. Set Matrix Zeroes/)
+- [x] [Spiral Matrix](./Java/Medium/54. Spiral Matrix/)
+- [x] [Rotate Image](./Java/Medium/48. Rotate Image/)
+- [x] [Word Search](./Java/Medium/79. Word Search/)
 
 ### 📂 String
-- [ ] Longest Substring Without Repeating Characters
+- [x] [Longest Substring Without Repeating Characters](./Java/Medium/3. Longest Substring Without Repeating Characters/)
 - [ ] Longest Repeating Character Replacement
-- [ ] Minimum Window Substring
-- [ ] Valid Anagram
-- [ ] Group Anagrams
-- [ ] Valid Parentheses
-- [ ] Valid Palindrome
+- [x] [Minimum Window Substring](./Java/Hard/76. Minimum Window Substring/)
+- [x] [Valid Anagram](./Java/Easy/242. Valid Anagram/)
+- [x] [Group Anagrams](./Java/Medium/49. Group Anagrams/)
+- [x] [Valid Parentheses](./Java/Easy/20. Valid Parentheses/)
+- [x] [Valid Palindrome](./Java/Easy/125. Valid Palindrome/)
 - [ ] Longest Palindromic Substring
 - [ ] Palindromic Substrings
 - [ ] Encode and Decode Strings
 
 ### 📂 Tree
-- [ ] Maximum Depth of Binary Tree
+- [x] [Maximum Depth of Binary Tree](./Java/Easy/104. Maximum Depth of Binary Tree/)
 - [ ] Same Tree
 - [ ] Invert Binary Tree
-- [ ] Binary Tree Maximum Path Sum
-- [ ] Binary Tree Level Order Traversal
+- [x] [Binary Tree Maximum Path Sum](./Java/Hard/124. Binary Tree Maximum Path Sum/)
+- [x] [Binary Tree Level Order Traversal](./Java/Medium/102. Binary Tree Level Order Traversal/)
 - [ ] Serialize and Deserialize Binary Tree
 - [ ] Subtree of Another Tree
 - [ ] Construct Binary Tree from Preorder and Inorder Traversal

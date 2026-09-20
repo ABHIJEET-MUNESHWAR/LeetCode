@@ -3,115 +3,115 @@
 Track your progress on the Grind 100 coding interview preparation list.
 
 ## Progress
-- **Completed:** 3 / 100 (3.0%)
+- **Completed:** 40 / 100 (40.0%)
 
 ---
 
 ## Checklist
 
 ### 📂 Array & Two Pointers
-- [ ] Two Sum
-- [ ] 3Sum
-- [ ] Container With Most Water
+- [x] [Two Sum](./Java/Easy/1. Two Sum/)
+- [x] [3Sum](./Java/Medium/15. 3Sum/)
+- [x] [Container With Most Water](./Java/Medium/11. Container With Most Water/)
 - [ ] Move Zeroes
 - [ ] Sort Colors
-- [ ] Product of Array Except Self
+- [x] [Product of Array Except Self](./Java/Medium/238. Product of Array Except Self/)
 - [ ] Next Permutation
-- [ ] Trapping Rain Water
+- [x] [Trapping Rain Water](./Java/Hard/42. Trapping Rain Water/)
 - [ ] Find the Duplicate Number
-- [ ] Majority Element
+- [x] [Majority Element](./Java/Easy/169. Majority Element/)
 - [ ] Find All Numbers Disappeared in an Array
 
 ### 📂 Subarray & Sliding Window
 - [ ] Maximum Subarray
 - [ ] Subarray Sum Equals K
 - [ ] Sliding Window Maximum
-- [ ] Longest Substring Without Repeating Characters
+- [x] [Longest Substring Without Repeating Characters](./Java/Medium/3. Longest Substring Without Repeating Characters/)
 - [ ] Find All Anagrams in a String
-- [ ] Minimum Window Substring
+- [x] [Minimum Window Substring](./Java/Hard/76. Minimum Window Substring/)
 
 ### 📂 Hash Map & String
-- [ ] Group Anagrams
-- [ ] Longest Consecutive Sequence
-- [ ] Valid Parentheses
+- [x] [Group Anagrams](./Java/Medium/49. Group Anagrams/)
+- [x] [Longest Consecutive Sequence](./Java/Medium/128. Longest Consecutive Sequence/)
+- [x] [Valid Parentheses](./Java/Easy/20. Valid Parentheses/)
 - [ ] Decode String
-- [ ] Valid Palindrome
+- [x] [Valid Palindrome](./Java/Easy/125. Valid Palindrome/)
 - [ ] Longest Palindromic Substring
 - [ ] Palindromic Substrings
 - [ ] Regular Expression Matching
-- [ ] Letter Combinations of a Phone Number
+- [x] [Letter Combinations of a Phone Number](./Java/Medium/17. Letter Combinations of a Phone Number/)
 
 ### 📂 Linked List
 - [ ] Reverse Linked List
 - [ ] Palindrome Linked List
-- [ ] Linked List Cycle
+- [x] [Linked List Cycle](./Java/Easy/141. Linked List Cycle/)
 - [ ] Linked List Cycle II
-- [ ] Merge Two Sorted Lists
+- [x] [Merge Two Sorted Lists](./Java/Easy/21. Merge Two Sorted Lists/)
 - [ ] Remove Nth Node From End of List
 - [ ] Intersection of Two Linked Lists
-- [ ] Add Two Numbers
-- [ ] Copy List with Random Pointer
-- [ ] LRU Cache
+- [x] [Add Two Numbers](./Java/Medium/2. Add Two Numbers/)
+- [x] [Copy List with Random Pointer](./Java/Medium/138. Copy List with Random Pointer/)
+- [x] [LRU Cache](./Java/Medium/146. LRU Cache/)
 - [ ] Sort List
 - [ ] Merge k Sorted Lists
 
 ### 📂 Binary Tree & BST
 - [ ] Invert Binary Tree
 - [ ] Symmetric Tree
-- [ ] Maximum Depth of Binary Tree
+- [x] [Maximum Depth of Binary Tree](./Java/Easy/104. Maximum Depth of Binary Tree/)
 - [ ] Diameter of Binary Tree
 - [ ] Binary Tree Inorder Traversal
-- [ ] Binary Tree Level Order Traversal
+- [x] [Binary Tree Level Order Traversal](./Java/Medium/102. Binary Tree Level Order Traversal/)
 - [ ] Convert Sorted Array to Binary Search Tree
 - [ ] Validate Binary Search Tree
-- [ ] Lowest Common Ancestor of a Binary Tree
+- [x] [Lowest Common Ancestor of a Binary Tree](./Java/Medium/236. Lowest Common Ancestor of a Binary Tree/)
 - [ ] Kth Smallest Element in a BST
 - [ ] Construct Binary Tree from Preorder and Inorder Traversal
-- [ ] Binary Tree Maximum Path Sum
+- [x] [Binary Tree Maximum Path Sum](./Java/Hard/124. Binary Tree Maximum Path Sum/)
 - [ ] Path Sum III
-- [ ] Flatten Binary Tree to Linked List
+- [x] [Flatten Binary Tree to Linked List](./Java/Medium/114. Flatten Binary Tree to Linked List/)
 - [ ] Merge Two Binary Trees
 
 ### 📂 Backtracking & Search
 - [x] [Permutations](./Java/Medium/46. Permutations/)
 - [x] [Subsets](./Java/Medium/78. Subsets/)
 - [x] [Combination Sum](./Java/Medium/39. Combination Sum/)
-- [ ] Word Search
-- [ ] Generate Parentheses
-- [ ] Search a 2D Matrix
+- [x] [Word Search](./Java/Medium/79. Word Search/)
+- [x] [Generate Parentheses](./Java/Medium/22. Generate Parentheses/)
+- [x] [Search a 2D Matrix](./Java/Medium/74. Search a 2D Matrix/)
 - [ ] Search a 2D Matrix II
-- [ ] Search in Rotated Sorted Array
+- [x] [Search in Rotated Sorted Array](./Java/Medium/33. Search in Rotated Sorted Array/)
 - [ ] Find First and Last Position of Element in Sorted Array
 
 ### 📂 Graph & Trie
-- [ ] Number of Islands
-- [ ] Course Schedule
+- [x] [Number of Islands](./Java/Medium/200. Number of Islands/)
+- [x] [Course Schedule](./Java/Medium/207. Course Schedule/)
 - [ ] Implement Trie (Prefix Tree)
 
 ### 📂 Dynamic Programming
-- [ ] Climbing Stairs
+- [x] [Climbing Stairs](./Java/Easy/70. Climbing Stairs/)
 - [ ] Coin Change
-- [ ] Word Break
-- [ ] Longest Increasing Subsequence
-- [ ] House Robber
+- [x] [Word Break](./Java/Medium/139. Word Break/)
+- [x] [Longest Increasing Subsequence](./Java/Medium/300. Longest Increasing Subsequence/)
+- [x] [House Robber](./Java/Medium/198. House Robber/)
 - [ ] Partition Equal Subset Sum
 - [ ] Edit Distance
-- [ ] Unique Paths
+- [x] [Unique Paths](./Java/Medium/62. Unique Paths/)
 - [ ] Minimum Path Sum
 - [ ] Target Sum
 - [ ] Unique Binary Search Trees
-- [ ] Best Time to Buy and Sell Stock
+- [x] [Best Time to Buy and Sell Stock](./Java/Easy/121. Best Time to Buy and Sell Stock/)
 - [ ] Best Time to Buy and Sell Stock with Cooldown
 - [ ] Perfect Squares
 - [ ] Maximal Square
 - [ ] Longest Valid Parentheses
 
 ### 📂 Stack & Heap
-- [ ] Min Stack
+- [x] [Min Stack](./Java/Medium/155. Min Stack/)
 - [ ] Daily Temperatures
 - [ ] Top K Frequent Elements
 - [ ] Find Median from Data Stream
-- [ ] Kth Largest Element in an Array
+- [x] [Kth Largest Element in an Array](./Java/Medium/215. Kth Largest Element in an Array/)
 - [ ] Task Scheduler
 
 ---
