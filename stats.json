@@ -89,23 +89,22 @@
     "LeetCode_LFU_Cache": true,
     "LeetCode_Merge_Two_Sorted_Lists": true,
     "LeetCode_Circle_and_Rectangle_Overlapping": true,
-    "LeetCode_Copy_List_with_Random_Pointer": true
+    "LeetCode_Copy_List_with_Random_Pointer": true,
+    "LeetCode_Find_X_Value_of_Array_I": true
   },
-  "totalSolved": 74,
+  "totalSolved": 75,
   "difficultyCounts": {
     "easy": 14,
-    "medium": 52,
+    "medium": 53,
     "hard": 8,
     "basic": 0
   },
   "todayProblems": [
-    "Merge Two Sorted Lists",
-    "Circle and Rectangle Overlapping",
-    "Copy List with Random Pointer"
+    "Find X Value of Array I"
   ],
-  "currentStreak": 5,
-  "todayCount": 3,
-  "lastSyncDate": "2026-09-19",
+  "currentStreak": 1,
+  "todayCount": 1,
+  "lastSyncDate": "2026-09-21",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -121,6 +120,7 @@
     "2026-09-16": 27,
     "2026-09-17": 5,
     "2026-09-18": 2,
-    "2026-09-19": 3
+    "2026-09-19": 3,
+    "2026-09-21": 1
   }
 }

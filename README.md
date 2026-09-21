@@ -74,3 +74,4 @@
 | 72 | [Merge Two Sorted Lists](./LeetCode/Easy/Merge%20Two%20Sorted%20Lists) | [LeetCode](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | 19 Sept 2026 | 07:38 pm |
 | 73 | [Circle and Rectangle Overlapping](./LeetCode/Medium/Circle%20and%20Rectangle%20Overlapping) | [LeetCode](https://leetcode.com/problems/circle-and-rectangle-overlapping/) | Medium | 19 Sept 2026 | 09:03 pm |
 | 74 | [Copy List with Random Pointer](./LeetCode/Medium/Copy%20List%20with%20Random%20Pointer) | [LeetCode](https://leetcode.com/problems/copy-list-with-random-pointer/) | Medium | 19 Sept 2026 | 10:02 pm |
+| 75 | [Find X Value of Array I](./LeetCode/Medium/Find%20X%20Value%20of%20Array%20I) | [LeetCode](https://leetcode.com/problems/find-x-value-of-array-i/) | Medium | 21 Sept 2026 | 05:10 pm |
