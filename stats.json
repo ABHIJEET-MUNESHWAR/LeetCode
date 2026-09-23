@@ -91,21 +91,22 @@
     "LeetCode_Circle_and_Rectangle_Overlapping": true,
     "LeetCode_Copy_List_with_Random_Pointer": true,
     "LeetCode_Find_X_Value_of_Array_I": true,
-    "LeetCode_Find_X_Value_of_Array_II": true
+    "LeetCode_Find_X_Value_of_Array_II": true,
+    "LeetCode_Minimum_Operations_to_Reduce_X_to_Zero": true
   },
-  "totalSolved": 76,
+  "totalSolved": 77,
   "difficultyCounts": {
     "easy": 14,
-    "medium": 53,
+    "medium": 54,
     "hard": 9,
     "basic": 0
   },
   "todayProblems": [
-    "Find X Value of Array II"
+    "Minimum Operations to Reduce X to Zero"
   ],
-  "currentStreak": 2,
+  "currentStreak": 3,
   "todayCount": 1,
-  "lastSyncDate": "2026-09-22",
+  "lastSyncDate": "2026-09-23",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -123,6 +124,7 @@
     "2026-09-18": 2,
     "2026-09-19": 3,
     "2026-09-21": 1,
-    "2026-09-22": 1
+    "2026-09-22": 1,
+    "2026-09-23": 1
   }
 }
