@@ -77,3 +77,4 @@
 | 75 | [Find X Value of Array I](./LeetCode/Medium/Find%20X%20Value%20of%20Array%20I) | [LeetCode](https://leetcode.com/problems/find-x-value-of-array-i/) | Medium | 21 Sept 2026 | 05:10 pm |
 | 76 | [Find X Value of Array II](./LeetCode/Hard/Find%20X%20Value%20of%20Array%20II) | [LeetCode](https://leetcode.com/problems/find-x-value-of-array-ii/) | Hard | 22 Sept 2026 | 04:02 pm |
 | 77 | [Minimum Operations to Reduce X to Zero](./LeetCode/Medium/Minimum%20Operations%20to%20Reduce%20X%20to%20Zero) | [LeetCode](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/) | Medium | 23 Sept 2026 | 03:18 pm |
+| 78 | [Smallest Index With Digit Sum Equal to Index](./LeetCode/Easy/Smallest%20Index%20With%20Digit%20Sum%20Equal%20to%20Index) | [LeetCode](https://leetcode.com/problems/smallest-index-with-digit-sum-equal-to-index/) | Easy | 24 Sept 2026 | 12:26 pm |
