@@ -1,6 +1,6 @@
 # 📝 1096. Brace Expansion II (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/brace-expansion-ii/?envType=daily-question&envId=2026-09-25)
+🔗 [Problem Link](https://leetcode.com/problems/brace-expansion-ii)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Hard-red) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
