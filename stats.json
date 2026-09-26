@@ -93,21 +93,22 @@
     "LeetCode_Find_X_Value_of_Array_I": true,
     "LeetCode_Find_X_Value_of_Array_II": true,
     "LeetCode_Minimum_Operations_to_Reduce_X_to_Zero": true,
-    "LeetCode_Smallest_Index_With_Digit_Sum_Equal_to_Index": true
+    "LeetCode_Smallest_Index_With_Digit_Sum_Equal_to_Index": true,
+    "LeetCode_Evaluate_the_Bracket_Pairs_of_a_String": true
   },
-  "totalSolved": 78,
+  "totalSolved": 79,
   "difficultyCounts": {
     "easy": 15,
-    "medium": 54,
+    "medium": 55,
     "hard": 9,
     "basic": 0
   },
   "todayProblems": [
-    "Smallest Index With Digit Sum Equal to Index"
+    "Evaluate the Bracket Pairs of a String"
   ],
-  "currentStreak": 4,
+  "currentStreak": 1,
   "todayCount": 1,
-  "lastSyncDate": "2026-09-24",
+  "lastSyncDate": "2026-09-26",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -127,6 +128,7 @@
     "2026-09-21": 1,
     "2026-09-22": 1,
     "2026-09-23": 1,
-    "2026-09-24": 1
+    "2026-09-24": 1,
+    "2026-09-26": 1
   }
 }
