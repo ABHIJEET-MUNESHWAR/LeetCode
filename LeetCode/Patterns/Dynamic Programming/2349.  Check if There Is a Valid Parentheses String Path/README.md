@@ -8,8 +8,8 @@
 Array, Dynamic Programming, Matrix, Bracket Sequences
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 48 ms
+- **Memory:** 48.8 MB
 
 ---
 
