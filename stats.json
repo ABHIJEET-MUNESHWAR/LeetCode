@@ -95,21 +95,22 @@
     "LeetCode_Minimum_Operations_to_Reduce_X_to_Zero": true,
     "LeetCode_Smallest_Index_With_Digit_Sum_Equal_to_Index": true,
     "LeetCode_Evaluate_the_Bracket_Pairs_of_a_String": true,
-    "LeetCode_Maximum_Nesting_Depth_of_the_Parentheses": true
+    "LeetCode_Maximum_Nesting_Depth_of_the_Parentheses": true,
+    "LeetCode__Check_if_There_Is_a_Valid_Parentheses_String_Path": true
   },
-  "totalSolved": 80,
+  "totalSolved": 81,
   "difficultyCounts": {
     "easy": 16,
     "medium": 55,
-    "hard": 9,
+    "hard": 10,
     "basic": 0
   },
   "todayProblems": [
-    "Maximum Nesting Depth of the Parentheses"
+    " Check if There Is a Valid Parentheses String Path"
   ],
-  "currentStreak": 1,
+  "currentStreak": 2,
   "todayCount": 1,
-  "lastSyncDate": "2026-09-28",
+  "lastSyncDate": "2026-09-29",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -131,6 +132,7 @@
     "2026-09-23": 1,
     "2026-09-24": 1,
     "2026-09-26": 1,
-    "2026-09-28": 1
+    "2026-09-28": 1,
+    "2026-09-29": 1
   }
 }
