@@ -3,7 +3,7 @@
 Track your progress on the Grind 100 coding interview preparation list.
 
 ## Progress
-- **Completed:** 40 / 100 (40.0%)
+- **Completed:** 41 / 100 (41.0%)
 
 ---
 
@@ -104,7 +104,7 @@ Track your progress on the Grind 100 coding interview preparation list.
 - [ ] Best Time to Buy and Sell Stock with Cooldown
 - [ ] Perfect Squares
 - [ ] Maximal Square
-- [ ] Longest Valid Parentheses
+- [x] [Longest Valid Parentheses](./Java/Hard/32. Longest Valid Parentheses/)
 
 ### 📂 Stack & Heap
 - [x] [Min Stack](./Java/Medium/155. Min Stack/)

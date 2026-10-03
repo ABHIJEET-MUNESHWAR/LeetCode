@@ -3,7 +3,7 @@
 Track your progress on the Curated 100hrs DSA core interview preparation list.
 
 ## Progress
-- **Completed:** 1 / 238 (0.4%)
+- **Completed:** 2 / 238 (0.8%)
 
 ---
 
@@ -296,7 +296,7 @@ Track your progress on the Curated 100hrs DSA core interview preparation list.
 - [ ] Basic Calculator II
 - [ ] Backspace String Compare
 - [ ] Baseball Game
-- [ ] Longest Valid Parentheses
+- [x] [Longest Valid Parentheses](./Java/Hard/32. Longest Valid Parentheses/)
 - [x] [Valid Parentheses](./Java/Easy/20. Valid Parentheses/)
 - [ ] Decode String
 - [ ] 132 Pattern
