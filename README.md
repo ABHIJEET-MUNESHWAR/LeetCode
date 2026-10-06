@@ -82,3 +82,4 @@
 | 80 | [Maximum Nesting Depth of the Parentheses](./LeetCode/Easy/Maximum%20Nesting%20Depth%20of%20the%20Parentheses) | [LeetCode](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/) | Easy | 28 Sept 2026 | 12:45 pm |
 | 81 | [ Check if There Is a Valid Parentheses String Path](./LeetCode/Hard/%20Check%20if%20There%20Is%20a%20Valid%20Parentheses%20String%20Path) | [LeetCode](https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/) | Hard | 29 Sept 2026 | 03:22 pm |
 | 82 | [Generate Parentheses](./LeetCode/Medium/Generate%20Parentheses) | [LeetCode](https://leetcode.com/problems/generate-parentheses/) | Medium | 02 Oct 2026 | 08:14 pm |
+| 83 | [Minimum Add to Make Parentheses Valid](./LeetCode/Medium/Minimum%20Add%20to%20Make%20Parentheses%20Valid) | [LeetCode](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | Medium | 06 Oct 2026 | 03:14 pm |

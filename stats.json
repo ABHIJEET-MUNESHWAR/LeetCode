@@ -97,21 +97,22 @@
     "LeetCode_Evaluate_the_Bracket_Pairs_of_a_String": true,
     "LeetCode_Maximum_Nesting_Depth_of_the_Parentheses": true,
     "LeetCode__Check_if_There_Is_a_Valid_Parentheses_String_Path": true,
-    "LeetCode_Generate_Parentheses": true
+    "LeetCode_Generate_Parentheses": true,
+    "LeetCode_Minimum_Add_to_Make_Parentheses_Valid": true
   },
-  "totalSolved": 82,
+  "totalSolved": 83,
   "difficultyCounts": {
     "easy": 16,
-    "medium": 56,
+    "medium": 57,
     "hard": 10,
     "basic": 0
   },
   "todayProblems": [
-    "Generate Parentheses"
+    "Minimum Add to Make Parentheses Valid"
   ],
   "currentStreak": 1,
   "todayCount": 1,
-  "lastSyncDate": "2026-10-02",
+  "lastSyncDate": "2026-10-06",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -135,6 +136,7 @@
     "2026-09-26": 1,
     "2026-09-28": 1,
     "2026-09-29": 1,
-    "2026-10-02": 1
+    "2026-10-02": 1,
+    "2026-10-06": 1
   }
 }
