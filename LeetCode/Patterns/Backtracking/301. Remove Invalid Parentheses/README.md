@@ -1,6 +1,6 @@
 # 📝 301. Remove Invalid Parentheses (LeetCode)
 
-🔗 [Problem Link](https://leetcode.com/problems/remove-invalid-parentheses/?envType=daily-question&envId=2026-10-07)
+🔗 [Problem Link](https://leetcode.com/problems/remove-invalid-parentheses/)
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Hard-red) ![Language](https://img.shields.io/badge/Language-Java-blue)
 
@@ -8,8 +8,8 @@
 String, Backtracking, Breadth-First Search
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 78 ms
+- **Memory:** 43.6 MB
 
 ---
 
