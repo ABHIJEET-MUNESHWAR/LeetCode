@@ -101,21 +101,22 @@
     "LeetCode_Minimum_Add_to_Make_Parentheses_Valid": true,
     "LeetCode_Minimum_Insertions_to_Balance_a_Parentheses_String": true,
     "LeetCode_Minimum_Sum_of_Squared_Difference": true,
-    "LeetCode_Apply_Operations_on_Array_to_Maximize_Sum_of_Squares": true
+    "LeetCode_Apply_Operations_on_Array_to_Maximize_Sum_of_Squares": true,
+    "LeetCode_Maximum_Alternating_Sum_of_Squares": true
   },
-  "totalSolved": 86,
+  "totalSolved": 87,
   "difficultyCounts": {
     "easy": 16,
-    "medium": 59,
+    "medium": 60,
     "hard": 11,
     "basic": 0
   },
   "todayProblems": [
-    "Apply Operations on Array to Maximize Sum of Squares"
+    "Maximum Alternating Sum of Squares"
   ],
-  "currentStreak": 1,
+  "currentStreak": 2,
   "todayCount": 1,
-  "lastSyncDate": "2026-10-12",
+  "lastSyncDate": "2026-10-13",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -143,6 +144,7 @@
     "2026-10-06": 1,
     "2026-10-09": 1,
     "2026-10-10": 1,
-    "2026-10-12": 1
+    "2026-10-12": 1,
+    "2026-10-13": 1
   }
 }
