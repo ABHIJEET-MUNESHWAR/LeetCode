@@ -87,3 +87,4 @@
 | 85 | [Minimum Sum of Squared Difference](./LeetCode/Medium/Minimum%20Sum%20of%20Squared%20Difference) | [LeetCode](https://leetcode.com/problems/minimum-sum-of-squared-difference/) | Medium | 10 Oct 2026 | 04:31 pm |
 | 86 | [Apply Operations on Array to Maximize Sum of Squares](./LeetCode/Hard/Apply%20Operations%20on%20Array%20to%20Maximize%20Sum%20of%20Squares) | [LeetCode](https://leetcode.com/problems/apply-operations-on-array-to-maximize-sum-of-squares/) | Hard | 12 Oct 2026 | 03:29 pm |
 | 87 | [Maximum Alternating Sum of Squares](./LeetCode/Medium/Maximum%20Alternating%20Sum%20of%20Squares) | [LeetCode](https://leetcode.com/problems/maximum-alternating-sum-of-squares/) | Medium | 13 Oct 2026 | 07:13 pm |
+| 88 | [Maximize Sum of Squares of Digits](./LeetCode/Medium/Maximize%20Sum%20of%20Squares%20of%20Digits) | [LeetCode](https://leetcode.com/problems/maximize-sum-of-squares-of-digits/) | Medium | 14 Oct 2026 | 01:02 pm |
