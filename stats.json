@@ -104,21 +104,22 @@
     "LeetCode_Apply_Operations_on_Array_to_Maximize_Sum_of_Squares": true,
     "LeetCode_Maximum_Alternating_Sum_of_Squares": true,
     "LeetCode_Maximize_Sum_of_Squares_of_Digits": true,
-    "LeetCode_Subarrays_Distinct_Element_Sum_of_Squares_II": true
+    "LeetCode_Subarrays_Distinct_Element_Sum_of_Squares_II": true,
+    "LeetCode_Minimum_Swaps_to_Sort_by_Digit_Sum": true
   },
-  "totalSolved": 89,
+  "totalSolved": 90,
   "difficultyCounts": {
     "easy": 16,
-    "medium": 61,
+    "medium": 62,
     "hard": 12,
     "basic": 0
   },
   "todayProblems": [
-    "Subarrays Distinct Element Sum of Squares II"
+    "Minimum Swaps to Sort by Digit Sum"
   ],
-  "currentStreak": 1,
+  "currentStreak": 2,
   "todayCount": 1,
-  "lastSyncDate": "2026-10-16",
+  "lastSyncDate": "2026-10-17",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -149,6 +150,7 @@
     "2026-10-12": 1,
     "2026-10-13": 1,
     "2026-10-14": 1,
-    "2026-10-16": 1
+    "2026-10-16": 1,
+    "2026-10-17": 1
   }
 }
