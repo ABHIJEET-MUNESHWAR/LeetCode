@@ -1,15 +1,20 @@
 class Solution {
-    public int robRecursive(int[] nums, int n, int index) {
+    public int robRecursionMemoization(int[] nums, int n, int index, int[] dp) {
         if (index >= n) {
             return 0;
         }
-        int take = nums[index] + robRecursive(nums, n, index + 2);
-        int skip = robRecursive(nums, n, index + 1);
-        return Math.max(take, skip);
+        if (dp[index] != -1) {
+            return dp[index];
+        }
+        int take = nums[index] + robRecursionMemoization(nums, n, index + 2, dp);
+        int skip = robRecursionMemoization(nums, n, index + 1, dp);
+        return dp[index] = Math.max(take, skip);
     }
 
     public int rob(int[] nums) {
         int n = nums.length;
-        return robRecursive(nums, n, 0);
+        int[] dp = new int[n + 1];
+        Arrays.fill(dp, -1);
+        return robRecursionMemoization(nums, n, 0, dp);
     }
 }
