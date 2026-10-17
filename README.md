@@ -91,3 +91,4 @@
 | 89 | [Subarrays Distinct Element Sum of Squares II](./LeetCode/Hard/Subarrays%20Distinct%20Element%20Sum%20of%20Squares%20II) | [LeetCode](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-ii/) | Hard | 16 Oct 2026 | 02:49 pm |
 | 90 | [Minimum Swaps to Sort by Digit Sum](./LeetCode/Medium/Minimum%20Swaps%20to%20Sort%20by%20Digit%20Sum) | [LeetCode](https://leetcode.com/problems/minimum-swaps-to-sort-by-digit-sum/) | Medium | 17 Oct 2026 | 03:57 pm |
 | 91 | [Triangle](./LeetCode/Medium/Triangle) | [LeetCode](https://leetcode.com/problems/triangle/) | Medium | 17 Oct 2026 | 08:46 pm |
+| 92 | [Longest Palindromic Substring](./LeetCode/Medium/Longest%20Palindromic%20Substring) | [LeetCode](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | 17 Oct 2026 | 09:32 pm |
