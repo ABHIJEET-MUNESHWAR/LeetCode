@@ -8,8 +8,8 @@
 Array, Hash Table, String, Dynamic Programming, Trie, Memoization, Brute-Force Search
 
 ### 🚀 Performance
-- **Runtime:** N/A
-- **Memory:** N/A
+- **Runtime:** 6 ms
+- **Memory:** 45.9 MB
 
 ---
 
