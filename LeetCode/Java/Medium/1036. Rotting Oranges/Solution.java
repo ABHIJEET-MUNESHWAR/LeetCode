@@ -2,7 +2,6 @@ class Solution {
     public int orangesRotting(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
-        int[][] directions = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 } };
         Queue<int[]> queue = new LinkedList<>();
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -11,23 +10,22 @@ class Solution {
                 }
             }
         }
-        int minutes = 0;
+        int[][] directions = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
+        int minTime = 0;
         while (!queue.isEmpty()) {
-            int queueSize = queue.size();
-            while (queueSize-- > 0) {
-                int[] orangeLocation = queue.poll();
-                int i = orangeLocation[0];
-                int j = orangeLocation[1];
+            int size = queue.size();
+            while (size-- > 0) {
+                int[] current = queue.poll();
                 for (int[] direction : directions) {
-                    int i_ = i + direction[0];
-                    int j_ = j + direction[1];
+                    int i_ = current[0] + direction[0];
+                    int j_ = current[1] + direction[1];
                     if (i_ >= 0 && j_ >= 0 && i_ < m && j_ < n && grid[i_][j_] == 1) {
                         grid[i_][j_] = 2;
-                        queue.add(new int[] { i_, j_ });
+                        queue.offer(new int[] { i_, j_ });
                     }
                 }
             }
-            minutes++;
+            minTime++;
         }
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -36,9 +34,10 @@ class Solution {
                 }
             }
         }
-        if (minutes == 0) {
+        if (minTime == 0) {
             return 0;
         }
-        return minutes - 1;
+        minTime--;
+        return minTime;
     }
 }
