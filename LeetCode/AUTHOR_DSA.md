@@ -3,7 +3,7 @@
 Track your progress on the Curated 100hrs DSA core interview preparation list.
 
 ## Progress
-- **Completed:** 4 / 238 (1.7%)
+- **Completed:** 5 / 238 (2.1%)
 
 ---
 
@@ -137,7 +137,7 @@ Track your progress on the Curated 100hrs DSA core interview preparation list.
 - [ ] Multiply and Find Array Value
 
 ### 📂 MODULE  3.10: DPSTYLE PROBLEMS GIVES TLE
-- [ ] House Robber
+- [x] [House Robber](./Java/Medium/198. House Robber/)
 - [ ] Jump Game
 - [ ] Stone Game
 - [ ] Matchsticks to Square
