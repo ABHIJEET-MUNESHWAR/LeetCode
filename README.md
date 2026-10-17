@@ -90,3 +90,4 @@
 | 88 | [Maximize Sum of Squares of Digits](./LeetCode/Medium/Maximize%20Sum%20of%20Squares%20of%20Digits) | [LeetCode](https://leetcode.com/problems/maximize-sum-of-squares-of-digits/) | Medium | 14 Oct 2026 | 01:02 pm |
 | 89 | [Subarrays Distinct Element Sum of Squares II](./LeetCode/Hard/Subarrays%20Distinct%20Element%20Sum%20of%20Squares%20II) | [LeetCode](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-ii/) | Hard | 16 Oct 2026 | 02:49 pm |
 | 90 | [Minimum Swaps to Sort by Digit Sum](./LeetCode/Medium/Minimum%20Swaps%20to%20Sort%20by%20Digit%20Sum) | [LeetCode](https://leetcode.com/problems/minimum-swaps-to-sort-by-digit-sum/) | Medium | 17 Oct 2026 | 03:57 pm |
+| 91 | [Triangle](./LeetCode/Medium/Triangle) | [LeetCode](https://leetcode.com/problems/triangle/) | Medium | 17 Oct 2026 | 08:46 pm |

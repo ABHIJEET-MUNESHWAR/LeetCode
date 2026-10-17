@@ -105,20 +105,22 @@
     "LeetCode_Maximum_Alternating_Sum_of_Squares": true,
     "LeetCode_Maximize_Sum_of_Squares_of_Digits": true,
     "LeetCode_Subarrays_Distinct_Element_Sum_of_Squares_II": true,
-    "LeetCode_Minimum_Swaps_to_Sort_by_Digit_Sum": true
+    "LeetCode_Minimum_Swaps_to_Sort_by_Digit_Sum": true,
+    "LeetCode_Triangle": true
   },
-  "totalSolved": 90,
+  "totalSolved": 91,
   "difficultyCounts": {
     "easy": 16,
-    "medium": 62,
+    "medium": 63,
     "hard": 12,
     "basic": 0
   },
   "todayProblems": [
-    "Minimum Swaps to Sort by Digit Sum"
+    "Minimum Swaps to Sort by Digit Sum",
+    "Triangle"
   ],
   "currentStreak": 2,
-  "todayCount": 1,
+  "todayCount": 2,
   "lastSyncDate": "2026-10-17",
   "maxStreak": 5,
   "activityHistory": {
@@ -151,6 +153,6 @@
     "2026-10-13": 1,
     "2026-10-14": 1,
     "2026-10-16": 1,
-    "2026-10-17": 1
+    "2026-10-17": 2
   }
 }
