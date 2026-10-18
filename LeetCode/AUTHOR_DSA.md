@@ -3,7 +3,7 @@
 Track your progress on the Curated 100hrs DSA core interview preparation list.
 
 ## Progress
-- **Completed:** 8 / 238 (3.4%)
+- **Completed:** 9 / 238 (3.8%)
 
 ---
 
@@ -106,7 +106,7 @@ Track your progress on the Curated 100hrs DSA core interview preparation list.
 
 ### 📂 MODULE  3.6: SEARCHING WITHOUT FORMAL BI
 - [x] [Search Insert Position](./Java/Easy/35. Search Insert Position/)
-- [ ] Search in Rotated Sorted Array
+- [x] [Search in Rotated Sorted Array](./Java/Medium/33. Search in Rotated Sorted Array/)
 - [ ] Find First and Last Position of Element in Sorted Array
 - [x] [Find Peak Element](./Java/Medium/162. Find Peak Element/)
 - [ ] Maximum Gap
