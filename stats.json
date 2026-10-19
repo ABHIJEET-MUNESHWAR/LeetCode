@@ -107,23 +107,22 @@
     "LeetCode_Subarrays_Distinct_Element_Sum_of_Squares_II": true,
     "LeetCode_Minimum_Swaps_to_Sort_by_Digit_Sum": true,
     "LeetCode_Triangle": true,
-    "LeetCode_Longest_Palindromic_Substring": true
+    "LeetCode_Longest_Palindromic_Substring": true,
+    "LeetCode_Find_Target_Indices_After_Sorting_Array": true
   },
-  "totalSolved": 92,
+  "totalSolved": 93,
   "difficultyCounts": {
-    "easy": 16,
+    "easy": 17,
     "medium": 64,
     "hard": 12,
     "basic": 0
   },
   "todayProblems": [
-    "Minimum Swaps to Sort by Digit Sum",
-    "Triangle",
-    "Longest Palindromic Substring"
+    "Find Target Indices After Sorting Array"
   ],
-  "currentStreak": 2,
-  "todayCount": 3,
-  "lastSyncDate": "2026-10-17",
+  "currentStreak": 1,
+  "todayCount": 1,
+  "lastSyncDate": "2026-10-19",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -155,6 +154,7 @@
     "2026-10-13": 1,
     "2026-10-14": 1,
     "2026-10-16": 1,
-    "2026-10-17": 3
+    "2026-10-17": 3,
+    "2026-10-19": 1
   }
 }
