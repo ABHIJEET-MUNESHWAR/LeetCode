@@ -108,21 +108,22 @@
     "LeetCode_Minimum_Swaps_to_Sort_by_Digit_Sum": true,
     "LeetCode_Triangle": true,
     "LeetCode_Longest_Palindromic_Substring": true,
-    "LeetCode_Find_Target_Indices_After_Sorting_Array": true
+    "LeetCode_Find_Target_Indices_After_Sorting_Array": true,
+    "LeetCode_Sum_of_Sortable_Integers": true
   },
-  "totalSolved": 93,
+  "totalSolved": 94,
   "difficultyCounts": {
     "easy": 17,
     "medium": 64,
-    "hard": 12,
+    "hard": 13,
     "basic": 0
   },
   "todayProblems": [
-    "Find Target Indices After Sorting Array"
+    "Sum of Sortable Integers"
   ],
-  "currentStreak": 1,
+  "currentStreak": 2,
   "todayCount": 1,
-  "lastSyncDate": "2026-10-19",
+  "lastSyncDate": "2026-10-20",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -155,6 +156,7 @@
     "2026-10-14": 1,
     "2026-10-16": 1,
     "2026-10-17": 3,
-    "2026-10-19": 1
+    "2026-10-19": 1,
+    "2026-10-20": 1
   }
 }
