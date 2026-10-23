@@ -8,8 +8,8 @@
 String, Dynamic Programming
 
 ### 🚀 Performance
-- **Runtime:** 5 ms
-- **Memory:** 44.9 MB
+- **Runtime:** 6 ms
+- **Memory:** 46.5 MB
 
 ---
 
