@@ -6,25 +6,25 @@ class Solution {
         if (size == 1) {
             return nums[0];
         }
-        int[] dp = new int[size + 1];
-        dp[0] = 0;
-
-        for (int i = 1; i <= size - 1; i++) {
-            int steal = nums[i - 1] + (((i - 2) >= 0) ? dp[i - 2] : 0);
-            int skip = dp[i - 1];
-            dp[i] = Math.max(steal, skip);
+        if (size == 2) {
+            return Math.max(nums[0], nums[1]);
         }
-        int result1 = dp[size - 1];
-        dp[0] = 0;
-        dp[1] = 0;
-        dp = new int[size + 1];
-        for (int i = 2; i <= size; i++) {
-            int steal = nums[i - 1] + dp[i - 2];
-            int skip = dp[i - 1];
-            dp[i] = Math.max(steal, skip);
-        }
-        int result2 = dp[size];
-        return Math.max(result1, result2);
+        Arrays.fill(dp, -1);
+        int take0thIndexHouse = solve(nums, 0, size - 2);
+        Arrays.fill(dp, -1);
+        int take1stIndexHouse = solve(nums, 1, size - 1);
+        return Math.max(take0thIndexHouse, take1stIndexHouse);
     }
 
+    private int solve(int[] nums, int index, int size) {
+        if (index > size) {
+            return 0;
+        }
+        if (dp[index] != -1) {
+            return dp[index];
+        }
+        int steal = nums[index] + solve(nums, index + 2, size);
+        int skip = solve(nums, index + 1, size);
+        return Math.max(steal, skip);
+    }
 }
