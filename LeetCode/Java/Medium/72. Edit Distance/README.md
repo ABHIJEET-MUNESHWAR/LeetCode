@@ -9,7 +9,7 @@ String, Dynamic Programming
 
 ### 🚀 Performance
 - **Runtime:** 6 ms
-- **Memory:** 46.5 MB
+- **Memory:** 46.7 MB
 
 ---
 
