@@ -112,21 +112,22 @@
     "LeetCode_Sum_of_Sortable_Integers": true,
     "LeetCode_Maximum_K_to_Sort_a_Permutation": true,
     "GeeksForGeeks_Meeting_Rooms_II": true,
-    "LeetCode_Minimum_XOR_Path_in_a_Grid": true
+    "LeetCode_Minimum_XOR_Path_in_a_Grid": true,
+    "LeetCode_Shortest_Path_With_At_Most_K_Consecutive_Identical_Characters": true
   },
-  "totalSolved": 97,
+  "totalSolved": 98,
   "difficultyCounts": {
     "easy": 17,
-    "medium": 67,
+    "medium": 68,
     "hard": 13,
     "basic": 0
   },
   "todayProblems": [
-    "Minimum XOR Path in a Grid"
+    "Shortest Path With At Most K Consecutive Identical Characters"
   ],
-  "currentStreak": 2,
+  "currentStreak": 1,
   "todayCount": 1,
-  "lastSyncDate": "2026-10-28",
+  "lastSyncDate": "2026-10-30",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -163,6 +164,7 @@
     "2026-10-20": 1,
     "2026-10-23": 1,
     "2026-10-27": 1,
-    "2026-10-28": 1
+    "2026-10-28": 1,
+    "2026-10-30": 1
   }
 }

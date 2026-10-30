@@ -97,3 +97,4 @@
 | 95 | [Maximum K to Sort a Permutation](./LeetCode/Medium/Maximum%20K%20to%20Sort%20a%20Permutation) | [LeetCode](https://leetcode.com/problems/maximum-k-to-sort-a-permutation/) | Medium | 23 Oct 2026 | 10:30 am |
 | 96 | [Meeting Rooms II](./GeeksForGeeks/Medium/Meeting%20Rooms%20II) | [GeeksForGeeks](https://www.geeksforgeeks.org/problems/attend-all-meetings-ii/1) | Medium | 27 Oct 2026 | 02:19 pm |
 | 97 | [Minimum XOR Path in a Grid](./LeetCode/Medium/Minimum%20XOR%20Path%20in%20a%20Grid) | [LeetCode](https://leetcode.com/problems/minimum-xor-path-in-a-grid/) | Medium | 28 Oct 2026 | 08:01 pm |
+| 98 | [Shortest Path With At Most K Consecutive Identical Characters](./LeetCode/Medium/Shortest%20Path%20With%20At%20Most%20K%20Consecutive%20Identical%20Characters) | [LeetCode](https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters/) | Medium | 30 Oct 2026 | 02:41 pm |
