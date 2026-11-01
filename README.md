@@ -98,3 +98,4 @@
 | 96 | [Meeting Rooms II](./GeeksForGeeks/Medium/Meeting%20Rooms%20II) | [GeeksForGeeks](https://www.geeksforgeeks.org/problems/attend-all-meetings-ii/1) | Medium | 27 Oct 2026 | 02:19 pm |
 | 97 | [Minimum XOR Path in a Grid](./LeetCode/Medium/Minimum%20XOR%20Path%20in%20a%20Grid) | [LeetCode](https://leetcode.com/problems/minimum-xor-path-in-a-grid/) | Medium | 28 Oct 2026 | 08:01 pm |
 | 98 | [Shortest Path With At Most K Consecutive Identical Characters](./LeetCode/Medium/Shortest%20Path%20With%20At%20Most%20K%20Consecutive%20Identical%20Characters) | [LeetCode](https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters/) | Medium | 30 Oct 2026 | 02:41 pm |
+| 99 | [Minimum Moves to Equal Array Elements](./LeetCode/Medium/Minimum%20Moves%20to%20Equal%20Array%20Elements) | [LeetCode](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/) | Medium | 01 Nov 2026 | 12:18 pm |
