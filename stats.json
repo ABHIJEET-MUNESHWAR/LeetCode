@@ -115,21 +115,22 @@
     "LeetCode_Minimum_XOR_Path_in_a_Grid": true,
     "LeetCode_Shortest_Path_With_At_Most_K_Consecutive_Identical_Characters": true,
     "LeetCode_Minimum_Moves_to_Equal_Array_Elements": true,
-    "LeetCode_Minimum_Moves_to_Equal_Array_Elements_III": true
+    "LeetCode_Minimum_Moves_to_Equal_Array_Elements_III": true,
+    "LeetCode_Minimum_Operations_to_Make_Elements_Within_K_Subarrays_Equal": true
   },
-  "totalSolved": 100,
+  "totalSolved": 101,
   "difficultyCounts": {
     "easy": 18,
     "medium": 69,
-    "hard": 13,
+    "hard": 14,
     "basic": 0
   },
   "todayProblems": [
-    "Minimum Moves to Equal Array Elements III"
+    "Minimum Operations to Make Elements Within K Subarrays Equal"
   ],
-  "currentStreak": 1,
+  "currentStreak": 2,
   "todayCount": 1,
-  "lastSyncDate": "2026-11-03",
+  "lastSyncDate": "2026-11-04",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -169,6 +170,7 @@
     "2026-10-28": 1,
     "2026-10-30": 1,
     "2026-11-01": 1,
-    "2026-11-03": 1
+    "2026-11-03": 1,
+    "2026-11-04": 1
   }
 }
