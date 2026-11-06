@@ -116,21 +116,22 @@
     "LeetCode_Shortest_Path_With_At_Most_K_Consecutive_Identical_Characters": true,
     "LeetCode_Minimum_Moves_to_Equal_Array_Elements": true,
     "LeetCode_Minimum_Moves_to_Equal_Array_Elements_III": true,
-    "LeetCode_Minimum_Operations_to_Make_Elements_Within_K_Subarrays_Equal": true
+    "LeetCode_Minimum_Operations_to_Make_Elements_Within_K_Subarrays_Equal": true,
+    "LeetCode_Count_Zero_Request_Servers": true
   },
-  "totalSolved": 101,
+  "totalSolved": 102,
   "difficultyCounts": {
     "easy": 18,
-    "medium": 69,
+    "medium": 70,
     "hard": 14,
     "basic": 0
   },
   "todayProblems": [
-    "Minimum Operations to Make Elements Within K Subarrays Equal"
+    "Count Zero Request Servers"
   ],
-  "currentStreak": 2,
+  "currentStreak": 1,
   "todayCount": 1,
-  "lastSyncDate": "2026-11-04",
+  "lastSyncDate": "2026-11-06",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -171,6 +172,7 @@
     "2026-10-30": 1,
     "2026-11-01": 1,
     "2026-11-03": 1,
-    "2026-11-04": 1
+    "2026-11-04": 1,
+    "2026-11-06": 1
   }
 }
