@@ -118,21 +118,22 @@
     "LeetCode_Minimum_Moves_to_Equal_Array_Elements_III": true,
     "LeetCode_Minimum_Operations_to_Make_Elements_Within_K_Subarrays_Equal": true,
     "LeetCode_Count_Zero_Request_Servers": true,
-    "LeetCode_Find_Servers_That_Handled_Most_Number_of_Requests": true
+    "LeetCode_Find_Servers_That_Handled_Most_Number_of_Requests": true,
+    "LeetCode_Climbing_Stairs_II": true
   },
-  "totalSolved": 103,
+  "totalSolved": 104,
   "difficultyCounts": {
     "easy": 18,
-    "medium": 70,
+    "medium": 71,
     "hard": 15,
     "basic": 0
   },
   "todayProblems": [
-    "Find Servers That Handled Most Number of Requests"
+    "Climbing Stairs II"
   ],
-  "currentStreak": 1,
+  "currentStreak": 2,
   "todayCount": 1,
-  "lastSyncDate": "2026-11-09",
+  "lastSyncDate": "2026-11-10",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -175,6 +176,7 @@
     "2026-11-03": 1,
     "2026-11-04": 1,
     "2026-11-06": 1,
-    "2026-11-09": 1
+    "2026-11-09": 1,
+    "2026-11-10": 1
   }
 }

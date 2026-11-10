@@ -103,3 +103,4 @@
 | 101 | [Minimum Operations to Make Elements Within K Subarrays Equal](./LeetCode/Hard/Minimum%20Operations%20to%20Make%20Elements%20Within%20K%20Subarrays%20Equal) | [LeetCode](https://leetcode.com/problems/minimum-operations-to-make-elements-within-k-subarrays-equal/) | Hard | 04 Nov 2026 | 06:46 pm |
 | 102 | [Count Zero Request Servers](./LeetCode/Medium/Count%20Zero%20Request%20Servers) | [LeetCode](https://leetcode.com/problems/count-zero-request-servers/) | Medium | 06 Nov 2026 | 01:59 pm |
 | 103 | [Find Servers That Handled Most Number of Requests](./LeetCode/Hard/Find%20Servers%20That%20Handled%20Most%20Number%20of%20Requests) | [LeetCode](https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/) | Hard | 09 Nov 2026 | 06:28 pm |
+| 104 | [Climbing Stairs II](./LeetCode/Medium/Climbing%20Stairs%20II) | [LeetCode](https://leetcode.com/problems/climbing-stairs-ii/) | Medium | 10 Nov 2026 | 06:41 pm |
