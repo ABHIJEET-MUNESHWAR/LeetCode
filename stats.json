@@ -119,21 +119,22 @@
     "LeetCode_Minimum_Operations_to_Make_Elements_Within_K_Subarrays_Equal": true,
     "LeetCode_Count_Zero_Request_Servers": true,
     "LeetCode_Find_Servers_That_Handled_Most_Number_of_Requests": true,
-    "LeetCode_Climbing_Stairs_II": true
+    "LeetCode_Climbing_Stairs_II": true,
+    "LeetCode_Minimum_Cost_to_Acquire_Required_Items": true
   },
-  "totalSolved": 104,
+  "totalSolved": 105,
   "difficultyCounts": {
     "easy": 18,
-    "medium": 71,
+    "medium": 72,
     "hard": 15,
     "basic": 0
   },
   "todayProblems": [
-    "Climbing Stairs II"
+    "Minimum Cost to Acquire Required Items"
   ],
-  "currentStreak": 2,
+  "currentStreak": 3,
   "todayCount": 1,
-  "lastSyncDate": "2026-11-10",
+  "lastSyncDate": "2026-11-11",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -177,6 +178,7 @@
     "2026-11-04": 1,
     "2026-11-06": 1,
     "2026-11-09": 1,
-    "2026-11-10": 1
+    "2026-11-10": 1,
+    "2026-11-11": 1
   }
 }
