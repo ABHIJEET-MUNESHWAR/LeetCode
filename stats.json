@@ -120,21 +120,22 @@
     "LeetCode_Count_Zero_Request_Servers": true,
     "LeetCode_Find_Servers_That_Handled_Most_Number_of_Requests": true,
     "LeetCode_Climbing_Stairs_II": true,
-    "LeetCode_Minimum_Cost_to_Acquire_Required_Items": true
+    "LeetCode_Minimum_Cost_to_Acquire_Required_Items": true,
+    "LeetCode_Longest_Strictly_Increasing_or_Strictly_Decreasing_Subarray": true
   },
-  "totalSolved": 105,
+  "totalSolved": 106,
   "difficultyCounts": {
-    "easy": 18,
+    "easy": 19,
     "medium": 72,
     "hard": 15,
     "basic": 0
   },
   "todayProblems": [
-    "Minimum Cost to Acquire Required Items"
+    "Longest Strictly Increasing or Strictly Decreasing Subarray"
   ],
-  "currentStreak": 3,
+  "currentStreak": 4,
   "todayCount": 1,
-  "lastSyncDate": "2026-11-11",
+  "lastSyncDate": "2026-11-12",
   "maxStreak": 5,
   "activityHistory": {
     "2026-07-21": 1,
@@ -179,6 +180,7 @@
     "2026-11-06": 1,
     "2026-11-09": 1,
     "2026-11-10": 1,
-    "2026-11-11": 1
+    "2026-11-11": 1,
+    "2026-11-12": 1
   }
 }
