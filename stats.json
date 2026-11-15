@@ -123,22 +123,23 @@
     "LeetCode_Minimum_Cost_to_Acquire_Required_Items": true,
     "LeetCode_Longest_Strictly_Increasing_or_Strictly_Decreasing_Subarray": true,
     "LeetCode_Count_Non-Decreasing_Subarrays_After_K_Operations": true,
-    "LeetCode_Minimum_Positive_Sum_Subarray_": true
+    "LeetCode_Minimum_Positive_Sum_Subarray_": true,
+    "LeetCode_Number_of_Sub-arrays_With_Odd_Sum": true
   },
-  "totalSolved": 108,
+  "totalSolved": 109,
   "difficultyCounts": {
     "easy": 20,
-    "medium": 72,
+    "medium": 73,
     "hard": 16,
     "basic": 0
   },
   "todayProblems": [
-    "Minimum Positive Sum Subarray "
+    "Number of Sub-arrays With Odd Sum"
   ],
-  "currentStreak": 6,
+  "currentStreak": 7,
   "todayCount": 1,
-  "lastSyncDate": "2026-11-14",
-  "maxStreak": 6,
+  "lastSyncDate": "2026-11-15",
+  "maxStreak": 7,
   "activityHistory": {
     "2026-07-21": 1,
     "2026-09-04": 3,
@@ -185,6 +186,7 @@
     "2026-11-11": 1,
     "2026-11-12": 1,
     "2026-11-13": 1,
-    "2026-11-14": 1
+    "2026-11-14": 1,
+    "2026-11-15": 1
   }
 }
