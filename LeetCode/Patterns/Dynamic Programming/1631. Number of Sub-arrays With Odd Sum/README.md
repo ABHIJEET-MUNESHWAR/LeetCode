@@ -2,14 +2,14 @@
 
 🔗 [Problem Link](https://leetcode.com/problems/number-of-sub-arrays-with-odd-sum/)
 
-![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-Java-blue)
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-orange) ![Language](https://img.shields.io/badge/Language-Go-blue)
 
 ### 💡 Tags
 Array, Math, Dynamic Programming, Prefix Sum
 
 ### 🚀 Performance
-- **Runtime:** 7 ms
-- **Memory:** 56.5 MB
+- **Runtime:** 3 ms
+- **Memory:** 9.9 MB
 
 ---
 
