@@ -125,21 +125,22 @@
     "LeetCode_Count_Non-Decreasing_Subarrays_After_K_Operations": true,
     "LeetCode_Minimum_Positive_Sum_Subarray_": true,
     "LeetCode_Number_of_Sub-arrays_With_Odd_Sum": true,
-    "LeetCode_Check_if_All_A's_Appears_Before_All_B's": true
+    "LeetCode_Check_if_All_A's_Appears_Before_All_B's": true,
+    "LeetCode_Maximum_Subarray_With_Equal_Products": true
   },
-  "totalSolved": 110,
+  "totalSolved": 111,
   "difficultyCounts": {
-    "easy": 21,
+    "easy": 22,
     "medium": 73,
     "hard": 16,
     "basic": 0
   },
   "todayProblems": [
-    "Check if All A's Appears Before All B's"
+    "Maximum Subarray With Equal Products"
   ],
   "currentStreak": 1,
   "todayCount": 1,
-  "lastSyncDate": "2026-11-22",
+  "lastSyncDate": "2026-11-24",
   "maxStreak": 7,
   "activityHistory": {
     "2026-07-21": 1,
@@ -189,6 +190,7 @@
     "2026-11-13": 1,
     "2026-11-14": 1,
     "2026-11-15": 1,
-    "2026-11-22": 1
+    "2026-11-22": 1,
+    "2026-11-24": 1
   }
 }
