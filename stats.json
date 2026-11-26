@@ -126,21 +126,22 @@
     "LeetCode_Minimum_Positive_Sum_Subarray_": true,
     "LeetCode_Number_of_Sub-arrays_With_Odd_Sum": true,
     "LeetCode_Check_if_All_A's_Appears_Before_All_B's": true,
-    "LeetCode_Maximum_Subarray_With_Equal_Products": true
+    "LeetCode_Maximum_Subarray_With_Equal_Products": true,
+    "LeetCode_Stone_Removal_Game": true
   },
-  "totalSolved": 111,
+  "totalSolved": 112,
   "difficultyCounts": {
-    "easy": 22,
+    "easy": 23,
     "medium": 73,
     "hard": 16,
     "basic": 0
   },
   "todayProblems": [
-    "Maximum Subarray With Equal Products"
+    "Stone Removal Game"
   ],
   "currentStreak": 1,
   "todayCount": 1,
-  "lastSyncDate": "2026-11-24",
+  "lastSyncDate": "2026-11-26",
   "maxStreak": 7,
   "activityHistory": {
     "2026-07-21": 1,
@@ -191,6 +192,7 @@
     "2026-11-14": 1,
     "2026-11-15": 1,
     "2026-11-22": 1,
-    "2026-11-24": 1
+    "2026-11-24": 1,
+    "2026-11-26": 1
   }
 }
