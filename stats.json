@@ -127,21 +127,22 @@
     "LeetCode_Number_of_Sub-arrays_With_Odd_Sum": true,
     "LeetCode_Check_if_All_A's_Appears_Before_All_B's": true,
     "LeetCode_Maximum_Subarray_With_Equal_Products": true,
-    "LeetCode_Stone_Removal_Game": true
+    "LeetCode_Stone_Removal_Game": true,
+    "LeetCode_Maximum_Number_of_Items_From_Sale_I": true
   },
-  "totalSolved": 112,
+  "totalSolved": 113,
   "difficultyCounts": {
     "easy": 23,
-    "medium": 73,
+    "medium": 74,
     "hard": 16,
     "basic": 0
   },
   "todayProblems": [
-    "Stone Removal Game"
+    "Maximum Number of Items From Sale I"
   ],
-  "currentStreak": 1,
+  "currentStreak": 2,
   "todayCount": 1,
-  "lastSyncDate": "2026-11-26",
+  "lastSyncDate": "2026-11-27",
   "maxStreak": 7,
   "activityHistory": {
     "2026-07-21": 1,
@@ -193,6 +194,7 @@
     "2026-11-15": 1,
     "2026-11-22": 1,
     "2026-11-24": 1,
-    "2026-11-26": 1
+    "2026-11-26": 1,
+    "2026-11-27": 1
   }
 }
